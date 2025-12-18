@@ -19,7 +19,7 @@ export default async function () {
 						itemType: "xItemRadioGroup",
 						label: i18n("桶策略"),
 						minWidth: 180,
-                        isUseBorder: true,
+						isUseBorder: true,
 						options: [
 							{
 								label: "私有",
