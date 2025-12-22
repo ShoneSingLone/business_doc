@@ -96,6 +96,11 @@ export default async function () {
 						},
 						{
 							icon: "icon_report",
+							label: i18n("xItemAutocomplete"),
+							href: "/x-component/x-item-autocomplate"
+						},
+						{
+							icon: "icon_report",
 							label: i18n("xItemCheck"),
 							href: "/x-component/x-item-check"
 						},

@@ -51,6 +51,10 @@ export default async function () {
 					"@/views/xComponent/DemoxItemInput/DemoxItemInput.vue"
 				),
 				_.$newRoute(
+					"/x-component/x-item-autocomplate",
+					"@/views/xComponent/DemoxItemAutocomplate/DemoxItemAutocomplate.vue"
+				),
+				_.$newRoute(
 					"/x-component/x-item-radio-group",
 					"@/views/xComponent/DemoxItemRadioGroup/DemoxItemRadioGroup.vue"
 				),
