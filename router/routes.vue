@@ -179,6 +179,10 @@ export default async function () {
 							"@/views/component/data/virtualizedTable/virtualizedTable.vue"
 						),
 						_.$newRoute(
+							"/component/data/x-table-easy",
+							"@/views/component/data/xTableEasy/xTableEasy.vue"
+						),
+						_.$newRoute(
 							"/component/data/pagination",
 							"@/views/component/data/pagination/pagination.vue"
 						),

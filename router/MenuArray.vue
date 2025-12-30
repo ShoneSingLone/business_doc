@@ -138,7 +138,11 @@ export default async function () {
 					label: `${i18n("AdvancedSearch")} ${i18n("高级搜索按钮")}`,
 					href: "/component/form/advanced-search"
 				},
-				{ icon: "_icon_item_input", label: i18n("input"), href: "/component/form/input" },
+				{
+					icon: "_icon_item_input",
+					label: i18n("input"),
+					href: "/component/form/input"
+				},
 				{
 					icon: "_icon_item_input_number",
 					label: i18n("inputNumber"),
@@ -149,14 +153,22 @@ export default async function () {
 					label: i18n("checkbox"),
 					href: "/component/form/checkbox"
 				},
-				{ icon: "_icon_item_radio", label: i18n("radio"), href: "/component/form/radio" },
+				{
+					icon: "_icon_item_radio",
+					label: i18n("radio"),
+					href: "/component/form/radio"
+				},
 				{ icon: "_icon_switch", label: i18n("switch"), href: "/component/form/switch" },
 				{
 					icon: "_icon_slider",
 					label: `${i18n("Slider")} ${i18n("滑块")}`,
 					href: "/component/form/slider"
 				},
-				{ icon: "_icon_selector", label: i18n("select"), href: "/component/form/select" },
+				{
+					icon: "_icon_selector",
+					label: i18n("select"),
+					href: "/component/form/select"
+				},
 				{
 					icon: "_icon_selector",
 					label: `${i18n("Cascader")} ${i18n("级联选择器")}`,
@@ -234,6 +246,11 @@ export default async function () {
 				},
 				{
 					icon: "icon_report",
+					label: `${i18n("xTableEasy")} ${i18n("表格")}`,
+					href: "/component/data/x-table-easy"
+				},
+				{
+					icon: "icon_report",
 					label: `${i18n("Pagination")} ${i18n("分页")}`,
 					href: "/component/data/pagination"
 				},
@@ -247,8 +264,16 @@ export default async function () {
 					label: `${i18n("Menu")} ${i18n("菜单")}`,
 					href: "/component/navigation/menu"
 				},
-				{ icon: "icon_report", label: i18n("Tabs"), href: "/component/navigation/tabs" },
-				{ icon: "icon_report", label: i18n("step"), href: "/component/navigation/step" },
+				{
+					icon: "icon_report",
+					label: i18n("Tabs"),
+					href: "/component/navigation/tabs"
+				},
+				{
+					icon: "icon_report",
+					label: i18n("step"),
+					href: "/component/navigation/step"
+				},
 				{
 					icon: "icon_report",
 					label: i18n("dropdown"),

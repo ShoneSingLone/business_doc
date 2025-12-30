@@ -119,7 +119,11 @@ export default async function () {
 						},
 						{ source: "Gas imports", target: "Ngas", value: 40.719 },
 						{ source: "Gas reserves", target: "Ngas", value: 82.233 },
-						{ source: "Gas", target: "Heating and cooling - commercial", value: 0.129 },
+						{
+							source: "Gas",
+							target: "Heating and cooling - commercial",
+							value: 0.129
+						},
 						{ source: "Gas", target: "Losses", value: 1.401 },
 						{ source: "Gas", target: "Thermal generation", value: 151.891 },
 						{ source: "Gas", target: "Agriculture", value: 2.096 },
@@ -172,7 +176,11 @@ export default async function () {
 							value: 525.531
 						},
 						{ source: "Thermal generation", target: "Losses", value: 787.129 },
-						{ source: "Thermal generation", target: "District heating", value: 79.329 },
+						{
+							source: "Thermal generation",
+							target: "District heating",
+							value: 79.329
+						},
 						{ source: "Tidal", target: "Electricity grid", value: 9.452 },
 						{
 							source: "UK land based bioenergy",
