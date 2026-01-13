@@ -20,26 +20,26 @@
 	</DocContentOfDemo>
 </template>
 <script lang="ts">
-	export default async function () {
-		const totalData = _.map(new Array(4000), (i, ii) => {
-			return {
-				id: ii,
-				name: `name${ii}`,
-				age: 18,
-				sex: "男",
-				phone: "13800000000",
-				address: "上海市普陀区金沙江路 1518 弄"
-			};
-		});
+export default async function () {
+	const totalData = _.map(new Array(4000), (i, ii) => {
 		return {
-			provide() {
-				return {
-					totalData
-				};
-			},
-			data() {
-				return {
-					descString: `# xTableEasy 表格组件
+			id: ii,
+			name: `name${ii}`,
+			age: 18,
+			sex: "男",
+			phone: "13800000000",
+			address: "上海市普陀区金沙江路 1518 弄"
+		};
+	});
+	return {
+		provide() {
+			return {
+				totalData
+			};
+		},
+		data() {
+			return {
+				descString: `# xTableEasy 表格组件
 xTableEasy 是一个基于 Vue 2.7 开发的高性能表格组件，提供了丰富的功能和良好的用户体验。
 
 ## 特性
@@ -55,9 +55,9 @@ xTableEasy 是一个基于 Vue 2.7 开发的高性能表格组件，提供了丰
 ## 适用场景
 xTableEasy 适用于各种中后台管理系统的表格展示场景，特别是需要处理大量数据的情况。
 			`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 <style lang="less"></style>
