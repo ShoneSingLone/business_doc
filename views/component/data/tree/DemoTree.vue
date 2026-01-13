@@ -19,16 +19,16 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			provide() {
-				return {
-					inject_tree: this
-				};
-			},
-			data() {
-				return {
-					apiString: `## xTree Attributes
+export default async function () {
+	return {
+		provide() {
+			return {
+				inject_tree: this
+			};
+		},
+		data() {
+			return {
+				apiString: `## xTree Attributes
 
 | Name                  | Description                                                                                                                                  | Type                  | Default |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------- |
@@ -93,39 +93,39 @@
 | node-collapse    | triggers when current node close                     | \`(data: TreeNodeData, node: TreeNode)\`                                                                                                  |
 
 `
-				};
+			};
+		},
+		methods: {
+			getKey: (prefix, id) => {
+				return `${prefix}-${id}`;
 			},
-			methods: {
-				getKey: (prefix, id) => {
-					return `${prefix}-${id}`;
-				},
-				createData(maxDeep, maxChildren, minNodesNumber, deep = 1, key = "node") {
-					const vm = this;
-					let id = 0;
-					return Array.from({ length: minNodesNumber })
-						.fill(deep)
-						.map(() => {
-							const childrenNumber =
-								deep === maxDeep ? 0 : Math.round(Math.random() * maxChildren);
-							const nodeKey = vm.getKey(key, ++id);
-							return {
-								id: nodeKey,
-								label: nodeKey,
-								children: childrenNumber
-									? vm.createData(
-											maxDeep,
-											maxChildren,
-											childrenNumber,
-											deep + 1,
-											nodeKey
-										)
-									: undefined
-							};
-						});
-				}
+			createData(maxDeep, maxChildren, minNodesNumber, deep = 1, key = "node") {
+				const vm = this;
+				let id = 0;
+				return Array.from({ length: minNodesNumber })
+					.fill(deep)
+					.map(() => {
+						const childrenNumber =
+							deep === maxDeep ? 0 : Math.round(Math.random() * maxChildren);
+						const nodeKey = vm.getKey(key, ++id);
+						return {
+							id: nodeKey,
+							label: nodeKey,
+							children: childrenNumber
+								? vm.createData(
+										maxDeep,
+										maxChildren,
+										childrenNumber,
+										deep + 1,
+										nodeKey
+									)
+								: undefined
+						};
+					});
 			}
-		};
-	}
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

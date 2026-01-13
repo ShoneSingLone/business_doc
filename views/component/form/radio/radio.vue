@@ -20,14 +20,14 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: `## Radio 单选框
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: `## Radio 单选框
 在一组备选项中进行单选
 `,
-					desc: `### Radio Attributes
+				desc: `### Radio Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
@@ -62,13 +62,13 @@
 | label     | Radio 的 value  | string / number  |        —       |     —    |
 | disabled  | 是否禁用    | boolean   | — | false   |
 | name | 原生 name 属性 | string    |      —         |     —    |`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.radio-demo {
-	}
+.radio-demo {
+}
 </style>

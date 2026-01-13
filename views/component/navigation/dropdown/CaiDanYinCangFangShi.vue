@@ -16,14 +16,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "可以`hide-on-click`属性来配置。\n\n下拉菜单默认在点击菜单项后会被隐藏，将`hide-on-click`属性默认为`false`可以关闭此功能。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "可以`hide-on-click`属性来配置。\n\n下拉菜单默认在点击菜单项后会被隐藏，将`hide-on-click`属性默认为`false`可以关闭此功能。"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "基于`Vue-popper`开发",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "基于`Vue-popper`开发",
+				apiString: `### Attributes
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 | trigger | 触发方式 | String  | click/focus/hover/manual |    click    |
@@ -46,13 +46,13 @@
 | after-enter | 显示动画播放完毕后触发 | — |
 | hide | 隐藏时触发 | — |
 | after-leave | 隐藏动画播放完毕后触发 | — |`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.popover-demo {
-	}
+.popover-demo {
+}
 </style>

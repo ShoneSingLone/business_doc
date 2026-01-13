@@ -59,46 +59,46 @@
 </template>
 
 <script lang="ts">
-	export default async function (payload) {
-		const { useDialogProps } = await _.$importVue("/common/utils/hooks.vue");
-		return defineComponent({
-			inject: ["APP"],
-			props: useDialogProps(),
-			data() {
-				const vm = this;
+export default async function (payload) {
+	const { useDialogProps } = await _.$importVue("/common/utils/hooks.vue");
+	return defineComponent({
+		inject: ["APP"],
+		props: useDialogProps(),
+		data() {
+			const vm = this;
+			return {
+				form: {
+					name: { value: "", label: i18n("名asdfasf称") }
+				}
+			};
+		},
+		computed: {
+			labelStyle() {
 				return {
-					form: {
-						name: { value: "", label: i18n("名asdfasf称") }
-					}
+					"--xItem-label-width": "144px"
 				};
 			},
-			computed: {
-				labelStyle() {
-					return {
-						"--xItem-label-width": "144px"
-					};
-				},
-				cpt_formData() {
-					return _.$pickFormValues(this.form);
-				},
-				btnOk() {
-					const vm = this;
-					return {
-						label: i18n("OK"),
-						preset: "blue",
-						async onClick() {
-							vm.onClickOk();
-						}
-					};
-				}
+			cpt_formData() {
+				return _.$pickFormValues(this.form);
 			},
-			methods: {
-				async onClickOk() {
-					this.closeModal();
-				}
+			btnOk() {
+				const vm = this;
+				return {
+					label: i18n("OK"),
+					preset: "blue",
+					async onClick() {
+						vm.onClickOk();
+					}
+				};
 			}
-		});
-	}
+		},
+		methods: {
+			async onClickOk() {
+				this.closeModal();
+			}
+		}
+	});
+}
 </script>
 
 <style lang="less"></style>

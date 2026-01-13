@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					apiString: `### Menu Attribute
+export default async function () {
+	return {
+		data() {
+			return {
+				apiString: `### Menu Attribute
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | mode     | 模式   | string  |   horizontal / vertical   | vertical |
@@ -62,10 +62,10 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | title     | 分组标题   | string  | — | — |`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

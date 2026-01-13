@@ -19,18 +19,18 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			inject: ["DemoCascader"],
-			data() {
-				return {};
-			},
-			computed: {
-				md() {
-					return `只需为 Cascader 的\`options\`属性指定选项数组即可渲染出一个级联选择器。通过\`props.expandTrigger\`可以定义展开子级菜单的触发方式。`;
-				}
+export default async function () {
+	return defineComponent({
+		inject: ["DemoCascader"],
+		data() {
+			return {};
+		},
+		computed: {
+			md() {
+				return `只需为 Cascader 的\`options\`属性指定选项数组即可渲染出一个级联选择器。通过\`props.expandTrigger\`可以定义展开子级菜单的触发方式。`;
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

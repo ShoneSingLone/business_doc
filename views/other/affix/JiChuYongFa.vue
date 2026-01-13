@@ -8,14 +8,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: `固钉默认固定在页面顶部。
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: `固钉默认固定在页面顶部。
 通过设置 \`offset\` 属性来改变吸顶距离，默认值为 0。`
-				};
-			}
-		});
-	}
+			};
+		}
+	});
+}
 </script>

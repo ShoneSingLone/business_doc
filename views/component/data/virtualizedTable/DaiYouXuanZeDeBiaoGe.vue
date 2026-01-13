@@ -14,15 +14,15 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			mounted() {
-				this.configsTable.onQuery();
-			},
-			data() {
-				const vm = this;
-				return {
-					md: `
+export default async function () {
+	return defineComponent({
+		mounted() {
+			this.configsTable.onQuery();
+		},
+		data() {
+			const vm = this;
+			return {
+				md: `
 得益于Typescript，可以使用以下特性： \`defTable.colSingle\` 单选 \`defTable.colMultiple\` 多选
 \`\`\`js
 defTable.colSingle({
@@ -42,54 +42,54 @@ defTable.colSingle({
 })
 \`\`\`
 `,
-					selected: {},
-					configsTable: defTable({
-						onQuery(pagination) {
-							const list = _.map(new Array(2000), (i, rowIndex) => {
-								return {
-									id: rowIndex,
-									title: `row_${rowIndex + 1}`
-								};
-							});
+				selected: {},
+				configsTable: defTable({
+					onQuery(pagination) {
+						const list = _.map(new Array(2000), (i, rowIndex) => {
+							return {
+								id: rowIndex,
+								title: `row_${rowIndex + 1}`
+							};
+						});
 
-							_.$setTableData(vm.configsTable, {
-								list,
-								total: list.length
-							});
-						},
-						onSelectedChange(newValue, oldValue) {
-							const row = _.find(
-								vm.configsTable.data.list,
-								item => item.id === newValue[0]
-							);
-							if (row) {
-								vm.selected = row;
-							} else {
-								vm.selected = {};
-							}
-						},
-						data: {
-							set: new Set(),
-							list: []
-						},
-						columns: [
-							defTable.colSingle({
-								by: "id",
-								getConfigs: () => {
-									return vm.configsTable;
-								},
-								disabled({ rowData, rowIndex }) {
-									if (rowIndex % 2) {
-										return i18n("如果是字符串且为真值，会用作禁用的提示");
-									}
-									return "";
+						_.$setTableData(vm.configsTable, {
+							list,
+							total: list.length
+						});
+					},
+					onSelectedChange(newValue, oldValue) {
+						const row = _.find(
+							vm.configsTable.data.list,
+							item => item.id === newValue[0]
+						);
+						if (row) {
+							vm.selected = row;
+						} else {
+							vm.selected = {};
+						}
+					},
+					data: {
+						set: new Set(),
+						list: []
+					},
+					columns: [
+						defTable.colSingle({
+							by: "id",
+							getConfigs: () => {
+								return vm.configsTable;
+							},
+							disabled({ rowData, rowIndex }) {
+								if (rowIndex % 2) {
+									return i18n("如果是字符串且为真值，会用作禁用的提示");
 								}
-							}),
-							{ prop: "title", label: i18n("title") }
-						]
-					})
-				};
-			}
-		});
-	}
+								return "";
+							}
+						}),
+						{ prop: "title", label: i18n("title") }
+					]
+				})
+			};
+		}
+	});
+}
 </script>

@@ -19,14 +19,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					mdTitle: "可通过`slot = error`可自定义加载失败内容"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				mdTitle: "可通过`slot = error`可自定义加载失败内容"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

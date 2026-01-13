@@ -30,11 +30,11 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					apiString: `### Dropdown Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				apiString: `### Dropdown Attributes
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
 | preset          | 菜单按钮类型，同 Button 组件(只在\`split-button\`为 true 的情况下有效)   | string  |          —             |    —     |
@@ -69,41 +69,41 @@
 | disabled      | 禁用     | boolean          | — | false |
 | divided       | 显示分割线     | boolean          | — | false |
 | icon          | 图标类名 | string   |  —  |  —  |`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.dropdown-demo {
-		.xDropdown-link {
-			cursor: pointer;
-			color: #409eff;
-		}
-		.el-icon-arrow-down {
-			font-size: 12px;
-		}
-
-		.xDropdown-link {
-			cursor: pointer;
-			color: #409eff;
-		}
-		.el-icon-arrow-down {
-			font-size: 12px;
-		}
-		.demonstration {
-			display: block;
-			color: #8492a6;
-			font-size: 14px;
-			margin-bottom: 20px;
-		}
-		.xDropdown-link {
-			cursor: pointer;
-			color: #409eff;
-		}
-		.el-icon-arrow-down {
-			font-size: 12px;
-		}
+.dropdown-demo {
+	.xDropdown-link {
+		cursor: pointer;
+		color: #409eff;
 	}
+	.el-icon-arrow-down {
+		font-size: 12px;
+	}
+
+	.xDropdown-link {
+		cursor: pointer;
+		color: #409eff;
+	}
+	.el-icon-arrow-down {
+		font-size: 12px;
+	}
+	.demonstration {
+		display: block;
+		color: #8492a6;
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	.xDropdown-link {
+		cursor: pointer;
+		color: #409eff;
+	}
+	.el-icon-arrow-down {
+		font-size: 12px;
+	}
+}
 </style>

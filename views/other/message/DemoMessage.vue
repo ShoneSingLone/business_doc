@@ -48,13 +48,13 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		/* 用于加载样式，实际使用中是懒加载，不用担心 */
-		_.$importVue("/common/ui-x/directive/xMessage/xMessage.vue");
-		return {
-			data() {
-				return {
-					md1: `## Message 消息提示
+export default async function () {
+	/* 用于加载样式，实际使用中是懒加载，不用担心 */
+	_.$importVue("/common/ui-x/directive/xMessage/xMessage.vue");
+	return {
+		data() {
+			return {
+				md1: `## Message 消息提示
 
 常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。
 
@@ -63,7 +63,7 @@
 - 如果需要手动关闭全部实例，可以调用 \`_.$msg.closeAll\` 方法。
 
 `,
-					apiString: `### Options
+				apiString: `### Options
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | message | 消息文字 | string / VNode | — | — |
@@ -82,18 +82,18 @@
 | 方法名 | 说明 |
 | ---- | ---- |
 | close | 关闭当前的 Message |				`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.DemoMessage-demo {
-		height: 270px;
+.DemoMessage-demo {
+	height: 270px;
 
-		> div {
-			margin-bottom: 16px;
-		}
+	> div {
+		margin-bottom: 16px;
 	}
+}
 </style>

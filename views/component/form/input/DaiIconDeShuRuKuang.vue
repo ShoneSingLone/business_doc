@@ -20,18 +20,18 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "带有图标标记输入类型\n可以通过 `prefix-icon` 和 `suffix-icon` 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标。",
-					input1: "",
-					input2: "",
-					input3: "",
-					input4: ""
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "带有图标标记输入类型\n可以通过 `prefix-icon` 和 `suffix-icon` 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标。",
+				input1: "",
+				input2: "",
+				input3: "",
+				input4: ""
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

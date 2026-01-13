@@ -7,23 +7,23 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "基于`Vue-popper`开发",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "基于`Vue-popper`开发",
+				apiString: `### Attributes
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 |onCancel |取消按钮点击事件,返回为\`真值\`则不会关闭modal|-------------------|-------------|--------|
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.popover-demo {
-	}
+.popover-demo {
+}
 </style>

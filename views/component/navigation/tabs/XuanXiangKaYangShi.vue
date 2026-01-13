@@ -10,20 +10,20 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "只需要设置 `type` 属性为 `card` 就可以使选项卡改变为标签风格。",
-					activeName: "first"
-				};
-			},
-			methods: {
-				handleClick({ tab, event }) {
-					console.log(tab, event);
-				}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "只需要设置 `type` 属性为 `card` 就可以使选项卡改变为标签风格。",
+				activeName: "first"
+			};
+		},
+		methods: {
+			handleClick({ tab, event }) {
+				console.log(tab, event);
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -14,26 +14,26 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					tags: [
-						{ name: "标签一", type: "" },
-						{ name: "标签二", type: "success" },
-						{ name: "标签三", type: "info" },
-						{ name: "标签四", type: "warning" },
-						{ name: "标签五", type: "danger" }
-					]
-				};
-			},
-			methods: {
-				handleClose(tag) {
-					_.remove(this.tags, ({ name }) => name === tag.name);
-					this.tags = [...this.tags];
-				}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				tags: [
+					{ name: "标签一", type: "" },
+					{ name: "标签二", type: "success" },
+					{ name: "标签三", type: "info" },
+					{ name: "标签四", type: "warning" },
+					{ name: "标签五", type: "danger" }
+				]
+			};
+		},
+		methods: {
+			handleClose(tag) {
+				_.remove(this.tags, ({ name }) => name === tag.name);
+				this.tags = [...this.tags];
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -37,12 +37,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: "当选项过多时，使用下拉菜单展示并选择内容。\n\n>如果 Select 的绑定值为对象类型，请务必指定 `value-key` 作为它的唯一性标识。",
-					apiString: `
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: "当选项过多时，使用下拉菜单展示并选择内容。\n\n>如果 Select 的绑定值为对象类型，请务必指定 `value-key` 作为它的唯一性标识。",
+				apiString: `
 > 如果 Select 的绑定值为对象类型，请务必指定 \`value-key\` 作为它的唯一性标识。
 
 ### Select Attributes
@@ -110,10 +110,10 @@
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | - |
 | blur | 使 input 失去焦点，并隐藏下拉框 | - | `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

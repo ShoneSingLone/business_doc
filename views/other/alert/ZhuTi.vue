@@ -9,13 +9,13 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "Alert 组件提供了两个不同的主题：`light`和`dark`。\r\r通过设置`effect`属性来改变主题，默认为`light`。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "Alert 组件提供了两个不同的主题：`light`和`dark`。\r\r通过设置`effect`属性来改变主题，默认为`light`。"
+			};
+		}
+	});
+}
 </script>

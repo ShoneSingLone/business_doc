@@ -16,43 +16,43 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				const vm = this;
-				return {
-					form: {
-						a: "",
-						b: "",
-						c: ""
-					},
-					configsBtn: {
-						preset: "blue",
-						label: "校验",
-						onClick() {
-							_.$validateForm(vm.$el);
-						}
-					},
-					rules: [
-						{
-							name: "required",
-							validator() {
-								const isFill = _.$isEveryInput(vm.form);
-								if (isFill) {
-									return "";
-								} else {
-									return i18n("至少配置一条数据");
-								}
+export default async function () {
+	return defineComponent({
+		data() {
+			const vm = this;
+			return {
+				form: {
+					a: "",
+					b: "",
+					c: ""
+				},
+				configsBtn: {
+					preset: "blue",
+					label: "校验",
+					onClick() {
+						_.$validateForm(vm.$el);
+					}
+				},
+				rules: [
+					{
+						name: "required",
+						validator() {
+							const isFill = _.$isEveryInput(vm.form);
+							if (isFill) {
+								return "";
+							} else {
+								return i18n("至少配置一条数据");
 							}
 						}
-					]
-				};
-			}
-		});
-	}
+					}
+				]
+			};
+		}
+	});
+}
 </script>
 <style lang="less">
-	.xItem-JiChuYongFa_some-class {
-		width: 132px;
-	}
+.xItem-JiChuYongFa_some-class {
+	width: 132px;
+}
 </style>

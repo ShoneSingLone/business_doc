@@ -8,20 +8,20 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {};
+export default async function () {
+	return defineComponent({
+		data() {
+			return {};
+		},
+		methods: {
+			ok() {
+				this.$emit("selected", { isOk: true });
 			},
-			methods: {
-				ok() {
-					this.$emit("selected", { isOk: true });
-				},
-				cancel() {
-					this.$emit("selected", { isOk: false });
-				}
+			cancel() {
+				this.$emit("selected", { isOk: false });
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

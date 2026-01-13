@@ -13,16 +13,16 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "使用`active-text`属性与`inactive-text`属性来设置开关的文字描述。",
-					value1: true,
-					value2: true
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "使用`active-text`属性与`inactive-text`属性来设置开关的文字描述。",
+				value1: true,
+				value2: true
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -14,41 +14,41 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "可以自定义备选项\n\n将自定义的 HTML 模板插入`el-option`的 slot 中即可。",
-					cities: [
-						{
-							value: "Beijing",
-							label: "北京"
-						},
-						{
-							value: "Shanghai",
-							label: "上海"
-						},
-						{
-							value: "Nanjing",
-							label: "南京"
-						},
-						{
-							value: "Chengdu",
-							label: "成都"
-						},
-						{
-							value: "Shenzhen",
-							label: "深圳"
-						},
-						{
-							value: "Guangzhou",
-							label: "广州"
-						}
-					],
-					value: ""
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "可以自定义备选项\n\n将自定义的 HTML 模板插入`el-option`的 slot 中即可。",
+				cities: [
+					{
+						value: "Beijing",
+						label: "北京"
+					},
+					{
+						value: "Shanghai",
+						label: "上海"
+					},
+					{
+						value: "Nanjing",
+						label: "南京"
+					},
+					{
+						value: "Chengdu",
+						label: "成都"
+					},
+					{
+						value: "Shenzhen",
+						label: "深圳"
+					},
+					{
+						value: "Guangzhou",
+						label: "广州"
+					}
+				],
+				value: ""
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

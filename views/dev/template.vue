@@ -9,13 +9,13 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {};
-			}
-		};
-	}
+export default async function () {
+	return {
+		data() {
+			return {};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

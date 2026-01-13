@@ -24,27 +24,27 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					input1: "",
-					input2: "",
-					input3: "",
-					select: "",
-					md: "可前置或后置元素，一般为标签或按钮\n可通过 slot 来指定在 input 中前置或者后置内容。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				input1: "",
+				input2: "",
+				input3: "",
+				select: "",
+				md: "可前置或后置元素，一般为标签或按钮\n可通过 slot 来指定在 input 中前置或者后置内容。"
+			};
+		}
+	});
+}
 </script>
 <style lang="less">
-	.FuHeXingShuRuKuang {
-		.el-select .el-input {
-			width: 130px;
-		}
-		.input-with-select .el-input-group__prepend {
-			background-color: #fff;
-		}
+.FuHeXingShuRuKuang {
+	.el-select .el-input {
+		width: 130px;
 	}
+	.input-with-select .el-input-group__prepend {
+		background-color: #fff;
+	}
+}
 </style>

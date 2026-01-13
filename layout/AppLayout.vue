@@ -11,18 +11,18 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			inject: ["APP"],
-			components: {
-				AppHeader: () => _.$importVue("@/layout/AppLayoutHeader.vue"),
-				AppLeft: () => _.$importVue("@/layout/AppLayoutLeft.vue")
-			},
-			computed: {
-				isShowLoading() {
-					return;
-				}
+export default async function () {
+	return defineComponent({
+		inject: ["APP"],
+		components: {
+			AppHeader: () => _.$importVue("@/layout/AppLayoutHeader.vue"),
+			AppLeft: () => _.$importVue("@/layout/AppLayoutLeft.vue")
+		},
+		computed: {
+			isShowLoading() {
+				return;
 			}
-		});
-	}
+		}
+	});
+}
 </script>

@@ -22,55 +22,55 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					dynamicTags: ["标签一", "标签二", "标签三"],
-					inputVisible: false,
-					inputValue: ""
-				};
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				dynamicTags: ["标签一", "标签二", "标签三"],
+				inputVisible: false,
+				inputValue: ""
+			};
+		},
+		methods: {
+			handleClose(tag) {
+				this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
 			},
-			methods: {
-				handleClose(tag) {
-					this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
-				},
 
-				showInput() {
-					this.inputVisible = true;
-					this.$nextTick(_ => {
-						this.$refs.saveTagInput.$refs.input.focus();
-					});
-				},
+			showInput() {
+				this.inputVisible = true;
+				this.$nextTick(_ => {
+					this.$refs.saveTagInput.$refs.input.focus();
+				});
+			},
 
-				handleInputConfirm() {
-					let inputValue = this.inputValue;
-					if (inputValue) {
-						this.dynamicTags.push(inputValue);
-					}
-					this.inputVisible = false;
-					this.inputValue = "";
+			handleInputConfirm() {
+				let inputValue = this.inputValue;
+				if (inputValue) {
+					this.dynamicTags.push(inputValue);
 				}
+				this.inputVisible = false;
+				this.inputValue = "";
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less">
-	.DongTaiBianJiBiaoQian {
-		.el-tag + .el-tag {
-			margin-left: 10px;
-		}
-		.button-new-tag {
-			margin-left: 10px;
-			height: 32px;
-			line-height: 30px;
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-		.input-new-tag {
-			width: 90px;
-			margin-left: 10px;
-			vertical-align: bottom;
-		}
+.DongTaiBianJiBiaoQian {
+	.el-tag + .el-tag {
+		margin-left: 10px;
 	}
+	.button-new-tag {
+		margin-left: 10px;
+		height: 32px;
+		line-height: 30px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.input-new-tag {
+		width: 90px;
+		margin-left: 10px;
+		vertical-align: bottom;
+	}
+}
 </style>

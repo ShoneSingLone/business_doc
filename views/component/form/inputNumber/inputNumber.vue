@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				apiString: `### Attributes
 | 参数              | 说明                     | 类型    | 可选值       | 默认值    |
 |-------------------|--------------------------|---------|--------------|-----------|
 | value / v-model   | 绑定值                   | number  | —            | 0         |
@@ -52,10 +52,10 @@
 | focus  | 使 input 获取焦点   | -    |
 | select | 选中 input 中的文字 | —    |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

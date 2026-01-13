@@ -10,14 +10,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "标题和描述都将居中。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "标题和描述都将居中。"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

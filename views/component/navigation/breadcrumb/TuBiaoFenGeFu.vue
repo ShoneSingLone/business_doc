@@ -12,40 +12,40 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "通过设置 `separator-class` 可使用相应的 `iconfont` 作为分隔符，注意这将使 `separator` 设置失效",
-					useVnode: ">**不使用**`xBreadcrumbItem`，`separator`类型可以是vNode"
-				};
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "通过设置 `separator-class` 可使用相应的 `iconfont` 作为分隔符，注意这将使 `separator` 设置失效",
+				useVnode: ">**不使用**`xBreadcrumbItem`，`separator`类型可以是vNode"
+			};
+		},
+		computed: {
+			cptSeparator() {
+				return h("xIcon", { icon: "_icon_breadcrumb" });
 			},
-			computed: {
-				cptSeparator() {
-					return h("xIcon", { icon: "_icon_breadcrumb" });
-				},
-				items() {
-					return [
-						{
-							label: "首页",
-							href: _.$aHashLink("/")
-						},
-						{
-							label: "活动管理",
-							href: _.$aHashLink("/activity")
-						},
-						{
-							label: "活动列表",
-							href: _.$aHashLink("/activity/list")
-						},
-						{
-							label: "活动列表",
-							href: _.$aHashLink("/activity/list/detail")
-						}
-					];
-				}
+			items() {
+				return [
+					{
+						label: "首页",
+						href: _.$aHashLink("/")
+					},
+					{
+						label: "活动管理",
+						href: _.$aHashLink("/activity")
+					},
+					{
+						label: "活动列表",
+						href: _.$aHashLink("/activity/list")
+					},
+					{
+						label: "活动列表",
+						href: _.$aHashLink("/activity/list/detail")
+					}
+				];
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

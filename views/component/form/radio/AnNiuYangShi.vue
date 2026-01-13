@@ -42,25 +42,25 @@
 	</xForm>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					radio1: "上海",
-					radio2: "上海",
-					radio3: "上海",
-					radio4: "上海"
-				};
-			},
-			computed: {
-				md() {
-					return `按钮样式的单选组合。
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				radio1: "上海",
+				radio2: "上海",
+				radio3: "上海",
+				radio4: "上海"
+			};
+		},
+		computed: {
+			md() {
+				return `按钮样式的单选组合。
 				
 只需要把\`el-radio\`元素换成\`xRadioButton\`元素即可，此外，Element 还提供了\`size\`属性。
 `;
-				}
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

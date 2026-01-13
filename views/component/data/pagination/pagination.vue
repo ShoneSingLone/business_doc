@@ -34,13 +34,13 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: `## Pagination 分页
+export default async function () {
+	return {
+		data() {
+			return {
+				md: `## Pagination 分页
 当数据量过多时，使用分页分解数据。`,
-					apiString: `### Attributes
+				apiString: `### Attributes
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 | small | 是否使用小型分页样式 | boolean | — | false |
@@ -71,66 +71,66 @@
 |------|--------|
 | — | 自定义内容，需要在 \`layout\` 中列出 \`slot\` |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.pagination-demo {
-		.demo-pagination {
-			.block {
-				padding: 30px 0;
-				text-align: center;
-				border-right: solid 1px #eff2f6;
-				display: inline-block;
-				width: 20%;
-				box-sizing: border-box;
-				vertical-align: top;
-				&:last-child {
-					border-right: none;
-				}
-			}
-
-			.demonstration {
-				display: block;
-				color: #8492a6;
-				font-size: 14px;
-				margin-bottom: 20px;
+.pagination-demo {
+	.demo-pagination {
+		.block {
+			padding: 30px 0;
+			text-align: center;
+			border-right: solid 1px #eff2f6;
+			display: inline-block;
+			width: 20%;
+			box-sizing: border-box;
+			vertical-align: top;
+			&:last-child {
+				border-right: none;
 			}
 		}
 
-		.demo-pagination__placeholder,
-		.demo-pagination__error {
-			@extend .demo-pagination;
-
-			.block {
-				width: 49%;
-			}
-
-			.xImg {
-				width: 300px;
-				height: 200px;
-			}
-
-			.pagination-slot {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 100%;
-				height: 100%;
-				background: #f5f7fa;
-				color: #909399;
-				font-size: 14px;
-			}
-		}
-
-		.demo-pagination__placeholder {
-			.dot {
-				animation: dot 2s infinite steps(3, start);
-				overflow: hidden;
-			}
+		.demonstration {
+			display: block;
+			color: #8492a6;
+			font-size: 14px;
+			margin-bottom: 20px;
 		}
 	}
+
+	.demo-pagination__placeholder,
+	.demo-pagination__error {
+		@extend .demo-pagination;
+
+		.block {
+			width: 49%;
+		}
+
+		.xImg {
+			width: 300px;
+			height: 200px;
+		}
+
+		.pagination-slot {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: #f5f7fa;
+			color: #909399;
+			font-size: 14px;
+		}
+	}
+
+	.demo-pagination__placeholder {
+		.dot {
+			animation: dot 2s infinite steps(3, start);
+			overflow: hidden;
+		}
+	}
+}
 </style>

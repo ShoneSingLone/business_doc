@@ -15,12 +15,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "## Collapse 折叠面板\n\n通过折叠面板收纳内容区域",
-					apiString: `### Collapse Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "## Collapse 折叠面板\n\n通过折叠面板收纳内容区域",
+				apiString: `### Collapse Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 当前激活的面板(如果是手风琴模式，绑定值类型需要为\`string\`，否则为\`array\`) | string / array | — | — |
@@ -38,13 +38,13 @@
 | title     | 面板标题        | string        | —     | —    |
 | disabled  | 是否禁用        | boolean       | —     | —    |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.DemoCollapse-demo {
-	}
+.DemoCollapse-demo {
+}
 </style>

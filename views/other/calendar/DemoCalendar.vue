@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "## Calendar 日历",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "## Calendar 日历",
+				apiString: `### Attributes
 | 参数             | 说明          | 类型      | 可选值        | 默认值  |
 |-----------------|-------------- |---------- |------------ |-------- |
 | value / v-model | 绑定值         | Date/string/number | —  | —      |
@@ -27,13 +27,13 @@
 | date            | 单元格代表的日期 | Date      | —           | —      |
 | data            | { type, isSelected, day}，\`type\` 表示该日期的所属月份，可选值有 prev-month，current-month，next-month；\`isSelected\` 标明该日期是否被选中；\`day\` 是格式化的日期，格式为 yyyy-MM-dd    | Object      | —           | —      |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.DemoCollapse-demo {
-	}
+.DemoCollapse-demo {
+}
 </style>

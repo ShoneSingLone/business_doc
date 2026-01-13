@@ -12,14 +12,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "支持三种类型：图标、图片和字符"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "支持三种类型：图标、图片和字符"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

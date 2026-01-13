@@ -19,12 +19,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: "## Switch 开关\n\n表示两种相互对立的状态间的切换，多用于触发「开/关」。",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: "## Switch 开关\n\n表示两种相互对立的状态间的切换，多用于触发「开/关」。",
+				apiString: `### Attributes
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
@@ -51,10 +51,10 @@
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 Switch 获取焦点 | - |`
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

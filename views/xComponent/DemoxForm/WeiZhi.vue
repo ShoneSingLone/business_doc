@@ -33,17 +33,17 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				const xItemInput = position => ({
-					value: "默认水平居右,垂直居左",
-					label: `${position}`,
-					tips: position,
-					msg: new Array(50).fill(position).join("\n")
-				});
-				return {
-					md: `
+export default async function () {
+	return defineComponent({
+		data() {
+			const xItemInput = position => ({
+				value: "默认水平居右,垂直居左",
+				label: `${position}`,
+				tips: position,
+				msg: new Array(50).fill(position).join("\n")
+			});
+			return {
+				md: `
 > 使用 预置class 改变label 位置
 
 \`\`\`html
@@ -51,7 +51,7 @@
 /* 默认居右 */
 <xItem :configs="xItem_left" />
 \`\`\``,
-					md2: `
+				md2: `
 ## Top-(left center right)
 
 \`\`\`html
@@ -60,29 +60,29 @@
 <xItem class="xItem-pos top center" :configs="xItemTopCenter" />
 <xItem class="xItem-pos top right" :configs="xItemTopRight" />
 \`\`\``,
-					xItem_left: xItemInput("left"),
-					xItem_right: xItemInput("right"),
-					xItemTopLeft: xItemInput("top-left"),
-					xItemTopCenter: xItemInput("top center"),
-					xItemTopRight: xItemInput("top right")
-				};
-			}
-		});
-	}
+				xItem_left: xItemInput("left"),
+				xItem_right: xItemInput("right"),
+				xItemTopLeft: xItemInput("top-left"),
+				xItemTopCenter: xItemInput("top center"),
+				xItemTopRight: xItemInput("top right")
+			};
+		}
+	});
+}
 </script>
 <style lang="less">
-	#x-form-demo-position {
-		.xForm {
-			outline: 1px solid royalblue;
-			.xFormItem {
-				outline: 1px dashed darkcyan;
-			}
-		}
-		.x-item-label-controller-wrapper {
+#x-form-demo-position {
+	.xForm {
+		outline: 1px solid royalblue;
+		.xFormItem {
 			outline: 1px dashed darkcyan;
-			.xItem_label {
-				outline: 1px dashed red;
-			}
 		}
 	}
+	.x-item-label-controller-wrapper {
+		outline: 1px dashed darkcyan;
+		.xItem_label {
+			outline: 1px dashed red;
+		}
+	}
+}
 </style>

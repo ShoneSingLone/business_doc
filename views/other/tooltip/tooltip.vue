@@ -10,12 +10,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "基于`Vue-popper`开发",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "基于`Vue-popper`开发",
+				apiString: `### Attributes
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 |  effect        |  默认提供的主题  | String            | dark/light | dark  |
@@ -34,46 +34,46 @@
 | hide-after | Tooltip 出现后自动隐藏延时，单位毫秒，为 0 则不会自动隐藏 | number | — | 0 |
 | tabindex   | Tooltip 组件的 [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) | number | — | 0 |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.tooltip-demo {
-		.tooltip-JiChuYongFa {
-			.box {
-				width: 400px;
+.tooltip-demo {
+	.tooltip-JiChuYongFa {
+		.box {
+			width: 400px;
 
-				.top {
-					text-align: center;
-				}
+			.top {
+				text-align: center;
+			}
 
-				.left {
-					float: left;
-					width: 60px;
-				}
+			.left {
+				float: left;
+				width: 60px;
+			}
 
-				.right {
-					float: right;
-					width: 60px;
-				}
+			.right {
+				float: right;
+				width: 60px;
+			}
 
-				.bottom {
-					clear: both;
-					text-align: center;
-				}
+			.bottom {
+				clear: both;
+				text-align: center;
+			}
 
-				.item {
-					margin: 4px;
-				}
+			.item {
+				margin: 4px;
+			}
 
-				.left .el-tooltip__popper,
-				.right .el-tooltip__popper {
-					padding: 8px 10px;
-				}
+			.left .el-tooltip__popper,
+			.right .el-tooltip__popper {
+				padding: 8px 10px;
 			}
 		}
 	}
+}
 </style>

@@ -7,14 +7,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					value: false
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				value: false
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

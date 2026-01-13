@@ -5,14 +5,14 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					input: ""
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				input: ""
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

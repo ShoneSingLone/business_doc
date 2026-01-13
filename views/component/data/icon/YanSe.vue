@@ -19,12 +19,12 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		const colorArray = ["red", "yellow", "blue", "green", "pink"];
-		return defineComponent({
-			data() {
-				return {
-					md: `
+export default async function () {
+	const colorArray = ["red", "yellow", "blue", "green", "pink"];
+	return defineComponent({
+		data() {
+			return {
+				md: `
 - 首先保证.svg文件里面的\`fill: currentColor;\`
 
 \`\`\`html
@@ -33,23 +33,23 @@
 </svg>
 \`\`\`
 `,
-					colorArray,
-					count: 0,
-					color1: "red",
-					color2: "yellow"
-				};
-			},
-			computed: {
-				md2() {
-					return `- 用\`color\`属性\`style="color:red;"\`
+				colorArray,
+				count: 0,
+				color1: "red",
+				color2: "yellow"
+			};
+		},
+		computed: {
+			md2() {
+				return `- 用\`color\`属性\`style="color:red;"\`
 - 直接加在元素\`xIcon\`上
 \`\`\`html
 <xIcon icon="icon_loading" class="empty" style="color:${this.color1}" />
 \`\`\`
 `;
-				},
-				md3() {
-					return `- 加在\`xIcon\`的parents上，作用范围与字体颜色一致。
+			},
+			md3() {
+				return `- 加在\`xIcon\`的parents上，作用范围与字体颜色一致。
 \`\`\`html
 <div style="color:${this.color2}"">
 		<div>
@@ -60,23 +60,23 @@
 	</div>
 \`\`\`
 `;
-				}
-			},
-			setup() {
-				let timmer;
-				onMounted(() => {
-					timmer = setInterval(() => {
-						const count = ++this.count % colorArray.length;
-						this.color1 = colorArray[count];
-						this.color2 = colorArray[(1 + count) % colorArray.length];
-						this.count = count;
-					}, 1000);
-				});
-				onBeforeUnmount(() => {
-					clearInterval(timmer);
-				});
 			}
-		});
-	}
+		},
+		setup() {
+			let timmer;
+			onMounted(() => {
+				timmer = setInterval(() => {
+					const count = ++this.count % colorArray.length;
+					this.color1 = colorArray[count];
+					this.color2 = colorArray[(1 + count) % colorArray.length];
+					this.count = count;
+				}, 1000);
+			});
+			onBeforeUnmount(() => {
+				clearInterval(timmer);
+			});
+		}
+	});
+}
 </script>
 <style lang="less"></style>

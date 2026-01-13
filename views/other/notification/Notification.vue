@@ -26,21 +26,21 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			setup(props) {
-				return {
-					contents: "contents"
-				};
-			},
-			data() {
-				return {
-					md1: `## Notification 通知
+export default async function () {
+	return {
+		setup(props) {
+			return {
+				contents: "contents"
+			};
+		},
+		data() {
+			return {
+				md1: `## Notification 通知
 适用性广泛的通知栏
 悬浮出现在页面角落，显示全局的通知提醒消息。
 >直接使用工具函数 \`_.$notify\`
 `,
-					apiString: `### Options
+				apiString: `### Options
 | 参数                     | 说明                                                                     | 类型                   | 可选值                                      | 默认值    |
 |--------------------------|--------------------------------------------------------------------------|------------------------|---------------------------------------------|-----------|
 | position                 | 自定义弹出位置                                                           | string                 | top-right/top-left/bottom-right/bottom-left | top-right |
@@ -57,10 +57,10 @@
 | title                    | 标题                                                                     | string                 | —                                           | —         |
 
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

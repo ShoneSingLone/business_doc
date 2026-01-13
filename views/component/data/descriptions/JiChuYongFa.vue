@@ -8,9 +8,9 @@
 	</xForm>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			inject: ["DemoDescriptions"]
-		});
-	}
+export default async function () {
+	return defineComponent({
+		inject: ["DemoDescriptions"]
+	});
+}
 </script>

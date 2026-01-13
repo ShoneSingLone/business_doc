@@ -12,37 +12,37 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "为`el-select`设置`disabled`属性，则整个选择器不可用",
-					options: [
-						{
-							value: "选项1",
-							label: "黄金糕"
-						},
-						{
-							value: "选项2",
-							label: "双皮奶"
-						},
-						{
-							value: "选项3",
-							label: "蚵仔煎"
-						},
-						{
-							value: "选项4",
-							label: "龙须面"
-						},
-						{
-							value: "选项5",
-							label: "北京烤鸭"
-						}
-					],
-					value: ""
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "为`el-select`设置`disabled`属性，则整个选择器不可用",
+				options: [
+					{
+						value: "选项1",
+						label: "黄金糕"
+					},
+					{
+						value: "选项2",
+						label: "双皮奶"
+					},
+					{
+						value: "选项3",
+						label: "蚵仔煎"
+					},
+					{
+						value: "选项4",
+						label: "龙须面"
+					},
+					{
+						value: "选项5",
+						label: "北京烤鸭"
+					}
+				],
+				value: ""
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

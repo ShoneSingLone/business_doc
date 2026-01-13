@@ -14,15 +14,15 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "改变`step`的值可以改变步长，通过设置`show-stops`属性可以显示间断点",
-					value: 0
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "改变`step`的值可以改变步长，通过设置`show-stops`属性可以显示间断点",
+				value: 0
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

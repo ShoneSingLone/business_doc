@@ -6,21 +6,21 @@
 	</xForm>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data(vm) {
-				return {
-					formSearch: defItems({
-						queryName: {
-							label: "名称/ID",
-							itemType: "xItemSwitch",
-							value: 0.1,
-							activeValue: 0.1,
-							inactiveValue: 0
-						}
-					})
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data(vm) {
+			return {
+				formSearch: defItems({
+					queryName: {
+						label: "名称/ID",
+						itemType: "xItemSwitch",
+						value: 0.1,
+						activeValue: 0.1,
+						inactiveValue: 0
+					}
+				})
+			};
+		}
+	});
+}
 </script>

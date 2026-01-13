@@ -27,12 +27,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: "DatePicker 日期选择器\n\n 用于选择或输入日期",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: "DatePicker 日期选择器\n\n 用于选择或输入日期",
+				apiString: `### Attributes
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
@@ -88,17 +88,17 @@
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | — |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.demo-input {
-		.el-input,
-		.el-textarea {
-			width: 500px;
-		}
+.demo-input {
+	.el-input,
+	.el-textarea {
+		width: 500px;
 	}
+}
 </style>

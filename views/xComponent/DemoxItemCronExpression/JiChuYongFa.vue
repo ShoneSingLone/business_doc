@@ -8,25 +8,25 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			components: {
-				xItemCronExpression: () =>
-					_.$importVue(
-						"/common/ui-x/common/xItem/xItemCronExpression/xItemCronExpression.vue"
-					)
-			},
-			data() {
-				return {
-					cronValue: "****",
-					cron: defItem({
-						label: "cron-expression",
-						itemType: "xItemCronExpression",
-						msg: ``,
-						rules: []
-					})
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		components: {
+			xItemCronExpression: () =>
+				_.$importVue(
+					"/common/ui-x/common/xItem/xItemCronExpression/xItemCronExpression.vue"
+				)
+		},
+		data() {
+			return {
+				cronValue: "****",
+				cron: defItem({
+					label: "cron-expression",
+					itemType: "xItemCronExpression",
+					msg: ``,
+					rules: []
+				})
+			};
+		}
+	});
+}
 </script>

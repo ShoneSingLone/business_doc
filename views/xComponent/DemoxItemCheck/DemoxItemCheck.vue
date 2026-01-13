@@ -14,12 +14,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					md: "# xItemCheck \r\r多选组件，类似checkbox，但是可以扩展展示效果。",
-					apiString: `## xItemCheck
+export default async function () {
+	return {
+		data() {
+			return {
+				md: "# xItemCheck \r\r多选组件，类似checkbox，但是可以扩展展示效果。",
+				apiString: `## xItemCheck
 
 \`\`\`css
 
@@ -44,10 +44,10 @@ input[type="checkbox"]:checked::after {
     color: green;
 }
 \`\`\``
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less"></style>

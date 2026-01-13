@@ -25,18 +25,18 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					input1: "",
-					input2: "",
-					input3: "",
-					input4: "",
-					md: "可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 medium、small 和 mini 三种尺寸。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				input1: "",
+				input2: "",
+				input3: "",
+				input4: "",
+				md: "可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 medium、small 和 mini 三种尺寸。"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

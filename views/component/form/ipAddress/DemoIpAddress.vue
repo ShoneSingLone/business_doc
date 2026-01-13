@@ -11,25 +11,25 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: "asdfasdf",
-					apiString: `### Ip Address
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: "asdfasdf",
+				apiString: `### Ip Address
 
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.demo-input {
-		.el-input,
-		.el-textarea {
-			width: 500px;
-		}
+.demo-input {
+	.el-input,
+	.el-textarea {
+		width: 500px;
 	}
+}
 </style>

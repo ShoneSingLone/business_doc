@@ -6,49 +6,49 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			setup() {
-				const refBorder1 = ref();
-				const borderStyle = reactive({ width: "500px" });
-				return {
-					refBorder1,
-					borderStyle,
-					moveOptions: {
-						left: 0,
-						width: 0,
-						onStart() {
-							this.width = refBorder1.value.clientWidth;
-						},
-						onMoving({ clickEvent, movingEvent }) {
-							const offsetLeft = movingEvent.clientX - clickEvent.clientX;
-							borderStyle.width = `${this.width + offsetLeft}px`;
-						}
+export default async function () {
+	return defineComponent({
+		setup() {
+			const refBorder1 = ref();
+			const borderStyle = reactive({ width: "500px" });
+			return {
+				refBorder1,
+				borderStyle,
+				moveOptions: {
+					left: 0,
+					width: 0,
+					onStart() {
+						this.width = refBorder1.value.clientWidth;
+					},
+					onMoving({ clickEvent, movingEvent }) {
+						const offsetLeft = movingEvent.clientX - clickEvent.clientX;
+						borderStyle.width = `${this.width + offsetLeft}px`;
 					}
-				};
-			}
-		});
-	}
+				}
+			};
+		}
+	});
+}
 </script>
 <style lang="less">
-	.move-demo {
-		.border1 {
-			border: 1px solid red;
-			height: 500px;
-		}
-		.gap {
-			background-color: black;
-			height: 500px;
-			width: 10px;
+.move-demo {
+	.border1 {
+		border: 1px solid red;
+		height: 500px;
+	}
+	.gap {
+		background-color: black;
+		height: 500px;
+		width: 10px;
 
-			&:hover {
-				cursor: ew-resize;
-			}
-		}
-		.border2 {
-			height: 500px;
-			width: 100px;
-			border: 1px solid green;
+		&:hover {
+			cursor: ew-resize;
 		}
 	}
+	.border2 {
+		height: 500px;
+		width: 100px;
+		border: 1px solid green;
+	}
+}
 </style>

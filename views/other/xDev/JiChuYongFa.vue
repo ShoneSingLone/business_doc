@@ -3,11 +3,11 @@
 		<h3>基础用法</h3>
 		<p>xDev 组件用于展示调试信息，默认折叠状态。</p>
 		<xDev :contents="demoData" @close="handleClose" />
-		
+
 		<h3>展示复杂数据</h3>
 		<p>支持展示任意JavaScript对象，包括嵌套结构。</p>
 		<xDev :contents="complexData" @close="handleClose" />
-		
+
 		<h3>实时数据</h3>
 		<p>可以动态更新展示内容。</p>
 		<xDev :contents="realTimeData" @close="handleClose" />
@@ -86,22 +86,22 @@ export default async function () {
 <style lang="less">
 .demo-xdev-basic {
 	padding: 20px;
-	
+
 	h3 {
 		margin: 20px 0 10px 0;
 		font-size: 16px;
 		font-weight: bold;
 	}
-	
+
 	p {
 		margin: 10px 0;
 		color: #606266;
 	}
-	
+
 	button {
 		margin: 10px 0;
 	}
-	
+
 	.x-dev-component {
 		margin: 10px 0;
 	}

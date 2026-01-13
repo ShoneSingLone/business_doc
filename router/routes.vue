@@ -1,17 +1,17 @@
 <script lang="ts">
-	export default async function () {
-		const ComponentPageRouterView = {
-			render(h) {
-				return hDiv({ class: "x-page-view Demo-view" }, [
-					h("xPageContent", [h("router-view")])
-				]);
-			}
-		};
-		const ComponentRouterView = {
-			render(h) {
-				return h("router-view");
-			}
-		};
+export default async function () {
+	const ComponentPageRouterView = {
+		render(h) {
+			return hDiv({ class: "x-page-view Demo-view" }, [
+				h("xPageContent", [h("router-view")])
+			]);
+		}
+	};
+	const ComponentRouterView = {
+		render(h) {
+			return h("router-view");
+		}
+	};
 
 	return [
 		_.$newRoute("/all", "@/views/ViewAllProject.vue"),

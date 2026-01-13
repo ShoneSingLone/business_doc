@@ -7,22 +7,22 @@
 	</xForm>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					radio: "选中且禁用"
-				};
-			},
-			computed: {
-				md() {
-					return `单选框不可用的状态。
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				radio: "选中且禁用"
+			};
+		},
+		computed: {
+			md() {
+				return `单选框不可用的状态。
                 
 只要在\`el-radio\`元素中设置\`disabled\`属性即可，它接受一个\`Boolean\`，\`true\`为禁用。
 `;
-				}
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -18,23 +18,23 @@
 	</ul>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {};
+		}
+	});
+}
 </script>
 <style lang="less">
-	ul.ZiDingYiYanSe_demo-ripple {
-		li {
-			height: 48px;
-			padding: 10px;
-			.ripple-change-text-color {
-				text-align: left;
-				text-indent: 16px;
-			}
+ul.ZiDingYiYanSe_demo-ripple {
+	li {
+		height: 48px;
+		padding: 10px;
+		.ripple-change-text-color {
+			text-align: left;
+			text-indent: 16px;
 		}
 	}
+}
 </style>

@@ -24,12 +24,12 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: "## Slider 滑块\n\n通过拖动滑块在一个固定区间内进行选择",
-					apiString: `### Attributes
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: "## Slider 滑块\n\n通过拖动滑块在一个固定区间内进行选择",
+				apiString: `### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | number | — | 0 |
@@ -57,17 +57,17 @@
 | change | 值改变时触发（使用鼠标拖曳时，只在松开鼠标后触发） | 改变后的值 |
 | input | 数据改变时触发（使用鼠标拖曳时，活动过程实时触发） | 改变后的值 |
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.DemoSlider {
-		.block {
-			width: 100%;
-			padding: 16px;
-		}
+.DemoSlider {
+	.block {
+		width: 100%;
+		padding: 16px;
 	}
+}
 </style>

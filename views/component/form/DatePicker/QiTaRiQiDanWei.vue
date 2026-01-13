@@ -38,20 +38,20 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					value1: "",
-					value2: "",
-					value3: "",
-					value4: "",
-					value5: "",
-					value6: "",
-					md: "通过扩展基础的日期选择，可以选择周、月、年或多个日期"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				value1: "",
+				value2: "",
+				value3: "",
+				value4: "",
+				value5: "",
+				value6: "",
+				md: "通过扩展基础的日期选择，可以选择周、月、年或多个日期"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -26,20 +26,20 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "通过设置绑定值自定义滑块的初始值",
-					value: 0
-				};
-			},
-			methods: {
-				formatTooltip(val) {
-					return val / 100;
-				}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "通过设置绑定值自定义滑块的初始值",
+				value: 0
+			};
+		},
+		methods: {
+			formatTooltip(val) {
+				return val / 100;
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

@@ -9,13 +9,13 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "使用 `center` 属性让文字水平居中。"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "使用 `center` 属性让文字水平居中。"
+			};
+		}
+	});
+}
 </script>

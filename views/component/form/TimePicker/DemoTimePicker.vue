@@ -22,15 +22,15 @@
 </template>
 
 <script lang="ts">
-	export default async function () {
-		return {
-			data() {
-				return {
-					mdTips: `### TimePicker 日期时间选择器
+export default async function () {
+	return {
+		data() {
+			return {
+				mdTips: `### TimePicker 日期时间选择器
 
 用于选择或输入时间
 `,
-					apiString: `### Attributes
+				apiString: `### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date(TimePicker) / array(DateTimeRangePicker) | — | — |
@@ -89,17 +89,17 @@
 | range-separator  | 自定义分隔符 |
 
 `
-				};
-			}
-		};
-	}
+			};
+		}
+	};
+}
 </script>
 
 <style lang="less">
-	.demo-input {
-		.el-input,
-		.el-textarea {
-			width: 500px;
-		}
+.demo-input {
+	.el-input,
+	.el-textarea {
+		width: 500px;
 	}
+}
 </style>

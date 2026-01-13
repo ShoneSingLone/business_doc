@@ -45,28 +45,28 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: ` `,
-					isCollapse: true
-				};
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: ` `,
+				isCollapse: true
+			};
+		},
+		methods: {
+			handleOpen(key, keyPath) {
+				console.log(key, keyPath);
+				_.$msgSuccess(`${key} + ${keyPath}`);
 			},
-			methods: {
-				handleOpen(key, keyPath) {
-					console.log(key, keyPath);
-					_.$msgSuccess(`${key} + ${keyPath}`);
-				},
-				handleClose(key, keyPath) {
-					console.log(key, keyPath);
-					_.$msgSuccess(`${key} + ${keyPath}`);
-				},
-				handleSelect(key, keyPath) {
-					_.$msgSuccess(`${key} + ${keyPath}`);
-				}
+			handleClose(key, keyPath) {
+				console.log(key, keyPath);
+				_.$msgSuccess(`${key} + ${keyPath}`);
+			},
+			handleSelect(key, keyPath) {
+				_.$msgSuccess(`${key} + ${keyPath}`);
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>

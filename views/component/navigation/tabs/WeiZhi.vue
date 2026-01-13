@@ -17,15 +17,15 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: '可以通过 `tab-position` 设置标签的位置\n标签一共有四个方向的设置 `tabPosition="left|right|top|bottom"`',
-					tabPosition: "left"
-				};
-			}
-		});
-	}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: '可以通过 `tab-position` 设置标签的位置\n标签一共有四个方向的设置 `tabPosition="left|right|top|bottom"`',
+				tabPosition: "left"
+			};
+		}
+	});
+}
 </script>
 <style lang="less"></style>

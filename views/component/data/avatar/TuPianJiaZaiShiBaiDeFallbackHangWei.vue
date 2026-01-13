@@ -7,19 +7,19 @@
 	</div>
 </template>
 <script lang="ts">
-	export default async function () {
-		return defineComponent({
-			data() {
-				return {
-					md: "当展示类型为图片的时候，图片加载失败的 fallback 行为"
-				};
-			},
-			methods: {
-				errorHandler() {
-					return true;
-				}
+export default async function () {
+	return defineComponent({
+		data() {
+			return {
+				md: "当展示类型为图片的时候，图片加载失败的 fallback 行为"
+			};
+		},
+		methods: {
+			errorHandler() {
+				return true;
 			}
-		});
-	}
+		}
+	});
+}
 </script>
 <style lang="less"></style>
