@@ -18,38 +18,38 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle:
-					"可配置定义更丰富的内容展示。\n配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。",
-				currentDate: _.$dateFormat()
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle:
+						"可配置定义更丰富的内容展示。\n配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。",
+					currentDate: _.$dateFormat()
+				};
+			}
+		});
+	}
 </script>
 <style lang="less">
-.card-DaiTuPian {
-	.time {
-		font-size: 13px;
-		color: #999;
-	}
+	.card-DaiTuPian {
+		.time {
+			font-size: 13px;
+			color: #999;
+		}
 
-	.bottom {
-		margin-top: 13px;
-		line-height: 12px;
-	}
+		.bottom {
+			margin-top: 13px;
+			line-height: 12px;
+		}
 
-	.button {
-		padding: 0;
-		float: right;
-	}
+		.button {
+			padding: 0;
+			float: right;
+		}
 
-	.image {
-		width: 100%;
-		display: block;
+		.image {
+			width: 100%;
+			display: block;
+		}
 	}
-}
 </style>

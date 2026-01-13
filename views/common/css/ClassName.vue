@@ -26,11 +26,11 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: `
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: `
 通过在html节点\`data-theme="tiny"\`指定默认主题
 \`\`\`html
 <html lang="zh-CN" data-theme="tiny">
@@ -58,9 +58,9 @@ $(window).on("x_ui_theme_change", function(e, theme) {
 });
 \`\`\`
 `
-			};
-		}
-	});
-}
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

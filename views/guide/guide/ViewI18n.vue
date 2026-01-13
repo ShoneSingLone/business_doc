@@ -23,20 +23,20 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md2: "默认使用`I18N_LANGUAGE`对应的语言文件生成i18n函数，可通过`_.$newI18n()`生成其他转换函数",
-				md: `运行 \`pnpm i18n 对应的APP_NAME\` 即可生成对应的i18n文件，
+	export default async function () {
+		return {
+			data() {
+				return {
+					md2: "默认使用`I18N_LANGUAGE`对应的语言文件生成i18n函数，可通过`_.$newI18n()`生成其他转换函数",
+					md: `运行 \`pnpm i18n 对应的APP_NAME\` 即可生成对应的i18n文件，
 如： \`pnpm i18n doc\`,
 **不要**加前面的 \`business_\`
 >注意：应用里面的i18n优先级更高，会覆盖common里面的同名字段
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

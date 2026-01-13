@@ -13,15 +13,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle:
-					"以按钮组的方式出现，常用于多项类似操作。\n\n使用`<xBtnGroup>`标签来嵌套你的按钮。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle:
+						"以按钮组的方式出现，常用于多项类似操作。\n\n使用`<xBtnGroup>`标签来嵌套你的按钮。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

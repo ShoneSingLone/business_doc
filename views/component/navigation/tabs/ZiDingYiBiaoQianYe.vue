@@ -15,14 +15,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "可以通过具名 `slot` 来实现自定义标签页的内容"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "可以通过具名 `slot` 来实现自定义标签页的内容"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

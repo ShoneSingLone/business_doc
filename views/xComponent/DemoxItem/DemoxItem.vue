@@ -18,19 +18,19 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `### xItem Events
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `### xItem Events
 
 | Name     | Description                        | Type                                                                |
 | -------- | ---------------------------------- | ------------------------------------------------------------------- |
 | \`setup\` | setup 运行时 emit 当前实例. | \`({xItem}) => void\`                               |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

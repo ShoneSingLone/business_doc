@@ -15,12 +15,12 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: "## Timeline 时间线",
-				apiString: `### Timeline Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: "## Timeline 时间线",
+					apiString: `### Timeline Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | reverse | 指定节点排序方向，默认为正序 | boolean | — | false |
@@ -42,13 +42,13 @@ export default async function () {
 | — | Timeline-Item 的内容 |
 | dot | 自定义节点 |
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.popover-demo {
-}
+	.popover-demo {
+	}
 </style>

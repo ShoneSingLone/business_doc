@@ -16,14 +16,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "设置 `simple` 可应用简洁风格，该条件下 `align-center` / `description` / `direction` / `space` 都将失效。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "设置 `simple` 可应用简洁风格，该条件下 `align-center` / `description` / `direction` / `space` 都将失效。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

@@ -25,17 +25,17 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "若先选择开始时间，则结束时间内备选项的状态会随之改变",
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "若先选择开始时间，则结束时间内备选项的状态会随之改变",
 
-				startTime: "",
-				endTime: ""
-			};
-		}
-	});
-}
+					startTime: "",
+					endTime: ""
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

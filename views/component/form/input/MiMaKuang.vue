@@ -5,15 +5,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				input: "",
-				md: "使用`show-password`属性即可得到一个可切换显示隐藏的密码框"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					input: "",
+					md: "使用`show-password`属性即可得到一个可切换显示隐藏的密码框"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

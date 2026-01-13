@@ -8,18 +8,18 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "额外提供了 `medium`、`small`、`mini` 三种尺寸的数字输入框",
-				num1: 1,
-				num2: 1,
-				num3: 1,
-				num4: 1
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "额外提供了 `medium`、`small`、`mini` 三种尺寸的数字输入框",
+					num1: 1,
+					num2: 1,
+					num3: 1,
+					num4: 1
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

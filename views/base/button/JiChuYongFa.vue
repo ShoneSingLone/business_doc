@@ -39,28 +39,28 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		methods: {
-			async testLoading() {
-				_.$msgSuccess("点击成功");
-				await _.$sleep(1000 * 3);
-				_.$msgSuccess("等待结束");
+	export default async function () {
+		return defineComponent({
+			methods: {
+				async testLoading() {
+					_.$msgSuccess("点击成功");
+					await _.$sleep(1000 * 3);
+					_.$msgSuccess("等待结束");
+				}
+			},
+			data() {
+				return {
+					mdTitle:
+						"基础的按钮用法。\n\n使用`preset`、`plain`、`round`和`circle`属性来定义 Button 的样式。"
+				};
 			}
-		},
-		data() {
-			return {
-				mdTitle:
-					"基础的按钮用法。\n\n使用`preset`、`plain`、`round`和`circle`属性来定义 Button 的样式。"
-			};
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less">
-.card-JiChuYongFa {
-	button {
-		margin-top: 8px;
+	.card-JiChuYongFa {
+		button {
+			margin-top: 8px;
+		}
 	}
-}
 </style>

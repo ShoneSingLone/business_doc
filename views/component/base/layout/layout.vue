@@ -23,14 +23,14 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: `## Layout 布局
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: `## Layout 布局
 
 通过基础的 24 分栏，迅速简便地创建布局。`,
-				apiString: `### Row Attributes
+					apiString: `### Row Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | gutter | 栅格间隔 | number | — | 0 |
@@ -52,39 +52,39 @@ export default async function () {
 | lg | \`≥1200px\` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | xl | \`≥1920px\` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | tag | 自定义元素标签 | string | * | div |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.layout-demo {
-	.el-row {
-		margin-bottom: 20px;
-		&:last-child {
-			margin-bottom: 0;
+	.layout-demo {
+		.el-row {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.el-col {
+			border-radius: 4px;
+		}
+		.bg-purple-dark {
+			background: #99a9bf;
+		}
+		.bg-purple {
+			background: #d3dce6;
+		}
+		.bg-purple-light {
+			background: #e5e9f2;
+		}
+		.grid-content {
+			border-radius: 4px;
+			min-height: 36px;
+		}
+		.row-bg {
+			padding: 10px 0;
+			background-color: #f9fafc;
 		}
 	}
-	.el-col {
-		border-radius: 4px;
-	}
-	.bg-purple-dark {
-		background: #99a9bf;
-	}
-	.bg-purple {
-		background: #d3dce6;
-	}
-	.bg-purple-light {
-		background: #e5e9f2;
-	}
-	.grid-content {
-		border-radius: 4px;
-		min-height: 36px;
-	}
-	.row-bg {
-		padding: 10px 0;
-		background-color: #f9fafc;
-	}
-}
 </style>

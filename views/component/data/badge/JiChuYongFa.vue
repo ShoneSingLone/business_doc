@@ -52,33 +52,33 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle: "展示新消息数量。"
-			};
-		},
-		methods: {
-			renderIcon() {
-				return hxIcon({ icon: "save" });
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle: "展示新消息数量。"
+				};
+			},
+			methods: {
+				renderIcon() {
+					return hxIcon({ icon: "save" });
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less">
-.card-JiChuYongFa {
-	.text {
-		font-size: 14px;
-	}
+	.card-JiChuYongFa {
+		.text {
+			font-size: 14px;
+		}
 
-	.item {
-		margin-bottom: 18px;
-	}
+		.item {
+			margin-bottom: 18px;
+		}
 
-	.box-card {
-		width: 480px;
+		.box-card {
+			width: 480px;
+		}
 	}
-}
 </style>

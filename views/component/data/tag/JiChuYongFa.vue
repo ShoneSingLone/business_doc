@@ -9,11 +9,11 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {};
+			}
+		});
+	}
 </script>

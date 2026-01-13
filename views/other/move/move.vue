@@ -7,16 +7,16 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: "基于`xLayer`",
-				apiString: ``
-			};
-		}
-	};
-}
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: "基于`xLayer`",
+					apiString: ``
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

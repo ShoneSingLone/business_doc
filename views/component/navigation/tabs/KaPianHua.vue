@@ -10,15 +10,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "将`type`设置为`border-card`",
-				activeName: "second"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "将`type`设置为`border-card`",
+					activeName: "second"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

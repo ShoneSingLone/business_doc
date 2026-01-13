@@ -4,8 +4,8 @@
 	</DocContentOfDemo>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({});
-}
+	export default async function () {
+		return defineComponent({});
+	}
 </script>
 <style lang="less"></style>

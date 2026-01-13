@@ -6,16 +6,16 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: `多选框不可用状态。\n\n设置\`disabled\`属性即可。`,
-				checked1: false,
-				checked2: true
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: `多选框不可用状态。\n\n设置\`disabled\`属性即可。`,
+					checked1: false,
+					checked2: true
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

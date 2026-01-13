@@ -14,13 +14,13 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: `## Image 图片
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: `## Image 图片
 图片容器，在保留原生img的特性下，支持懒加载，自定义占位、加载失败等`,
-				apiString: `### Attributes
+					apiString: `### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | src | 图片源，同原生 | string | — | - |
@@ -43,58 +43,58 @@ export default async function () {
 |---------|-------------|
 | placeholder | 图片未加载的占位内容 |
 | error | 加载失败的内容 |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.image-demo {
-	.block {
-		padding: 30px 0;
-		text-align: center;
-		border-right: solid 1px #eff2f6;
-		display: inline-block;
-		width: 20%;
-		box-sizing: border-box;
-		vertical-align: top;
-		&:last-child {
-			border-right: none;
+	.image-demo {
+		.block {
+			padding: 30px 0;
+			text-align: center;
+			border-right: solid 1px #eff2f6;
+			display: inline-block;
+			width: 20%;
+			box-sizing: border-box;
+			vertical-align: top;
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		.demonstration {
+			display: block;
+			color: #8492a6;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+
+		.xImg {
+			width: 300px;
+			height: 200px;
+		}
+
+		.image-slot {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: #f5f7fa;
+			color: #909399;
+			font-size: 14px;
+		}
+
+		.dot {
+			animation: dot 2s infinite steps(3, start);
+			overflow: hidden;
+		}
+
+		.demo-image__error {
+			width: 200px;
+			height: 200px;
 		}
 	}
-
-	.demonstration {
-		display: block;
-		color: #8492a6;
-		font-size: 14px;
-		margin-bottom: 20px;
-	}
-
-	.xImg {
-		width: 300px;
-		height: 200px;
-	}
-
-	.image-slot {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		background: #f5f7fa;
-		color: #909399;
-		font-size: 14px;
-	}
-
-	.dot {
-		animation: dot 2s infinite steps(3, start);
-		overflow: hidden;
-	}
-
-	.demo-image__error {
-		width: 200px;
-		height: 200px;
-	}
-}
 </style>

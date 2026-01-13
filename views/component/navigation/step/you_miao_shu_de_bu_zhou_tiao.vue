@@ -9,19 +9,19 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "每个步骤有其对应的步骤状态描述。"
-			};
-		},
-		methods: {
-			next() {
-				if (this.active++ > 2) this.active = 0;
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "每个步骤有其对应的步骤状态描述。"
+				};
+			},
+			methods: {
+				next() {
+					if (this.active++ > 2) this.active = 0;
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

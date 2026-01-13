@@ -19,15 +19,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle: "可通过`slot = placeholder`可自定义占位内容",
-				src: "xxxxxxxxxx"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle: "可通过`slot = placeholder`可自定义占位内容",
+					src: "xxxxxxxxxx"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

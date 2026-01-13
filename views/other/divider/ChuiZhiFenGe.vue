@@ -9,7 +9,7 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return {};
-}
+	export default async function () {
+		return {};
+	}
 </script>

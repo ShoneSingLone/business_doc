@@ -5,20 +5,20 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({});
-}
+	export default async function () {
+		return defineComponent({});
+	}
 </script>
 <style lang="less">
-.icon-demo {
-	.empty {
-		width: 64px;
-		height: 64px;
+	.icon-demo {
+		.empty {
+			width: 64px;
+			height: 64px;
 
-		&.img {
-			width: 100px;
-			height: auto;
+			&.img {
+				width: 100px;
+				height: auto;
+			}
 		}
 	}
-}
 </style>

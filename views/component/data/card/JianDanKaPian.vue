@@ -9,28 +9,28 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle: "卡片可以只有内容区域。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle: "卡片可以只有内容区域。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less">
-.card-JianDanKaPian {
-	.text {
-		font-size: 14px;
-	}
+	.card-JianDanKaPian {
+		.text {
+			font-size: 14px;
+		}
 
-	.item {
-		padding: 18px 0;
-	}
+		.item {
+			padding: 18px 0;
+		}
 
-	.box-card {
-		width: 480px;
+		.box-card {
+			width: 480px;
+		}
 	}
-}
 </style>

@@ -10,11 +10,11 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: `## Drawer 抽屉
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: `## Drawer 抽屉
 有些时候, \`Dialog\` 组件并不满足我们的需求, 比如你的表单很长, 亦或是你需要临时展示一些文档, \`Drawer\` 拥有和 \`Dialog\` 几乎相同的 API, 在 UI 上带来不一样的体验.
 
 > Drawer 的内容是懒渲染的，即在第一次被打开之前，传入的默认 slot 不会被渲染到 DOM 上。因此，如果需要执行 DOM 操作，或通过 \`ref\` 获取相应组件，请在 \`open\` 事件回调中进行。
@@ -23,7 +23,7 @@ export default async function () {
 
 > 如果 \`visible\` 属性绑定的变量位于 Vuex 的 store 内，那么 \`.sync\` 不会正常工作。此时需要去除 \`.sync\` 修饰符，同时监听 Drawer 的 \`open\` 和 \`close\` 事件，在事件回调中执行 Vuex 中对应的 mutation 更新 \`visible\` 属性绑定的变量的值。
 `,
-				apiString: `### Drawer Attributes
+					apiString: `### Drawer Attributes
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
@@ -64,18 +64,18 @@ export default async function () {
 | close  | Drawer 关闭的回调 | — |
 | closed | Drawer 关闭动画结束时的回调 | — |
 				`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.DemoMessage-demo {
-	height: 270px;
+	.DemoMessage-demo {
+		height: 270px;
 
-	> div {
-		margin-bottom: 16px;
+		> div {
+			margin-bottom: 16px;
+		}
 	}
-}
 </style>

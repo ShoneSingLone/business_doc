@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				mdTips: `### DateTimePicker 日期时间选择器
+	export default async function () {
+		return {
+			data() {
+				return {
+					mdTips: `### DateTimePicker 日期时间选择器
 在同一个选择器里选择日期和时间
 > DateTimePicker 由 DatePicker 和 TimePicker 派生，\`Picker Options\` 或者其他选项可以参照 DatePicker 和 TimePicker。
 
@@ -30,7 +30,7 @@ export default async function () {
 - type对应 Panel是各种展示形式，
 - 可以通过扩展type得到不同的形式
                 `,
-				apiString: `### Attributes
+					apiString: `### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | value / v-model | 绑定值 | date(DateTimePicker) / array(DateTimeRangePicker) | — | — |
@@ -89,17 +89,17 @@ export default async function () {
 | range-separator  | 自定义分隔符 |
 
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.demo-input {
-	.el-input,
-	.el-textarea {
-		width: 500px;
+	.demo-input {
+		.el-input,
+		.el-textarea {
+			width: 500px;
+		}
 	}
-}
 </style>

@@ -11,11 +11,11 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `### Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |------------------------------ | ------ |
 | title     | 标题           | string    |  —                            | 返回   |
@@ -33,13 +33,13 @@ export default async function () {
 | title     | 标题内容      |
 | content   | 内容         |
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.pageheader-demo {
-}
+	.pageheader-demo {
+	}
 </style>

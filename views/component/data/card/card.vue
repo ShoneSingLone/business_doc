@@ -9,21 +9,21 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `### Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | header | 设置 header，也可以通过 \`slot#header\` 传入 DOM | string| — | — |
 | body-class | 设置 body 的class| object| — | { "el-card__body": true } |
 | body-style | 设置 body 的style| object| — | { padding: '20px' } |
 | shadow | 设置阴影显示时机 | string | always / hover / never | always |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

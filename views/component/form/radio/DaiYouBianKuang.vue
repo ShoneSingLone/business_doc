@@ -30,25 +30,25 @@
 	</xForm>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				radio1: "1",
-				radio2: "1",
-				radio3: "1",
-				radio4: "1"
-			};
-		},
-		computed: {
-			md() {
-				return `带有边框
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					radio1: "1",
+					radio2: "1",
+					radio3: "1",
+					radio4: "1"
+				};
+			},
+			computed: {
+				md() {
+					return `带有边框
 				
 设置\`border\`属性可以渲染为带有边框的单选框。
 `;
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

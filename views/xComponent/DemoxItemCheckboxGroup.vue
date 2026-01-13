@@ -11,55 +11,55 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	await _.$importVue("/common/utils/rules.vue");
+	export default async function () {
+		await _.$importVue("/common/utils/rules.vue");
 
-	return defineComponent({
-		data() {
-			const vm = this;
-			return {
-				eventName: "",
-				form: defItems({
-					xItemCheckboxGroup: {
-						value: [],
-						label: "xItemCheckboxGroup",
-						itemType: "xItemCheckboxGroup",
-						minWidth: 120,
-						options: [...new Array(20)].map((i, ii) => {
-							return {
-								label: ii,
-								value: ii
-							};
-						}),
-						rules: [_rules.required()],
-						onChange() {
-							vm.eventName = "onChange";
-						}
-					},
-					xItemCheck: {
-						value: "",
-						label: "xItemCheck",
-						itemType: "xItemCheck",
-						minWidth: 90,
-						onChange() {
-							vm.eventName = "onChange";
+		return defineComponent({
+			data() {
+				const vm = this;
+				return {
+					eventName: "",
+					form: defItems({
+						xItemCheckboxGroup: {
+							value: [],
+							label: "xItemCheckboxGroup",
+							itemType: "xItemCheckboxGroup",
+							minWidth: 120,
+							options: [...new Array(20)].map((i, ii) => {
+								return {
+									label: ii,
+									value: ii
+								};
+							}),
+							rules: [_rules.required()],
+							onChange() {
+								vm.eventName = "onChange";
+							}
 						},
-						options: [...new Array(20)].map((i, ii) => {
-							return {
-								label: ii,
-								value: ii
-							};
-						}),
-						rules: [_rules.required()]
-					}
-				})
-			};
-		},
-		methods: {
-			check() {
-				_.$validateForm(this.$el);
+						xItemCheck: {
+							value: "",
+							label: "xItemCheck",
+							itemType: "xItemCheck",
+							minWidth: 90,
+							onChange() {
+								vm.eventName = "onChange";
+							},
+							options: [...new Array(20)].map((i, ii) => {
+								return {
+									label: ii,
+									value: ii
+								};
+							}),
+							rules: [_rules.required()]
+						}
+					})
+				};
+			},
+			methods: {
+				check() {
+					_.$validateForm(this.$el);
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>

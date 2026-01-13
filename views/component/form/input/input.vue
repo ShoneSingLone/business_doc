@@ -43,12 +43,12 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				mdTips: "通过鼠标或键盘输入字符\n>Input 为受控组件，它**总会显示 Vue 绑定值**。\n\n 通常情况下，应当处理 `input` 事件，并更新组件的绑定值（或使用`v-model`）。否则，输入框内显示的值将不会改变。\n 不支持 `v-model` 修饰符。",
-				apiString: `### Input Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					mdTips: "通过鼠标或键盘输入字符\n>Input 为受控组件，它**总会显示 Vue 绑定值**。\n\n 通常情况下，应当处理 `input` 事件，并更新组件的绑定值（或使用`v-model`）。否则，输入框内显示的值将不会改变。\n 不支持 `v-model` 修饰符。",
+					apiString: `### Input Attributes
 
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
@@ -150,17 +150,17 @@ export default async function () {
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | - |
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.demo-input {
-	.el-input,
-	.el-textarea {
-		width: 500px;
+	.demo-input {
+		.el-input,
+		.el-textarea {
+			width: 500px;
+		}
 	}
-}
 </style>

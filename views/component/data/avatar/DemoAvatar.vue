@@ -19,14 +19,14 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: `### Avatar 头像
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: `### Avatar 头像
 
 用图标、图片或者字符的形式展示用户或事物信息。`,
-				apiString: `### Attributes
+					apiString: `### Attributes
 
 | 参数              | 说明                             | 类型            | 可选值 | 默认值 |
 | ----------------- | -------------------------------- | --------------- | ------ | ------ |
@@ -50,14 +50,14 @@ export default async function () {
 | 名称	 | 说明               |  
 | ------ | ------------------ | 
 | default  | 自定义头像展示内容 |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.avatar-block {
-	margin: 8px;
-}
+	.avatar-block {
+		margin: 8px;
+	}
 </style>

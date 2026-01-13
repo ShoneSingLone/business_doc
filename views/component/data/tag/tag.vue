@@ -16,11 +16,11 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `### Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `### Attributes
 | 参数                | 说明             | 类型    | 可选值                      | 默认值 |
 |---------------------|------------------|---------|-----------------------------|--------|
 | type                | 类型             | string  | success/info/warning/danger | —      |
@@ -38,10 +38,10 @@ export default async function () {
 | click    | 点击 Tag 时触发的事件 | —        |
 | close    | 关闭 Tag 时触发的事件 | —        |
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

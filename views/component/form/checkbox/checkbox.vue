@@ -34,14 +34,14 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				mdTips: `## Checkbox 多选框
+	export default async function () {
+		return {
+			data() {
+				return {
+					mdTips: `## Checkbox 多选框
 一组备选项中进行多选
 `,
-				apiString: `### Checkbox Attributes
+					apiString: `### Checkbox Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value / v-model | 绑定值 | string / number / boolean | — | — |
@@ -85,17 +85,17 @@ export default async function () {
 | disabled  | 是否禁用    | boolean   |  — | false   |
 | name | 原生 name 属性 | string    |      —         |     —    |
 | checked  | 当前是否勾选    | boolean   |  — | false   |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.demo-input {
-	.el-input,
-	.el-textarea {
-		width: 500px;
+	.demo-input {
+		.el-input,
+		.el-textarea {
+			width: 500px;
+		}
 	}
-}
 </style>

@@ -15,24 +15,24 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: [
-					"### Ripple 参数",
-					"| 参数名          | 类型      | 默认        | 说明                              |",
-					"| :-------------- | :-------- | :---------- | :-------------------------------- |",
-					"| color           | `string`  | '#00000050' | 可选，默认当前文本颜色            |",
-					"| initial-opacity | `number`  | 0.1         | 可选，初始交互效果透明度大小      |",
-					"| final-opacity   | `number`  | 0.1         | 可选，结束交互效果长按透明度大小  |",
-					"| duration        | `number`  | 400         | 可选，持续时间                    |",
-					"| easing          | `string`  | 'ease-out'  | 可选，缓动动画                    |",
-					"| delay           | `number`  | 75`         | 可选，延迟 debouceTime 时间后调用 |",
-					"| disabled        | `boolean` | false       | 可选，禁止水波效果                |"
-				].join("\n")
-			};
-		}
-	};
-}
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: [
+						"### Ripple 参数",
+						"| 参数名          | 类型      | 默认        | 说明                              |",
+						"| :-------------- | :-------- | :---------- | :-------------------------------- |",
+						"| color           | `string`  | '#00000050' | 可选，默认当前文本颜色            |",
+						"| initial-opacity | `number`  | 0.1         | 可选，初始交互效果透明度大小      |",
+						"| final-opacity   | `number`  | 0.1         | 可选，结束交互效果长按透明度大小  |",
+						"| duration        | `number`  | 400         | 可选，持续时间                    |",
+						"| easing          | `string`  | 'ease-out'  | 可选，缓动动画                    |",
+						"| delay           | `number`  | 75`         | 可选，延迟 debouceTime 时间后调用 |",
+						"| disabled        | `boolean` | false       | 可选，禁止水波效果                |"
+					].join("\n")
+				};
+			}
+		};
+	}
 </script>

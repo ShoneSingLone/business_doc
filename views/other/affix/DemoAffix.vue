@@ -13,12 +13,12 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: "# Affix 固钉\r\r将页面元素固定在特定可视区域。",
-				apiString: `## Affix API
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: "# Affix 固钉\r\r将页面元素固定在特定可视区域。",
+					apiString: `## Affix API
 
 ### Affix Attributes
 
@@ -49,10 +49,10 @@ export default async function () {
 | --------- | -------------------------- |
 | \`default\` | customize default content. |
 `
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

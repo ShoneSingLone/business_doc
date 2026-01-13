@@ -26,14 +26,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle: "当内容在垂直⽅向上过⾼时，可将时间戳置于内容之上。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle: "当内容在垂直⽅向上过⾼时，可将时间戳置于内容之上。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

@@ -15,14 +15,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdTitle: ">通用的资源放在commonn/assets/svg 文件夹下\n\n直接使用svg的名字作为icon\n"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					mdTitle:
+						">通用的资源放在commonn/assets/svg 文件夹下\n\n直接使用svg的名字作为icon\n"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

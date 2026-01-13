@@ -38,14 +38,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				value1: "",
-				value2: "",
-				value3: "",
-				md: `
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					value1: "",
+					value2: "",
+					value3: "",
+					md: `
 使用\`format\`指定输入框的格式；使用\`value-format\`指定绑定值的格式。
 
 默认情况下，组件接受并返回\`Date\`对象。以下为可用的格式化字符串，以 UTC 2017年1月2日 03:04:05 为例：
@@ -76,9 +76,9 @@ export default async function () {
 | \`timestamp\` | JS时间戳 | 仅 \`value-format\` 可用；组件绑定值为\`number\`类型 | 1483326245000 |
 | \`\[MM]\` | 不需要格式化字符 | 使用方括号标识不需要格式化的字符 (如  \[A] \[MM])  | MM |
 `
-			};
-		}
-	});
-}
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

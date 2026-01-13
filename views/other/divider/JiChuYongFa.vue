@@ -8,11 +8,11 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return { md: "对不同章节的文本段落进行分割。" };
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return { md: "对不同章节的文本段落进行分割。" };
+			}
+		});
+	}
 </script>

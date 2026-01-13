@@ -27,20 +27,20 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "`v-model`的值为当前被选中的`el-option`的 value 属性值",
-				activeNames: ["1"]
-			};
-		},
-		methods: {
-			handleChange(val) {
-				console.log(val);
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "`v-model`的值为当前被选中的`el-option`的 value 属性值",
+					activeNames: ["1"]
+				};
+			},
+			methods: {
+				handleChange(val) {
+					console.log(val);
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

@@ -11,14 +11,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "竖直方向的步骤条。\n\n只需要在`xSteps`元素中设置`direction`属性为`vertical`即可。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "竖直方向的步骤条。\n\n只需要在`xSteps`元素中设置`direction`属性为`vertical`即可。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

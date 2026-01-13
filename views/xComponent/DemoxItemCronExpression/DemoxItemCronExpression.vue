@@ -9,15 +9,15 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `### `
-			};
-		}
-	};
-}
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `### `
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less"></style>

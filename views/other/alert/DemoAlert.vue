@@ -1,9 +1,9 @@
 <style lang="less">
-.DemoAlert {
-	.el-alert + .el-alert {
-		margin-top: 8px;
+	.DemoAlert {
+		.el-alert + .el-alert {
+			margin-top: 8px;
+		}
 	}
-}
 </style>
 
 <template>
@@ -30,12 +30,12 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: "## Alert 警告\r\r用于页面中展示重要的提示信息。",
-				apiString: `### Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: "## Alert 警告\r\r用于页面中展示重要的提示信息。",
+					apiString: `### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | title     | 标题           | string | — | — |
@@ -58,8 +58,8 @@ export default async function () {
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
 | close | 关闭alert时触发的事件 | — |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>

@@ -4,14 +4,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		methods: {
-			goBack() {
-				console.log("go back");
+	export default async function () {
+		return defineComponent({
+			methods: {
+				goBack() {
+					console.log("go back");
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

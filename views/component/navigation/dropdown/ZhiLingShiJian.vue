@@ -16,19 +16,19 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		methods: {
-			handleCommand(command) {
-				_.$msg("click on item " + command);
+	export default async function () {
+		return defineComponent({
+			methods: {
+				handleCommand(command) {
+					_.$msg("click on item " + command);
+				}
+			},
+			data() {
+				return {
+					md: "指令事件\n\n点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作"
+				};
 			}
-		},
-		data() {
-			return {
-				md: "指令事件\n\n点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作"
-			};
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

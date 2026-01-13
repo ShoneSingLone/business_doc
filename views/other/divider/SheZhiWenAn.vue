@@ -12,12 +12,12 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	const { THIS_FILE_URL } = this;
-	return defineComponent({
-		data() {
-			return { md: "可以在分割线上自定义文案内容。" };
-		}
-	});
-}
+	export default async function () {
+		const { THIS_FILE_URL } = this;
+		return defineComponent({
+			data() {
+				return { md: "可以在分割线上自定义文案内容。" };
+			}
+		});
+	}
 </script>

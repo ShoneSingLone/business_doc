@@ -8,15 +8,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: `Affix 组件提供 2 个固定的位置参数 \`top\` 和 \`bottom\`。
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: `Affix 组件提供 2 个固定的位置参数 \`top\` 和 \`bottom\`。
 
 通过设置 position 属性来改变固定位置，默认值为 top 。`
-			};
-		}
-	});
-}
+				};
+			}
+		});
+	}
 </script>

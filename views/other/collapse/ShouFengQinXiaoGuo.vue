@@ -27,15 +27,15 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "每次只能展开一个面板\n\n通过 `accordion` 属性来设置是否以手风琴模式显示。",
-				activeName: "1"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "每次只能展开一个面板\n\n通过 `accordion` 属性来设置是否以手风琴模式显示。",
+					activeName: "1"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

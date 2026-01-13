@@ -1,9 +1,9 @@
 <style lang="less">
-.Demoprogress {
-	.xProgress + .xProgress {
-		margin-top: 8px;
+	.Demoprogress {
+		.xProgress + .xProgress {
+			margin-top: 8px;
+		}
 	}
-}
 </style>
 
 <template>
@@ -28,12 +28,12 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: "## Progress 进度条\r\r用于展示操作进度，告知用户当前状态和预期。",
-				apiString: `### Attributes
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: "## Progress 进度条\r\r用于展示操作进度，告知用户当前状态和预期。",
+					apiString: `### Attributes
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
 | **percentage** | **百分比（必填）**   | number         |     0-100          |     0    |
@@ -48,8 +48,8 @@ export default async function () {
 | format  | 指定进度条文字内容 | function(percentage) | — | — |
 | define-back-color  | 指定进度条底色（支持 hex 格式） | string | — | — |
 | text-color  | 指定进度条字体颜色（支持 hex 格式） | string | — | — |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>

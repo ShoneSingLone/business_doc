@@ -14,18 +14,18 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				md: `常用的操作按钮。
+	export default async function () {
+		return {
+			data() {
+				return {
+					md: `常用的操作按钮。
 默认使用ripple
 >click会有loading效果，如果是异步函数，会在\`await\` 期间会一直loading
 
 普通模式下loading是boolean类型，
 configs使用isLoading可以是boolean或Function用于computed
 `,
-				apiString: `### Attributes
+					apiString: `### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | ripple     | 水波纹   | boolean  |  -            |    true     |
@@ -40,41 +40,41 @@ configs使用isLoading可以是boolean或Function用于computed
 | autofocus  | 是否默认聚焦 | boolean   |  —  |  false  |
 | type | 原生 type 属性 | string | button / submit / reset | button |
 				`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>
 
 <style lang="less">
-.dropdown-demo {
-	.el-dropdown-link {
-		cursor: pointer;
-		color: #409eff;
-	}
-	.el-icon-arrow-down {
-		font-size: 12px;
-	}
+	.dropdown-demo {
+		.el-dropdown-link {
+			cursor: pointer;
+			color: #409eff;
+		}
+		.el-icon-arrow-down {
+			font-size: 12px;
+		}
 
-	.el-dropdown-link {
-		cursor: pointer;
-		color: #409eff;
+		.el-dropdown-link {
+			cursor: pointer;
+			color: #409eff;
+		}
+		.el-icon-arrow-down {
+			font-size: 12px;
+		}
+		.demonstration {
+			display: block;
+			color: #8492a6;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		.el-dropdown-link {
+			cursor: pointer;
+			color: #409eff;
+		}
+		.el-icon-arrow-down {
+			font-size: 12px;
+		}
 	}
-	.el-icon-arrow-down {
-		font-size: 12px;
-	}
-	.demonstration {
-		display: block;
-		color: #8492a6;
-		font-size: 14px;
-		margin-bottom: 20px;
-	}
-	.el-dropdown-link {
-		cursor: pointer;
-		color: #409eff;
-	}
-	.el-icon-arrow-down {
-		font-size: 12px;
-	}
-}
 </style>

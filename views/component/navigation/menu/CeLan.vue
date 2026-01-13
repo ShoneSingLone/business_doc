@@ -87,28 +87,28 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: `### 侧栏
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: `### 侧栏
 垂直菜单，可内嵌子菜单。
 
 通过\`xMenuItemGroup\`组件可以实现菜单进行分组，分组名可以通过\`title\`属性直接设定，也可以通过具名 slot 来设定。
                 `,
-				activeIndex: "1",
-				activeIndex2: "1"
-			};
-		},
-		methods: {
-			handleOpen(key, keyPath) {
-				_.$msgSuccess(`${key} + ${keyPath}`);
+					activeIndex: "1",
+					activeIndex2: "1"
+				};
 			},
-			handleClose(key, keyPath) {
-				_.$msgSuccess(`${key} + ${keyPath}`);
+			methods: {
+				handleOpen(key, keyPath) {
+					_.$msgSuccess(`${key} + ${keyPath}`);
+				},
+				handleClose(key, keyPath) {
+					_.$msgSuccess(`${key} + ${keyPath}`);
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

@@ -105,78 +105,78 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		beforeUnmount() {
-			clearInterval(this.timer);
-		},
-		computed: {
-			visible_label() {
-				return this.manual.visible ? "是" : "否";
-			}
-		},
-		methods: {
-			toggle() {
-				const placement =
-					"top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end".split(
-						"/"
-					);
-				this.manual.visible = !this.manual.visible;
-				if (this.manual.visible) {
-					this.manual.placement = placement[this.count++ % placement.length];
-					this.manual.title = this.manual.placement;
+	export default async function () {
+		return defineComponent({
+			beforeUnmount() {
+				clearInterval(this.timer);
+			},
+			computed: {
+				visible_label() {
+					return this.manual.visible ? "是" : "否";
 				}
-			}
-		},
-		data() {
-			return {
-				count: 0,
-				visible: false,
-				mdTitle:
-					'`trigger`属性用于设置何时触发 Popover，支持四种触发方式：`hover`，`click`，`focus` 和 `manual`。对于触发 Popover 的元素，有两种写法：使用 `slot="reference"` 的具名插槽，或使用自定义指令`v-popover`指向 Popover 的索引`ref`',
-				manual: {
-					title: "标题",
-					content: "这是一段内容,这是一段内容,这是一段内容,这是一段内容。",
-					width: 200,
-					trigger: "manual",
-					placement: "top",
-					visible: false,
-					onMounted({ popoverVm, referenceVm }) {
-						console.log(
-							"🚀 ~ onMounted ~  popoverVm, referenceVm :",
-							popoverVm,
-							referenceVm
+			},
+			methods: {
+				toggle() {
+					const placement =
+						"top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end".split(
+							"/"
 						);
-						_.$msg("manual onMounted");
+					this.manual.visible = !this.manual.visible;
+					if (this.manual.visible) {
+						this.manual.placement = placement[this.count++ % placement.length];
+						this.manual.title = this.manual.placement;
 					}
-				},
-				manualImmediateShow: {
-					content: "如果 trigger 为 manual 且 visible 为 true，则直接显示 popover",
-					width: 200,
-					trigger: "manual",
-					visible: true,
-					placement: "top",
-					onMounted({ popoverVm, referenceVm }) {
-						setTimeout(() => {
-							popoverVm.doClose();
-							_.$msg("close");
-						}, 1000 * 2);
-					}
-				},
-				md1: "### 推荐使用v-xtips\n\n>如果是字符串默认为`content`\n\n>如果是对象，但`content`是假值，则不会有tips"
-			};
-		}
-	});
-}
+				}
+			},
+			data() {
+				return {
+					count: 0,
+					visible: false,
+					mdTitle:
+						'`trigger`属性用于设置何时触发 Popover，支持四种触发方式：`hover`，`click`，`focus` 和 `manual`。对于触发 Popover 的元素，有两种写法：使用 `slot="reference"` 的具名插槽，或使用自定义指令`v-popover`指向 Popover 的索引`ref`',
+					manual: {
+						title: "标题",
+						content: "这是一段内容,这是一段内容,这是一段内容,这是一段内容。",
+						width: 200,
+						trigger: "manual",
+						placement: "top",
+						visible: false,
+						onMounted({ popoverVm, referenceVm }) {
+							console.log(
+								"🚀 ~ onMounted ~  popoverVm, referenceVm :",
+								popoverVm,
+								referenceVm
+							);
+							_.$msg("manual onMounted");
+						}
+					},
+					manualImmediateShow: {
+						content: "如果 trigger 为 manual 且 visible 为 true，则直接显示 popover",
+						width: 200,
+						trigger: "manual",
+						visible: true,
+						placement: "top",
+						onMounted({ popoverVm, referenceVm }) {
+							setTimeout(() => {
+								popoverVm.doClose();
+								_.$msg("close");
+							}, 1000 * 2);
+						}
+					},
+					md1: "### 推荐使用v-xtips\n\n>如果是字符串默认为`content`\n\n>如果是对象，但`content`是假值，则不会有tips"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less">
-.popover-JiChuYongFa {
-	.div-demo {
-		width: 300px;
-		border: 1px solid blue;
-		text-align: center;
-		border-radius: 40x;
-		padding: var(--ui-one);
+	.popover-JiChuYongFa {
+		.div-demo {
+			width: 300px;
+			border: 1px solid blue;
+			text-align: center;
+			border-radius: 40x;
+			padding: var(--ui-one);
+		}
 	}
-}
 </style>

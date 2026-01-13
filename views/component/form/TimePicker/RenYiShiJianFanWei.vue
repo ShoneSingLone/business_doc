@@ -23,16 +23,16 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "可选择任意的时间范围\n\n添加`is-range`属性即可选择时间范围，同样支持`arrow-control`属性。",
-				value1: [new Date(2016, 9, 10, 8, 40), new Date(2016, 9, 10, 9, 40)],
-				value2: [new Date(2016, 9, 10, 8, 40), new Date(2016, 9, 10, 9, 40)]
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "可选择任意的时间范围\n\n添加`is-range`属性即可选择时间范围，同样支持`arrow-control`属性。",
+					value1: [new Date(2016, 9, 10, 8, 40), new Date(2016, 9, 10, 9, 40)],
+					value2: [new Date(2016, 9, 10, 8, 40), new Date(2016, 9, 10, 9, 40)]
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

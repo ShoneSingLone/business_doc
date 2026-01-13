@@ -9,12 +9,12 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	const { THIS_FILE_URL } = this;
-	return defineComponent({
-		data() {
-			return { ipAddress: "" };
-		}
-	});
-}
+	export default async function () {
+		const { THIS_FILE_URL } = this;
+		return defineComponent({
+			data() {
+				return { ipAddress: "" };
+			}
+		});
+	}
 </script>

@@ -9,27 +9,27 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		setup() {
-			return {
-				md: `如果在整个应用使用同一个empty，可以修改默认empty 组件的加载地址`,
-				columns: [
-					{
-						prop: "name",
-						label: "Name",
-						align: "center"
-					},
-					{
-						prop: "date",
-						label: "date",
-						align: "center"
-					}
-				],
-				data: []
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			setup() {
+				return {
+					md: `如果在整个应用使用同一个empty，可以修改默认empty 组件的加载地址`,
+					columns: [
+						{
+							prop: "name",
+							label: "Name",
+							align: "center"
+						},
+						{
+							prop: "date",
+							label: "date",
+							align: "center"
+						}
+					],
+					data: []
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

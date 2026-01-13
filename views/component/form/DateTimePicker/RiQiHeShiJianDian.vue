@@ -31,44 +31,44 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "通过设置`type`属性为`datetime`，即可在同一个选择器里同时进行日期和时间的选择。快捷选项的使用方法与 Date Picker 相同。",
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "通过设置`type`属性为`datetime`，即可在同一个选择器里同时进行日期和时间的选择。快捷选项的使用方法与 Date Picker 相同。",
 
-				pickerOptions: {
-					shortcuts: [
-						{
-							text: "今天",
-							onClick(picker) {
-								picker.$emit("pick", new Date());
+					pickerOptions: {
+						shortcuts: [
+							{
+								text: "今天",
+								onClick(picker) {
+									picker.$emit("pick", new Date());
+								}
+							},
+							{
+								text: "昨天",
+								onClick(picker) {
+									const date = new Date();
+									date.setTime(date.getTime() - 3600 * 1000 * 24);
+									picker.$emit("pick", date);
+								}
+							},
+							{
+								text: "一周前",
+								onClick(picker) {
+									const date = new Date();
+									date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+									picker.$emit("pick", date);
+								}
 							}
-						},
-						{
-							text: "昨天",
-							onClick(picker) {
-								const date = new Date();
-								date.setTime(date.getTime() - 3600 * 1000 * 24);
-								picker.$emit("pick", date);
-							}
-						},
-						{
-							text: "一周前",
-							onClick(picker) {
-								const date = new Date();
-								date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
-								picker.$emit("pick", date);
-							}
-						}
-					]
-				},
-				value1: "",
-				value2: "",
-				value3: ""
-			};
-		}
-	});
-}
+						]
+					},
+					value1: "",
+					value2: "",
+					value3: ""
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>

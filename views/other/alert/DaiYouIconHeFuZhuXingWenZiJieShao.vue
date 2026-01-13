@@ -25,13 +25,13 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "这是一个同时具有 icon 和辅助性文字的样例。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "这是一个同时具有 icon 和辅助性文字的样例。"
+				};
+			}
+		});
+	}
 </script>

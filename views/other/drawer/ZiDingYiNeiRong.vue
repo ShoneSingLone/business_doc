@@ -46,75 +46,75 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: ["和 `Dialog` 组件一样, `Drawer` 同样可以在其内部嵌套各种丰富的操作"].join(
-					"\n"
-				),
-				table: false,
-				dialog: false,
-				loading: false,
-				gridData: [
-					{
-						date: "2016-05-02",
-						name: "王小虎",
-						address: "上海市普陀区金沙江路 1518 弄"
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: ["和 `Dialog` 组件一样, `Drawer` 同样可以在其内部嵌套各种丰富的操作"].join(
+						"\n"
+					),
+					table: false,
+					dialog: false,
+					loading: false,
+					gridData: [
+						{
+							date: "2016-05-02",
+							name: "王小虎",
+							address: "上海市普陀区金沙江路 1518 弄"
+						},
+						{
+							date: "2016-05-04",
+							name: "王小虎",
+							address: "上海市普陀区金沙江路 1518 弄"
+						},
+						{
+							date: "2016-05-01",
+							name: "王小虎",
+							address: "上海市普陀区金沙江路 1518 弄"
+						},
+						{
+							date: "2016-05-03",
+							name: "王小虎",
+							address: "上海市普陀区金沙江路 1518 弄"
+						}
+					],
+					form: {
+						name: "",
+						region: "",
+						date1: "",
+						date2: "",
+						delivery: false,
+						type: [],
+						resource: "",
+						desc: ""
 					},
-					{
-						date: "2016-05-04",
-						name: "王小虎",
-						address: "上海市普陀区金沙江路 1518 弄"
-					},
-					{
-						date: "2016-05-01",
-						name: "王小虎",
-						address: "上海市普陀区金沙江路 1518 弄"
-					},
-					{
-						date: "2016-05-03",
-						name: "王小虎",
-						address: "上海市普陀区金沙江路 1518 弄"
-					}
-				],
-				form: {
-					name: "",
-					region: "",
-					date1: "",
-					date2: "",
-					delivery: false,
-					type: [],
-					resource: "",
-					desc: ""
-				},
-				formLabelWidth: "80px",
-				timer: null
-			};
-		},
-		methods: {
-			handleClose(done) {
-				if (this.loading) {
-					return;
-				}
-				_.$confirm("确定要提交表单吗？").then(_ => {
-					this.loading = true;
-					this.timer = setTimeout(() => {
-						done();
-						// 动画关闭需要一定的时间
-						setTimeout(() => {
-							this.loading = false;
-						}, 400);
-					}, 2000);
-				});
+					formLabelWidth: "80px",
+					timer: null
+				};
 			},
-			cancelForm() {
-				this.loading = false;
-				this.dialog = false;
-				clearTimeout(this.timer);
+			methods: {
+				handleClose(done) {
+					if (this.loading) {
+						return;
+					}
+					_.$confirm("确定要提交表单吗？").then(_ => {
+						this.loading = true;
+						this.timer = setTimeout(() => {
+							done();
+							// 动画关闭需要一定的时间
+							setTimeout(() => {
+								this.loading = false;
+							}, 400);
+						}, 2000);
+					});
+				},
+				cancelForm() {
+					this.loading = false;
+					this.dialog = false;
+					clearTimeout(this.timer);
+				}
 			}
-		}
-	});
-}
+		});
+	}
 </script>
 <style lang="less"></style>

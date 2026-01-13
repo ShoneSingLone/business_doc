@@ -19,11 +19,11 @@
 </template>
 
 <script lang="ts">
-export default async function () {
-	return {
-		data() {
-			return {
-				apiString: `
+	export default async function () {
+		return {
+			data() {
+				return {
+					apiString: `
 ## Directives
 
 | Name | Description | Type | Default |
@@ -34,8 +34,8 @@ export default async function () {
 | infinite-scroll-distance | trigger distance (px) | ^[number] | 0 |
 | infinite-scroll-immediate | Whether to execute the loading method immediately, in case the content cannot be filled up in the initial state. | ^[boolean] | true |
 | infinite-scroll-up | 开去启向上滑动的监听 | ^[boolean] | false |`
-			};
-		}
-	};
-}
+				};
+			}
+		};
+	}
 </script>

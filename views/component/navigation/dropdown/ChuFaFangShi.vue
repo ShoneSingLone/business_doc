@@ -36,14 +36,14 @@
 	</div>
 </template>
 <script lang="ts">
-export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				md: "可以配置 click 激活或者 hover 激活。\n\n在`trigger`属性设置为`click`即可。"
-			};
-		}
-	});
-}
+	export default async function () {
+		return defineComponent({
+			data() {
+				return {
+					md: "可以配置 click 激活或者 hover 激活。\n\n在`trigger`属性设置为`click`即可。"
+				};
+			}
+		});
+	}
 </script>
 <style lang="less"></style>
