@@ -328,6 +328,11 @@ export default async function () {
 					icon: "_icon_affix",
 					label: `${i18n("xExcalidraw")} ${i18n("白板")}`,
 					href: "/component/data/excalidraw"
+				},
+				{
+					icon: "icon_report",
+					label: `${i18n("xDev")} ${i18n("调试组件")}`,
+					href: "/other/x_dev"
 				}
 			]
 		},
