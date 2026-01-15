@@ -183,6 +183,18 @@ export default async function () {
 							"@/views/component/data/xTableEasy/xTableEasy.vue"
 						),
 						_.$newRoute(
+							"/component/data/x-table-easy/table_width",
+							"@/views/component/data/xTableEasy/xTableEasy.TableWidth.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/table_height",
+							"@/views/component/data/xTableEasy/xTableEasy.TableHeight.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/table_border",
+							"@/views/component/data/xTableEasy/xTableEasy.TableBorder.vue"
+						),
+						_.$newRoute(
 							"/component/data/pagination",
 							"@/views/component/data/pagination/pagination.vue"
 						),

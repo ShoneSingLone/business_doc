@@ -247,7 +247,24 @@ export default async function () {
 				{
 					icon: "icon_report",
 					label: `${i18n("xTableEasy")} ${i18n("表格")}`,
-					href: "/component/data/x-table-easy"
+					href: "/component/data/x-table-easy",
+					children: [
+						{
+							icon: "_icon_layout",
+							label: `${i18n("表格宽度")}`,
+							href: "/component/data/x-table-easy/table_width"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("表格高度")}`,
+							href: "/component/data/x-table-easy/table_height"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("表格边框")}`,
+							href: "/component/data/x-table-easy/table_border"
+						}
+					]
 				},
 				{
 					icon: "icon_report",
