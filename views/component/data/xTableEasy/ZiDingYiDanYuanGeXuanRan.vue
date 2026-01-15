@@ -90,9 +90,9 @@ export default async function () {
 						align: "center",
 						// 自定义单元格渲染
 						cellRenderer: (row, column, rowIndex, colIndex) => {
-							return row.sex === "男" ? 
-								`<span style="color: blue;">${row.sex}</span>` : 
-								`<span style="color: pink;">${row.sex}</span>`;
+							return row.sex === "男"
+								? `<span style="color: blue;">${row.sex}</span>`
+								: `<span style="color: pink;">${row.sex}</span>`;
 						}
 					},
 					{
@@ -124,7 +124,7 @@ export default async function () {
 							if (score >= 90) color = "green";
 							else if (score >= 80) color = "blue";
 							else if (score >= 60) color = "orange";
-							
+
 							return `<div style="display: flex; align-items: center; justify-content: center;">
 								<span style="color: ${color}; font-weight: bold;">${score}</span>
 								<div style="width: 80px; height: 6px; background: #e0e0e0; margin-left: 8px; border-radius: 3px;">

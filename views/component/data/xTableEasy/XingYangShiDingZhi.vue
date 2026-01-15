@@ -2,15 +2,14 @@
 	<div>
 		<h3>行样式定制</h3>
 		<p>通过配置 rowStyleOption，可以实现行样式的定制，包括斑马纹、悬停高亮和点击高亮。</p>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="400" 
-			borderX 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="400"
+			borderX
 			borderY
 			rowKeyFieldName="id"
-			:rowStyleOption="rowStyleOption"
-		/>
+			:rowStyleOption="rowStyleOption" />
 	</div>
 </template>
 <script lang="ts">
@@ -159,14 +158,14 @@ p {
 			color: #67c23a;
 		}
 	}
-	
+
 	.row-middle-score {
 		td {
 			font-weight: bold;
 			color: #409eff;
 		}
 	}
-	
+
 	.row-low-score {
 		td {
 			font-weight: bold;

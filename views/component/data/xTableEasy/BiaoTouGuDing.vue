@@ -2,38 +2,35 @@
 	<div>
 		<h3>表头固定</h3>
 		<p>通过配置 fixedHeader 属性，可以实现表头的固定功能，当表格内容滚动时，表头保持可见。</p>
-		
+
 		<h4>固定表头</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
 			:maxHeight="300"
 			fixedHeader
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">不固定表头</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
+			borderX
+			borderY />
+
+		<h4 style="margin-top: 20px">不固定表头</h4>
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
 			:maxHeight="300"
 			:fixedHeader="false"
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">同时固定表头和表尾</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
+			borderX
+			borderY />
+
+		<h4 style="margin-top: 20px">同时固定表头和表尾</h4>
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
 			:footerData="footerData"
 			:maxHeight="300"
 			fixedHeader
 			fixedFooter
-			borderX 
-			borderY
-		/>
+			borderX
+			borderY />
 	</div>
 </template>
 <script lang="ts">
@@ -47,7 +44,7 @@ export default async function () {
 				name: `用户${i + 1}`,
 				age: 18 + Math.floor(Math.random() * 30),
 				sex: Math.random() > 0.5 ? "男" : "女",
-				phone: `138000000${String(i).padStart(2, '0')}`,
+				phone: `138000000${String(i).padStart(2, "0")}`,
 				address: `上海市浦东新区张江高科技园区 ${i + 1} 号`
 			});
 		}

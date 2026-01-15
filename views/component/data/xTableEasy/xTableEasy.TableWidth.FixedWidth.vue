@@ -2,7 +2,12 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" :scrollWidth="900" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:scrollWidth="900"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>

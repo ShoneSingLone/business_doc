@@ -2,26 +2,24 @@
 	<div>
 		<h3>表格宽度</h3>
 		<p>通过配置 scrollWidth 属性，可以设置表格的宽度。</p>
-		
+
 		<h4>固定宽度</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="300" 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="300"
 			:scrollWidth="800"
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">百分比宽度</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="300" 
+			borderX
+			borderY />
+
+		<h4 style="margin-top: 20px">百分比宽度</h4>
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="300"
 			:scrollWidth="'100%'"
-			borderX 
-			borderY
-		/>
+			borderX
+			borderY />
 	</div>
 </template>
 <script lang="ts">

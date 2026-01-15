@@ -2,15 +2,14 @@
 	<div>
 		<h3>虚拟滚动 (4000 条数据)</h3>
 		<p>虚拟滚动可以高效渲染大量数据，只渲染可视区域内的数据行，提升性能。</p>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="500" 
-			borderX 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="500"
+			borderX
 			borderY
 			rowKeyFieldName="id"
-			:virtualScrollOption="virtualScrollOption"
-		/>
+			:virtualScrollOption="virtualScrollOption" />
 	</div>
 </template>
 <script lang="ts">
@@ -24,7 +23,7 @@ export default async function () {
 				name: `用户${i + 1}`,
 				age: 18 + Math.floor(Math.random() * 30),
 				sex: Math.random() > 0.5 ? "男" : "女",
-				phone: `1380000${String(i).padStart(4, '0')}`,
+				phone: `1380000${String(i).padStart(4, "0")}`,
 				address: `上海市浦东新区张江高科技园区 ${i + 1} 号`,
 				status: Math.floor(Math.random() * 3) + 1,
 				score: Math.floor(Math.random() * 100) + 1
@@ -110,8 +109,14 @@ export default async function () {
 					enable: true,
 					bufferScale: 1, // 缓冲比例
 					minRowHeight: 40, // 最小行高
-					scrolling: (startRowIndex, visibleStartIndex, visibleEndIndex, visibleAboveCount, visibleBelowCount) => {
-						console.log('虚拟滚动数据范围:', {
+					scrolling: (
+						startRowIndex,
+						visibleStartIndex,
+						visibleEndIndex,
+						visibleAboveCount,
+						visibleBelowCount
+					) => {
+						console.log("虚拟滚动数据范围:", {
 							startRowIndex,
 							visibleStartIndex,
 							visibleEndIndex,

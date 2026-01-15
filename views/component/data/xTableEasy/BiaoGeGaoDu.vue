@@ -2,33 +2,22 @@
 	<div>
 		<h3>表格高度</h3>
 		<p>通过配置 maxHeight 属性，可以设置表格的最大高度，当内容超过时会显示滚动条。</p>
-		
+
 		<h4>固定高度</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="300"
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">自适应高度</h4>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">百分比高度</h4>
-		<div style="height: 300px; border: 1px solid #e8e8e8; padding: 10px; box-sizing: border-box;">
-			<xTableEasy 
-				:columns="columns" 
-				:tableData="tableData" 
+		<xTableEasy :columns="columns" :tableData="tableData" :maxHeight="300" borderX borderY />
+
+		<h4 style="margin-top: 20px">自适应高度</h4>
+		<xTableEasy :columns="columns" :tableData="tableData" borderX borderY />
+
+		<h4 style="margin-top: 20px">百分比高度</h4>
+		<div
+			style="height: 300px; border: 1px solid #e8e8e8; padding: 10px; box-sizing: border-box">
+			<xTableEasy
+				:columns="columns"
+				:tableData="tableData"
 				:maxHeight="'100%'"
-				borderX 
-				borderY
-			/>
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -43,7 +32,7 @@ export default async function () {
 				name: `用户${i + 1}`,
 				age: 18 + Math.floor(Math.random() * 30),
 				sex: Math.random() > 0.5 ? "男" : "女",
-				phone: `138000000${String(i).padStart(2, '0')}`,
+				phone: `138000000${String(i).padStart(2, "0")}`,
 				address: `上海市浦东新区张江高科技园区 ${i + 1} 号`
 			});
 		}

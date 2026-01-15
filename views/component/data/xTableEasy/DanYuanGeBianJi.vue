@@ -2,15 +2,14 @@
 	<div>
 		<h3>单元格编辑</h3>
 		<p>通过配置 editOption，可以实现单元格的编辑功能，支持多种编辑类型。</p>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="400" 
-			borderX 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="400"
+			borderX
 			borderY
 			rowKeyFieldName="id"
-			:editOption="editOption"
-		/>
+			:editOption="editOption" />
 	</div>
 </template>
 <script lang="ts">
@@ -137,9 +136,9 @@ export default async function () {
 						// 开关类型编辑
 						editType: "switch",
 						cellRenderer: (row, column, rowIndex, colIndex) => {
-							return row.status === 1 ? 
-								`<span style='color: green;'>启用</span>` : 
-								`<span style='color: red;'>禁用</span>`;
+							return row.status === 1
+								? `<span style='color: green;'>启用</span>`
+								: `<span style='color: red;'>禁用</span>`;
 						}
 					}
 				],
@@ -160,7 +159,14 @@ export default async function () {
 					},
 					// 编辑完成回调
 					afterEdit: (row, column, oldValue, newValue, rowIndex, colIndex) => {
-						console.log("编辑完成", { row, column, oldValue, newValue, rowIndex, colIndex });
+						console.log("编辑完成", {
+							row,
+							column,
+							oldValue,
+							newValue,
+							rowIndex,
+							colIndex
+						});
 						// 这里可以发送请求保存数据
 						// return false; // 返回false可以回滚编辑
 					}

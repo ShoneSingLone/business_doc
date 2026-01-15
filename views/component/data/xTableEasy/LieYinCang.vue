@@ -2,28 +2,29 @@
 	<div>
 		<h3>列隐藏</h3>
 		<p>通过配置 columnHiddenOption，可以实现列的隐藏和显示功能。</p>
-		
-		<div style="margin-bottom: 15px;">
+
+		<div style="margin-bottom: 15px">
 			<h4>列显示控制</h4>
-			<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-				<label v-for="column in columns" :key="column.colKey" style="display: flex; align-items: center; gap: 5px;">
-					<input 
-						type="checkbox" 
-						v-model="visibleColumns[column.colKey]" 
-						@change="handleColumnVisibilityChange" 
-					/>
+			<div style="display: flex; gap: 10px; flex-wrap: wrap">
+				<label
+					v-for="column in columns"
+					:key="column.colKey"
+					style="display: flex; align-items: center; gap: 5px">
+					<input
+						type="checkbox"
+						v-model="visibleColumns[column.colKey]"
+						@change="handleColumnVisibilityChange" />
 					{{ column.title }}
 				</label>
 			</div>
 		</div>
-		
-		<xTableEasy 
-			:columns="filteredColumns" 
-			:tableData="tableData" 
+
+		<xTableEasy
+			:columns="filteredColumns"
+			:tableData="tableData"
 			:maxHeight="300"
-			borderX 
-			borderY
-		/>
+			borderX
+			borderY />
 	</div>
 </template>
 <script lang="ts">

@@ -2,18 +2,17 @@
 	<div>
 		<h3>列宽拖动</h3>
 		<p>通过配置 columnWidthResizeOption，可以实现列宽的拖动调整功能。</p>
-		
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
+
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
 			:maxHeight="300"
 			:scrollWidth="1000"
-			borderX 
+			borderX
 			borderY
-			:columnWidthResizeOption="columnWidthResizeOption"
-		/>
-		
-		<p style="margin-top: 10px; color: #606266; font-size: 14px;">
+			:columnWidthResizeOption="columnWidthResizeOption" />
+
+		<p style="margin-top: 10px; color: #606266; font-size: 14px">
 			提示：将鼠标悬停在列头之间的分隔线上，拖动调整列宽。
 		</p>
 	</div>

@@ -11,7 +11,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过配置 borderX 和 borderY 属性，可以显示表格的横向和纵向边框。',
+				mdDoc: "通过配置 borderX 和 borderY 属性，可以显示表格的横向和纵向边框。",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

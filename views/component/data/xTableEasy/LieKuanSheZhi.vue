@@ -2,34 +2,31 @@
 	<div>
 		<h3>列宽设置</h3>
 		<p>通过配置 columns 的 width 属性，可以设置列的宽度，支持像素和百分比两种单位。</p>
-		
+
 		<h4>像素宽度</h4>
-		<xTableEasy 
-			:columns="columnsPixel" 
-			:tableData="tableData" 
+		<xTableEasy
+			:columns="columnsPixel"
+			:tableData="tableData"
 			:maxHeight="300"
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">百分比宽度</h4>
-		<xTableEasy 
-			:columns="columnsPercent" 
-			:tableData="tableData" 
+			borderX
+			borderY />
+
+		<h4 style="margin-top: 20px">百分比宽度</h4>
+		<xTableEasy
+			:columns="columnsPercent"
+			:tableData="tableData"
 			:maxHeight="300"
 			:scrollWidth="1000"
-			borderX 
-			borderY
-		/>
-		
-		<h4 style="margin-top: 20px;">自动宽度</h4>
-		<xTableEasy 
-			:columns="columnsAuto" 
-			:tableData="tableData" 
+			borderX
+			borderY />
+
+		<h4 style="margin-top: 20px">自动宽度</h4>
+		<xTableEasy
+			:columns="columnsAuto"
+			:tableData="tableData"
 			:maxHeight="300"
-			borderX 
-			borderY
-		/>
+			borderX
+			borderY />
 	</div>
 </template>
 <script lang="ts">

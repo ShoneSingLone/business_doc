@@ -11,7 +11,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '只显示横向边框，通过设置 borderY 属性来实现',
+				mdDoc: "只显示横向边框，通过设置 borderY 属性来实现",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

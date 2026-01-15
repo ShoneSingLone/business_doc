@@ -11,7 +11,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '如果不设置表格高度，表格会根据内容自动调整高度。',
+				mdDoc: "如果不设置表格高度，表格会根据内容自动调整高度。",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

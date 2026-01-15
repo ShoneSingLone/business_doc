@@ -6,6 +6,7 @@
 				:columns="columns"
 				:table-data="tableData"
 				:maxHeight="300"
+				:fixedHeader="true"
 				borderX
 				borderY />
 		</div>
@@ -16,12 +17,12 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "表格的固定高度，通过设置 maxHeight 属性为固定数值来实现。此表格高度为300px",
+				mdDoc: "通过设置 fixedHeader 属性为 true 来实现表头固定，配合 maxHeight 属性使用",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
 					{ field: "hobby", key: "c", title: "Hobby", width: 300 },
-					{ field: "address", key: "d", title: "Address", width: 300 }
+					{ field: "address", key: "d", title: "Address", width: 400 }
 				],
 				tableData: [
 					{
@@ -83,6 +84,18 @@ export default async function () {
 						date: "2020-09-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Shenzhen"
+					},
+					{
+						name: "John",
+						date: "1900-05-20",
+						hobby: "coding and coding repeat",
+						address: "No.1 Century Avenue, Shanghai"
+					},
+					{
+						name: "Dickerson",
+						date: "1910-06-20",
+						hobby: "coding and coding repeat",
+						address: "No.1 Century Avenue, Beijing"
 					}
 				]
 			};

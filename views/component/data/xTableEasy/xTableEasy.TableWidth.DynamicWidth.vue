@@ -2,7 +2,12 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" :scrollWidth="'calc(100% - 20px)'" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:scrollWidth="'calc(100% - 20px)'"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -11,7 +16,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '表格动态宽度（calc css函数）',
+				mdDoc: "表格动态宽度（calc css函数）",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

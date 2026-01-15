@@ -2,14 +2,13 @@
 	<div>
 		<h3>列固定</h3>
 		<p>通过配置 columns 的 fixed 属性，可以实现列的固定，支持 left 和 right 两种固定方式。</p>
-		<xTableEasy 
-			:columns="columns" 
-			:tableData="tableData" 
-			:maxHeight="400" 
+		<xTableEasy
+			:columns="columns"
+			:tableData="tableData"
+			:maxHeight="400"
 			:scrollWidth="1200"
-			borderX 
-			borderY
-		/>
+			borderX
+			borderY />
 	</div>
 </template>
 <script lang="ts">

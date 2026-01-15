@@ -2,7 +2,12 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" :maxHeight="'calc(100vh - 200px)'" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:maxHeight="'calc(100vh - 200px)'"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -11,7 +16,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '表格动态高度（calc css函数），通过设置 maxHeight 属性为 calc 表达式来实现响应式高度',
+				mdDoc: "表格动态高度（calc css函数），通过设置 maxHeight 属性为 calc 表达式来实现响应式高度",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

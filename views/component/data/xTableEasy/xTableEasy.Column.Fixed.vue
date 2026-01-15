@@ -2,7 +2,12 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" :scrollWidth="1000" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:scrollWidth="1000"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -11,7 +16,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过在 columns 配置中设置 fixed 属性来实现列固定',
+				mdDoc: "通过在 columns 配置中设置 fixed 属性来实现列固定",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100, fixed: "left" },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
