@@ -245,27 +245,127 @@ export default async function () {
 					href: "/component/data/virtualized-table"
 				},
 				{
-					icon: "icon_report",
-					label: `${i18n("xTableEasy")} ${i18n("表格")}`,
-					href: "/component/data/x-table-easy",
-					children: [
-						{
-							icon: "_icon_layout",
-							label: `${i18n("表格宽度")}`,
-							href: "/component/data/x-table-easy/table_width"
-						},
-						{
-							icon: "_icon_layout",
-							label: `${i18n("表格高度")}`,
-							href: "/component/data/x-table-easy/table_height"
-						},
-						{
-							icon: "_icon_layout",
-							label: `${i18n("表格边框")}`,
-							href: "/component/data/x-table-easy/table_border"
-						}
-					]
-				},
+						icon: "icon_report",
+						label: `${i18n("xTableEasy")} ${i18n("表格")}`,
+						href: "/component/data/x-table-easy",
+						children: [
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表格宽度")}`,
+								href: "/component/data/x-table-easy/table_width"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表格高度")}`,
+								href: "/component/data/x-table-easy/table_height"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表格边框")}`,
+								href: "/component/data/x-table-easy/table_border"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("列宽设置")}`,
+								href: "/component/data/x-table-easy/column_width"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("列宽拖动")}`,
+								href: "/component/data/x-table-easy/column_width_dragging"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("列固定")}`,
+								href: "/component/data/x-table-easy/column_fixed"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("列隐藏")}`,
+								href: "/component/data/x-table-easy/column_hidden"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表头固定")}`,
+								href: "/component/data/x-table-easy/header_fixed"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表头分组")}`,
+								href: "/component/data/x-table-easy/header_group"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("表头隐藏")}`,
+								href: "/component/data/x-table-easy/header_hidden"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("筛选")}`,
+								href: "/component/data/x-table-easy/filter"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("筛选自定义")}`,
+								href: "/component/data/x-table-easy/filter_custom"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("排序")}`,
+								href: "/component/data/x-table-easy/sort"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格对齐")}`,
+								href: "/component/data/x-table-easy/cell_align"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格样式")}`,
+								href: "/component/data/x-table-easy/cell_style"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格自定义")}`,
+								href: "/component/data/x-table-easy/cell_custom"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格合并")}`,
+								href: "/component/data/x-table-easy/cell_merge"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("操作列")}`,
+								href: "/component/data/x-table-easy/action_column"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格选择")}`,
+								href: "/component/data/x-table-easy/cell_selection"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("单元格编辑")}`,
+								href: "/component/data/x-table-easy/cell_edit"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("虚拟滚动")}`,
+								href: "/component/data/x-table-easy/virtual_scroll"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("行样式定制")}`,
+								href: "/component/data/x-table-easy/row_style"
+							},
+							{
+								icon: "_icon_layout",
+								label: `${i18n("行展开")}`,
+								href: "/component/data/x-table-easy/row_expand"
+							}
+						]
+					},
 				{
 					icon: "icon_report",
 					label: `${i18n("Pagination")} ${i18n("分页")}`,

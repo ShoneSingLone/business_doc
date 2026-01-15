@@ -2,7 +2,7 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" borderX borderY />
+			<xTableEasy :columns="columns" :table-data="tableData" :column-width-resize-option="columnWidthResizeOption" borderX borderY />
 		</div>
 	</div>
 </template>
@@ -11,7 +11,10 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过在 columns 配置中设置 width 属性来定义列宽',
+				mdDoc: '通过设置 columnWidthResizeOption 属性来启用列宽拖动功能',
+				columnWidthResizeOption: {
+					enable: true
+				},
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
