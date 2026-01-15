@@ -2,8 +2,16 @@
 	<DocContentOfDemo class="x-table-easy-table-border">
 		<xMd :md="mdTips" />
 		<DemoAndCode
-			title="表格边框"
+			title="完整边框（横向和纵向）"
 			path="@/views/component/data/xTableEasy/xTableEasy.TableBorder.AutoBorder.vue"
+			unfold />
+		<DemoAndCode
+			title="只显示横向边框"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableBorder.HorizontalBorder.vue"
+			unfold />
+		<DemoAndCode
+			title="只显示纵向边框"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableBorder.VerticalBorder.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>

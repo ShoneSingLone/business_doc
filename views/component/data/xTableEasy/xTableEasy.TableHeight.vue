@@ -5,6 +5,14 @@
 			title="表格自动高度"
 			path="@/views/component/data/xTableEasy/xTableEasy.TableHeight.AutoHeight.vue"
 			unfold />
+		<DemoAndCode
+			title="表格固定高度"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableHeight.FixedHeight.vue"
+			unfold />
+		<DemoAndCode
+			title="表格动态高度（calc css函数）"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableHeight.DynamicHeight.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

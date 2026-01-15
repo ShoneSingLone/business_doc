@@ -5,6 +5,14 @@
 			title="表格自动宽度"
 			path="@/views/component/data/xTableEasy/xTableEasy.TableWidth.AutoWidth.vue"
 			unfold />
+		<DemoAndCode
+			title="表格固定宽度"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableWidth.FixedWidth.vue"
+			unfold />
+		<DemoAndCode
+			title="表格动态宽度（calc css函数）"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableWidth.DynamicWidth.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
