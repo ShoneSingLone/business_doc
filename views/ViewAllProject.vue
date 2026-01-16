@@ -2,7 +2,7 @@
 	<div class="x-page-view ViewAllProject">
 		<xPageTitle
 			title="所有项目"
-			tips="源码static_vue2文件夹下所有非common文件夹，及其子目录的html文件">
+			tips="源码statics文件夹下所有非common文件夹，及其子目录的html文件">
 		</xPageTitle>
 		<xPageContent>
 			<xTablebar :configs="configsTable">
