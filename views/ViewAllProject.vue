@@ -72,6 +72,12 @@ export default async function () {
 				},
 				oprBtnArray: [
 					{
+						label: i18n("刷新"),
+						async onClick() {
+							vm.loadAllProject();
+						}
+					},
+					{
 						label: i18n("download"),
 						async onClick() {
 							vm.download();
@@ -248,14 +254,34 @@ export default async function () {
 									return hBtnWithMore({
 										col: 3,
 										children: [
-											{
-												label: i18n("添加入口"),
-												onClick() {
-													return;
+											() => {
+												if (rowData.archiveFiles?.length) {
+													return h({
+														template: `<xPopover placement="left-end" width="200" trigger="hover">
+	<xCard style="width:50vw;height:50vh;overflow:auto;"> 
+	    <div v-for="(item, index) in archive_files">
+			<xBtn type="a" :href="href(item.archivePath)" target="_blank" preset="text">{{ item.name }}</xBtn>
+		</div>
+	</xCard>														
+	<xBtn slot="reference" preset="text">项目压缩包({{archive_files.length}})</xBtn>
+</xPopover>`,
+														data() {
+															return {
+																archive_files: rowData.archiveFiles
+															};
+														},
+														methods: {
+															href(archivePath) {
+																return `/boundless-api/project/archive/download${archivePath}`;
+															}
+														}
+													});
+												} else {
+													return null;
 												}
 											},
 											{
-												label: i18n("open in vscode"),
+												label: i18n("open"),
 												onClick() {
 													return _api.doc.cmd({
 														action: "cmd",
