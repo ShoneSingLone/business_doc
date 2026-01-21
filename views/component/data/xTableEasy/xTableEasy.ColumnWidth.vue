@@ -5,6 +5,10 @@
 			title="列宽设置"
 			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.Setting.vue"
 			unfold />
+		<DemoAndCode
+			title="列宽拖动"
+			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.Dragging.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
