@@ -13,6 +13,10 @@
 			title="表格动态宽度（calc css函数）"
 			path="@/views/component/data/xTableEasy/xTableEasy.TableWidth.DynamicWidth.vue"
 			unfold />
+		<DemoAndCode
+			title="表格动态宽度（百分比）"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableWidth.PercentWidth.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

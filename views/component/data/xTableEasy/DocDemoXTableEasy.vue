@@ -2,7 +2,10 @@
 	<DocContentOfDemo>
 		<xMd :md="descString" />
 		<!-- 基础用法 -->
-		<DemoAndCode title="基础用法" path="@/views/component/data/xTableEasy/JiChuYongFa.vue" />
+		<DemoAndCode
+			title="基础用法"
+			path="@/views/component/data/xTableEasy/JiChuYongFa.vue"
+			unfold />
 	</DocContentOfDemo>
 </template>
 <script lang="ts">

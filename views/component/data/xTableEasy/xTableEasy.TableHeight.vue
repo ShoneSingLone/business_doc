@@ -13,6 +13,10 @@
 			title="表格动态高度（calc css函数）"
 			path="@/views/component/data/xTableEasy/xTableEasy.TableHeight.DynamicHeight.vue"
 			unfold />
+		<DemoAndCode
+			title="表格动态高度（百分比）"
+			path="@/views/component/data/xTableEasy/xTableEasy.TableHeight.PercentHeight.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

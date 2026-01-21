@@ -2,6 +2,53 @@
 	<div>
 		<h3>虚拟滚动 (4000 条数据)</h3>
 		<p>虚拟滚动可以高效渲染大量数据，只渲染可视区域内的数据行，提升性能。</p>
+
+		<h4>实现原理</h4>
+		<div class="principle-explanation">
+			<ol>
+				<li
+					><strong>只渲染可视区域数据</strong
+					>：根据容器高度和行高计算可视区域能显示的行数，只渲染这些行及其前后的缓冲行。</li
+				>
+				<li
+					><strong>占位符技术</strong
+					>：使用一个高度等于所有数据行总高度的占位符元素，确保滚动条能正常工作。</li
+				>
+				<li
+					><strong>滚动事件监听</strong
+					>：监听滚动容器的scroll事件，根据滚动位置动态计算当前应该显示的数据范围。</li
+				>
+				<li
+					><strong>数据切片</strong
+					>：根据计算出的起始和结束索引，从完整数据中切片出需要显示的部分。</li
+				>
+				<li
+					><strong>缓冲机制</strong
+					>：为了避免滚动时频繁更新，会在可视区域前后添加一定比例的缓冲数据。</li
+				>
+			</ol>
+		</div>
+
+		<h4>核心配置</h4>
+		<div class="config-explanation">
+			<ul>
+				<li><code>enable: true</code> - 启用虚拟滚动</li>
+				<li><code>bufferScale: 1</code> - 缓冲比例，可视区域行数的倍数</li>
+				<li><code>minRowHeight: 40</code> - 最小行高，用于计算可视区域行数</li>
+				<li><code>scrolling</code> - 滚动回调函数，可用于监控滚动状态</li>
+			</ul>
+		</div>
+
+		<h4>性能优势</h4>
+		<div class="performance-explanation">
+			<ul>
+				<li>大幅减少DOM节点数量，提升渲染性能</li>
+				<li>降低内存占用，避免浏览器卡顿</li>
+				<li>支持渲染数万条甚至更多数据</li>
+				<li>滚动体验流畅，无明显卡顿</li>
+			</ul>
+		</div>
+
 		<xTableEasy
 			:columns="columns"
 			:tableData="tableData"
@@ -137,9 +184,53 @@ h3 {
 	font-weight: 500;
 }
 
+h4 {
+	margin: 20px 0 10px 0;
+	font-size: 14px;
+	font-weight: 500;
+	color: #303133;
+}
+
 p {
 	margin: 0 0 15px 0;
 	color: #606266;
 	font-size: 14px;
+}
+
+.principle-explanation,
+.config-explanation,
+.performance-explanation {
+	margin: 0 0 20px 0;
+	padding: 15px;
+	background-color: #f5f7fa;
+	border-radius: 4px;
+	border-left: 4px solid #409eff;
+}
+
+.principle-explanation ol {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.config-explanation ul,
+.performance-explanation ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.principle-explanation li,
+.config-explanation li,
+.performance-explanation li {
+	margin: 8px 0;
+	color: #606266;
+	font-size: 14px;
+}
+
+code {
+	background-color: #f0f0f0;
+	padding: 2px 4px;
+	border-radius: 2px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
 }
 </style>
