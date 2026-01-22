@@ -16,7 +16,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "表格动态宽度（calc css函数）",
+				mdDoc: '表格的动态宽度，可以通过 `style="width:calc(100vw - 300px)"` 方式设置。此表格容器宽度为100vw - 300px',
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },

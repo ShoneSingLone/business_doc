@@ -2,21 +2,16 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:scrollWidth="'80%'"
-				borderX
-				borderY />
+			<xTableEasy :columns="columns" :table-data="tableData" />
 		</div>
 	</div>
 </template>
 <script lang="ts">
 export default async function () {
-	return {
+	return defineComponent({
 		data() {
 			return {
-				mdDoc: '表格的动态宽度，可以通过 `style="width:80%"` 方式设置。此表格容器宽度为80%',
+				mdDoc: "不显示任何边框，不设置任何边框属性",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
@@ -57,7 +52,6 @@ export default async function () {
 				]
 			};
 		}
-	};
+	});
 }
 </script>
-<style lang="less"></style>

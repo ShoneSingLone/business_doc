@@ -40,7 +40,7 @@ export default async function () {
    - 使用百分比可以实现响应式高度，随父容器高度变化
 4. **内部实现**：表格组件会根据设置的maxHeight值，计算并应用到表格容器上，实现内容的滚动显示
 `,
-				apiString: `
+			apiString: `
 ## API
 
 ### 表格高度设置

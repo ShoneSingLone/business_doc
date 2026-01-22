@@ -39,7 +39,7 @@ export default async function () {
    - 使用百分比可以实现响应式宽度，随父容器宽度变化
 4. **内部实现**：表格组件会根据设置的宽度值，计算并应用到表格容器上，确保表格正确显示
 `,
-				apiString: `
+			apiString: `
 ## API
 
 ### 表格宽度设置
