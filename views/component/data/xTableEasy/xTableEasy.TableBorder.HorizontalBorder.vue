@@ -2,7 +2,7 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" borderY />
+			<xTableEasy :columns="columns" :table-data="tableData" borderX />
 		</div>
 	</div>
 </template>
@@ -11,7 +11,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "只显示横向边框，通过设置 borderY 属性来实现",
+				mdDoc: "只显示横向边框，通过设置 borderX 属性来实现",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
