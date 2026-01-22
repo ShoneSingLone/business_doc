@@ -14,7 +14,7 @@
 			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.NoWidth.vue"
 			unfold />
 		<DemoAndCode
-			title="长文本处理"
+			title="长文本破坏布局"
 			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.LongWord.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />

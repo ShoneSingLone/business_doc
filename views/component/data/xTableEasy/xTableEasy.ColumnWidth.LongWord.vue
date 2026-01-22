@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<h2>长文本破坏布局</h2>
 		<xMd :md="mdDoc" />
 		<p>
 			word-break：
