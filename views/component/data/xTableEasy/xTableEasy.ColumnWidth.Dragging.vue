@@ -1,65 +1,33 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:column-width-resize-option="columnWidthResizeOption"
-				borderX
-				borderY />
-		</div>
-	</div>
+	<DocContentOfDemo class="x-table-easy-column-width-dragging">
+		<xMd :md="mdDoc" />
+		<DemoAndCode
+			title="列宽拖动"
+			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.Dragging.Basic.vue"
+			unfold />
+		<DemoAndCode
+			title="禁用列宽拖动"
+			path="@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.Dragging.Disable.vue"
+			unfold />
+	</DocContentOfDemo>
 </template>
+
 <script lang="ts">
 export default async function () {
-	return defineComponent({
+	return {
 		data() {
 			return {
-				mdDoc: "通过设置 columnWidthResizeOption 属性来启用列宽拖动功能",
-				columnWidthResizeOption: {
-					enable: true
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 100 },
-					{ field: "date", key: "b", title: "Tel", width: 200 },
-					{ field: "hobby", key: "c", title: "Hobby", width: 300 },
-					{ field: "address", key: "d", title: "Address", width: 400 }
-				],
-				tableData: [
-					{
-						name: "John",
-						date: "1900-05-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Shanghai"
-					},
-					{
-						name: "Dickerson",
-						date: "1910-06-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Beijing"
-					},
-					{
-						name: "Larsen",
-						date: "2000-07-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Chongqing"
-					},
-					{
-						name: "Geneva",
-						date: "2010-08-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Xiamen"
-					},
-					{
-						name: "Jami",
-						date: "2020-09-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Shenzhen"
-					}
-				]
+				mdDoc: `- 1、当存在大文本时，列宽调整将会很有用
+- 2、通过 \`columnWidthResizeOption\` 设置列宽拖动功能
+- 3、建议设置 \`scroll-width=0\`，那么当列宽总和大于容器宽度时，将会出横向滚动条
+- 4、通过 \`column.width\` 设置列的默认宽度，如果所有列宽总和小于容器宽度，列宽度将会自适应`
 			};
 		}
-	});
+	};
 }
 </script>
+
+<style lang="less">
+.x-table-easy-column-width-dragging {
+}
+</style>
