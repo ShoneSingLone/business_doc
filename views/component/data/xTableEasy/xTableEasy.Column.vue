@@ -45,7 +45,7 @@ export default async function () {
    - 可以通过拖动列头边界来调整列宽
    - 内部实现：表格组件会监听鼠标事件，计算拖动距离并更新列宽
 `,
-			apiString: `
+				apiString: `
 ## API
 
 ### 列配置

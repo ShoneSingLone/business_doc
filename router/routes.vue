@@ -527,7 +527,10 @@ export default async function () {
 			children: [
 				_.$newRoute("/other/affix", "@/views/other/affix/DocDemoAffix.vue"),
 				_.$newRoute("/other/message", "@/views/other/message/DocDemoMessage.vue"),
-				_.$newRoute("/other/notification", "@/views/other/notification/DocDemoNotification.vue"),
+				_.$newRoute(
+					"/other/notification",
+					"@/views/other/notification/DocDemoNotification.vue"
+				),
 				_.$newRoute("/other/alert", "@/views/other/alert/DocDemoAlert.vue"),
 				_.$newRoute("/other/progress", "@/views/other/progress/DocDemoProgress.vue"),
 				_.$newRoute("/other/collapse", "@/views/other/collapse/DocDemoCollapse.vue"),

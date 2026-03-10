@@ -44,7 +44,7 @@ export default async function () {
    - 可以通过外部控件动态控制表头的显示和隐藏
    - 内部实现：表格组件会根据 showHeader 属性决定是否渲染表头部分
 `,
-			apiString: `
+				apiString: `
 ## API
 
 ### 表头配置
