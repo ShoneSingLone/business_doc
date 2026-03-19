@@ -3,7 +3,9 @@
 		<div class="flex vertical">
 			<xMd :md="'> 推荐通过工具函数 `_.$previewImgs` 调用'" />
 			<div class="flex">
-				<xBtn @click="$event => openImgPreviewer($event)">index下标</xBtn>
+				<xBtn @click="openImgPreviewer">index下标</xBtn>
+				<xGap r />
+				<xBtn @click="openImgPreviewerWithOriginDom">英雄动画效果</xBtn>
 				<xGap r />
 				<xBtn @click="openImgPreviewerCurrentUrl">currentUrl</xBtn>
 			</div>
@@ -38,8 +40,15 @@ export default async function () {
 			openImgPreviewer(event) {
 				_.$previewImgs({
 					urlList: this.srcList,
+					index: 3
+				});
+			},
+			openImgPreviewerWithOriginDom(event) {
+				_.$previewImgs({
+					urlList: this.srcList,
 					index: 3,
-					originDom: event.currentTarget
+					// 传递点击的DOM元素，实现英雄动画
+					originDom: event.target
 				});
 			},
 			openImgPreviewerCurrentUrl() {
