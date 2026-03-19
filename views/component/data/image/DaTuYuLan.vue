@@ -3,7 +3,7 @@
 		<div class="flex vertical">
 			<xMd :md="'> 推荐通过工具函数 `_.$previewImgs` 调用'" />
 			<div class="flex">
-				<xBtn @click="openImgPreviewer">index下标</xBtn>
+				<xBtn @click="$event => openImgPreviewer($event)">index下标</xBtn>
 				<xGap r />
 				<xBtn @click="openImgPreviewerCurrentUrl">currentUrl</xBtn>
 			</div>
@@ -35,10 +35,11 @@ export default async function () {
 			};
 		},
 		methods: {
-			openImgPreviewer() {
+			openImgPreviewer(event) {
 				_.$previewImgs({
 					urlList: this.srcList,
-					index: 3
+					index: 3,
+					originDom: event.currentTarget
 				});
 			},
 			openImgPreviewerCurrentUrl() {
