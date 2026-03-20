@@ -3,12 +3,19 @@
 		<div class="flex vertical">
 			<xMd :md="'> 推荐通过工具函数 `_.$previewImgs` 调用'" />
 			<div class="flex">
-				<xBtn @click="openImgPreviewer">index下标</xBtn>
-				<xGap r />
-				<xBtn @click="openImgPreviewerWithOriginDom">英雄动画效果</xBtn>
-				<xGap r />
+				<xGap f />
 				<xBtn @click="openImgPreviewerCurrentUrl">currentUrl</xBtn>
+				<xGap r />
+				<xBtn @click="openImgPreviewer">index下标</xBtn>
 			</div>
+			<div class="flex mt">
+				<xGap f />
+				<xBtn @click="openImgPreviewerWithOriginDom" preset="primary"
+					>附·英雄动画--index下标</xBtn
+				>
+			</div>
+			<xMd
+				:md="'> 为什么叫*英雄动画*？我也不知道。反正业界说就这么翻译。把按钮放在最右边，可以明显看到这个图片从边边到中央，又从中央回到边边，比较吸睛。'" />
 		</div>
 		<div class="flex vertical x-margin">
 			<xMd :md="mdTitle" />
