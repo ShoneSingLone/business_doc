@@ -2,13 +2,13 @@
 export default async function () {
 	return [
 		{
-			icon: "icon_report",
+			icon: "_icon_demo",
 			label: i18n("Demo"),
 			children: [
-				{ icon: "icon_report", label: i18n("基础列表"), href: "/demo/config" },
-				{ icon: "icon_report", label: i18n("错误信息提示页"), href: "/demo/error" },
+				{ icon: "_icon_table", label: i18n("基础列表"), href: "/demo/config" },
+				{ icon: "_icon_alert", label: i18n("错误信息提示页"), href: "/demo/error" },
 				{
-					icon: "icon_report",
+					icon: "_icon_table",
 					label: i18n("列表"),
 					href: "/template/list"
 				}
@@ -44,7 +44,7 @@ export default async function () {
 					label: i18n("Infinite Scroll"),
 					href: "/directives/infinite_scroll"
 				},
-				{ icon: "icon_report", label: i18n("layer"), href: "/other/layer" },
+				{ icon: "_icon_dialog", label: i18n("layer"), href: "/other/layer" },
 				{ icon: "_icon_move", label: i18n("move"), href: "/other/move" },
 				{ icon: "_icon_popover", label: i18n("Popover"), href: "/other/popover" },
 				{
@@ -76,46 +76,46 @@ export default async function () {
 				{ href: "/x-component/x-form", icon: "_icon_form", label: i18n("xForm") },
 				{
 					href: "/x-component/x-item",
-					icon: "icon_report",
+					icon: "_icon_form",
 					label: i18n("xItem"),
 					children: [
 						{
-							icon: "icon_report",
+							icon: "_icon_item_radio",
 							label: i18n("xItemRadioGroup"),
 							href: "/x-component/x-item-radio-group"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_switch",
 							label: i18n("xItemSwitch"),
 							href: "/x-component/x-item-switch"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_item_input",
 							label: i18n("xItemInput"),
 							href: "/x-component/x-item-input"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_selector",
 							label: i18n("xItemAutocomplete"),
 							href: "/x-component/x-item-autocomplate"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_item_checkbox",
 							label: i18n("xItemCheck"),
 							href: "/x-component/x-item-check"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_cron",
 							label: i18n("xItemCronExpression"),
 							href: "/x-component/x-item-cron-expression"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_network",
 							label: i18n("xItemCidr"),
 							href: "/x-component/x-item-cidr"
 						},
 						{
-							icon: "icon_report",
+							icon: "_icon_item_checkbox",
 							label: i18n("xItemCheckboxGroup"),
 							href: "/x-component/x-item-checkbox-group"
 						}
@@ -134,7 +134,7 @@ export default async function () {
 				},
 				{ icon: "_icon_btn", label: i18n("button"), href: "/component/base/button" },
 				{
-					icon: "icon_report",
+					icon: "_icon_search",
 					label: `${i18n("AdvancedSearch")} ${i18n("高级搜索按钮")}`,
 					href: "/component/form/advanced-search"
 				},
@@ -190,7 +190,7 @@ export default async function () {
 					href: "/component/form/date-time-picker"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_network",
 					label: i18n("ip-address"),
 					href: "/component/form/ip-address"
 				},
@@ -220,17 +220,17 @@ export default async function () {
 					href: "/component/data/icon"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_card",
 					label: `${i18n("Card")} ${i18n("卡片")}`,
 					href: "/component/data/card"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_descriptions",
 					label: `${i18n("Descriptions")} ${i18n("描述列表")}`,
 					href: "/component/data/descriptions"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_tag",
 					label: `${i18n("Tag")} ${i18n("标签")}`,
 					href: "/component/data/tag"
 				},
@@ -240,12 +240,12 @@ export default async function () {
 					href: "/component/data/tree"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_table",
 					label: `${i18n("Table")} ${i18n("列表")}`,
 					href: "/component/data/virtualized-table"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_table",
 					label: `${i18n("xTableEasy")} ${i18n("表格")}`,
 					href: "/component/data/x-table-easy",
 					children: [
@@ -382,32 +382,32 @@ export default async function () {
 					]
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_pagination",
 					label: `${i18n("Pagination")} ${i18n("分页")}`,
 					href: "/component/data/pagination"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_badge",
 					label: `${i18n("Badge")} ${i18n("标记")}`,
 					href: "/component/data/badge"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_menu",
 					label: `${i18n("Menu")} ${i18n("菜单")}`,
 					href: "/component/navigation/menu"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_tabs",
 					label: i18n("Tabs"),
 					href: "/component/navigation/tabs"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_step",
 					label: i18n("step"),
 					href: "/component/navigation/step"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_dropdown",
 					label: i18n("dropdown"),
 					href: "/component/navigation/dropdown"
 				},
@@ -462,38 +462,38 @@ export default async function () {
 					href: "/component/data/excalidraw"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_dev",
 					label: `${i18n("xDev")} ${i18n("调试组件")}`,
 					href: "/other/x_dev"
 				}
 			]
 		},
 		{
-			icon: "icon_report",
+			icon: "_icon_dev",
 			label: i18n("开发调试用"),
 			children: [
 				{
-					icon: "icon_report",
+					icon: "_icon_test",
 					label: i18n("TestComponent"),
 					href: "/component/base/testcomponent"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_template",
 					label: i18n("template"),
 					href: "/dev/template"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_render",
 					label: i18n("render"),
 					href: "/dev/render"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_socket",
 					label: i18n("socket.io"),
 					href: "/dev/io"
 				},
 				{
-					icon: "icon_report",
+					icon: "_icon_debug",
 					label: i18n("调试"),
 					href: "/dev/rule"
 				}
