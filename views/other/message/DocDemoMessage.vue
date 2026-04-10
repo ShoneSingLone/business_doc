@@ -50,7 +50,7 @@
 <script lang="ts">
 export default async function () {
 	/* 用于加载样式，实际使用中是懒加载，不用担心 */
-	_.$importVue("/common/ui-x/directive/xMessage/xMessage.vue");
+	_.$importVue("/common/ui-x/directives/xMessage/xMessage.vue");
 	return {
 		data() {
 			return {

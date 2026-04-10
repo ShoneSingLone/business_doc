@@ -87,7 +87,7 @@ columnWidthResizeOption: {
 					enable: true,
 					minWidth: 30,
 					sizeChange: ({ column, differWidth, columnWidth }) => {
-						console.log('列宽变化:', {
+						console.log("列宽变化:", {
 							column: column.field,
 							differWidth: differWidth,
 							columnWidth: columnWidth

@@ -4,15 +4,15 @@
 
 		<DemoAndCode
 			title="基础用法"
-			path="@/views/directive/directive/infinite_scroll/JiChuYongFa.vue"
+			path="@/views/directives/directives/infinite_scroll/JiChuYongFa.vue"
 			unfold />
 		<DemoAndCode
 			title="Scroll Up"
-			path="@/views/directive/directive/infinite_scroll/scroll_up.vue"
+			path="@/views/directives/directives/infinite_scroll/scroll_up.vue"
 			unfold />
 		<DemoAndCode
 			title="禁用加载"
-			path="@/views/directive/directive/infinite_scroll/jin_yong_jia_zai.vue"
+			path="@/views/directives/directives/infinite_scroll/jin_yong_jia_zai.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>

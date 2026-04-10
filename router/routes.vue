@@ -36,12 +36,12 @@ export default async function () {
 		_.$newRoute("/directive", ComponentPageRouterView, {
 			children: [
 				_.$newRoute(
-					"/directive/ripple",
-					"@/views/directive/directive/ripple/DocDemoRipple.vue"
+					"/directives/ripple",
+					"@/views/directives/directives/ripple/DocDemoRipple.vue"
 				),
 				_.$newRoute(
-					"/directive/infinite_scroll",
-					"@/views/directive/directive/infinite_scroll/DocDemoInfiniteScroll.vue"
+					"/directives/infinite_scroll",
+					"@/views/directives/directives/infinite_scroll/DocDemoInfiniteScroll.vue"
 				)
 			]
 		}),
@@ -89,6 +89,10 @@ export default async function () {
 			children: [
 				_.$newRoute("/component/base", ComponentRouterView, {
 					children: [
+						_.$newRoute(
+							"/component/base/testcomponent",
+							"@/views/component/base/TestComponent/DocDemoTestComponent.vue"
+						),
 						_.$newRoute(
 							"/component/base/button",
 							"@/views/base/button/DocDemoButton.vue"
@@ -302,176 +306,8 @@ export default async function () {
 							"@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.vue"
 						),
 						_.$newRoute(
-							"/component/data/x-table-easy/row_expand",
-							"@/views/component/data/xTableEasy/examples/HangZhanKai.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/virtual_scroll",
-							"@/views/component/data/xTableEasy/XuNiGunDong.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/action_column",
-							"@/views/component/data/xTableEasy/CaoZuoLie.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_selection",
-							"@/views/component/data/xTableEasy/DaiYouXuanZeDeBiaoGe.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_edit",
-							"@/views/component/data/xTableEasy/DanYuanGeBianJi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/row_style",
-							"@/views/component/data/xTableEasy/XingYangShiDingZhi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_align",
-							"@/views/component/data/xTableEasy/DanYuanGeDuiQi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_style",
-							"@/views/component/data/xTableEasy/DanYuanGeYangShi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_custom",
-							"@/views/component/data/xTableEasy/ZiDingYiDanYuanGeXuanRan.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_merge",
-							"@/views/component/data/xTableEasy/DanYuanGeHeBing.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/sort",
-							"@/views/component/data/xTableEasy/PaiXu.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/filter",
-							"@/views/component/data/xTableEasy/ShaiXuan.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/filter_custom",
-							"@/views/component/data/xTableEasy/ShaiXuanZiDingYi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_group",
-							"@/views/component/data/xTableEasy/BiaoTouFenZu.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_fixed",
-							"@/views/component/data/xTableEasy/BiaoTouGuDing.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_hidden",
-							"@/views/component/data/xTableEasy/BiaoTouYinCang.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/column_hidden",
-							"@/views/component/data/xTableEasy/LieYinCang.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/base_usage",
-							"@/views/component/data/xTableEasy/JiChuYongFa.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/table_border",
-							"@/views/component/data/xTableEasy/BiaoGeBianKuang.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/table_height",
-							"@/views/component/data/xTableEasy/BiaoGeGaoDu.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/table_width",
-							"@/views/component/data/xTableEasy/BiaoGeKuanDu.vue"
-						),
-						_.$newRoute(
 							"/component/data/x-table-easy/column_width_setting",
-							"@/views/component/data/xTableEasy/LieKuanSheZhi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/column_width_dragging",
-							"@/views/component/data/xTableEasy/LieKuanTuoDong.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/column_fixed",
-							"@/views/component/data/xTableEasy/LieGuDing.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_style",
-							"@/views/component/data/xTableEasy/DanYuanGeYangShi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_merge",
-							"@/views/component/data/xTableEasy/DanYuanGeHeBing.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_custom",
-							"@/views/component/data/xTableEasy/ZiDingYiDanYuanGeXuanRan.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_selection",
-							"@/views/component/data/xTableEasy/DaiYouXuanZeDeBiaoGe.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_edit",
-							"@/views/component/data/xTableEasy/DanYuanGeBianJi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/virtual_scroll",
-							"@/views/component/data/xTableEasy/XuNiGunDong.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/action_column",
-							"@/views/component/data/xTableEasy/CaoZuoLie.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/row_style",
-							"@/views/component/data/xTableEasy/XingYangShiDingZhi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/row_expand",
-							"@/views/component/data/xTableEasy/examples/HangZhanKai.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/sort",
-							"@/views/component/data/xTableEasy/PaiXu.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/filter",
-							"@/views/component/data/xTableEasy/ShaiXuan.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/filter_custom",
-							"@/views/component/data/xTableEasy/ShaiXuanZiDingYi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_group",
-							"@/views/component/data/xTableEasy/BiaoTouFenZu.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_fixed",
-							"@/views/component/data/xTableEasy/BiaoTouGuDing.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/header_hidden",
-							"@/views/component/data/xTableEasy/BiaoTouYinCang.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/column_hidden",
-							"@/views/component/data/xTableEasy/LieYinCang.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_align",
-							"@/views/component/data/xTableEasy/DanYuanGeDuiQi.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_custom",
-							"@/views/component/data/xTableEasy/ZiDingYiDanYuanGeXuanRan.vue"
-						),
-						_.$newRoute(
-							"/component/data/x-table-easy/cell_merge",
-							"@/views/component/data/xTableEasy/DanYuanGeHeBing.vue"
+							"@/views/component/data/xTableEasy/xTableEasy.ColumnWidth.Setting.vue"
 						),
 						_.$newRoute(
 							"/component/data/x-table-easy/base_usage",
@@ -527,7 +363,10 @@ export default async function () {
 			children: [
 				_.$newRoute("/other/affix", "@/views/other/affix/DocDemoAffix.vue"),
 				_.$newRoute("/other/message", "@/views/other/message/DocDemoMessage.vue"),
-				_.$newRoute("/other/notification", "@/views/other/notification/DocDemoNotification.vue"),
+				_.$newRoute(
+					"/other/notification",
+					"@/views/other/notification/DocDemoNotification.vue"
+				),
 				_.$newRoute("/other/alert", "@/views/other/alert/DocDemoAlert.vue"),
 				_.$newRoute("/other/progress", "@/views/other/progress/DocDemoProgress.vue"),
 				_.$newRoute("/other/collapse", "@/views/other/collapse/DocDemoCollapse.vue"),

@@ -2,7 +2,9 @@
 
 ## 动画效果概述
 
-在 `hero_animation.html` 中实现了一种流畅的图片预览动画效果。当用户点击网格中的缩略图时，图片会从缩略图位置平滑地放大到全屏预览位置，同时背景会逐渐变暗。这种效果通常被称为 "Hero Animation" 或 "共享元素过渡"。
+在 `hero_animation.html`
+中实现了一种流畅的图片预览动画效果。当用户点击网格中的缩略图时，图片会从缩略图位置平滑地放大到全屏预览位置，同时背景会逐渐变暗。这种效果通常被称为 "Hero
+Animation" 或 "共享元素过渡"。
 
 ## 核心动画处理流程
 
@@ -20,14 +22,14 @@ let animationFrameId = null; // 动画帧 ID
 
 ```javascript
 cards.forEach(card => {
-  card.addEventListener('click', (e) => {
-    // 如果正在动画，先取消当前动画
-    if (isAnimating) {
-      cancelAnimation();
-    }
-    // 直接切换到新图片，不需要先关闭
-    switchToCard(card);
-  });
+	card.addEventListener("click", e => {
+		// 如果正在动画，先取消当前动画
+		if (isAnimating) {
+			cancelAnimation();
+		}
+		// 直接切换到新图片，不需要先关闭
+		switchToCard(card);
+	});
 });
 ```
 
@@ -42,14 +44,14 @@ cards.forEach(card => {
 const rect = card.getBoundingClientRect();
 
 // 重置所有样式到初始状态（无动画）
-preview.style.transition = 'none';
-preview.style.width = rect.width + 'px';
-preview.style.height = rect.height + 'px';
-preview.style.left = rect.left + 'px';
-preview.style.top = rect.top + 'px';
-preview.style.transform = 'translate(0, 0)';
-preview.style.borderRadius = '18px';
-preview.style.opacity = '0';
+preview.style.transition = "none";
+preview.style.width = rect.width + "px";
+preview.style.height = rect.height + "px";
+preview.style.left = rect.left + "px";
+preview.style.top = rect.top + "px";
+preview.style.transform = "translate(0, 0)";
+preview.style.borderRadius = "18px";
+preview.style.opacity = "0";
 
 // 强制刷新 DOM，确保样式更新生效
 preview.getBoundingClientRect();
@@ -63,11 +65,11 @@ preview.getBoundingClientRect();
 
 ```javascript
 // 显示覆盖层和预览
-overlay.classList.add('active');
-preview.classList.add('active');
+overlay.classList.add("active");
+preview.classList.add("active");
 
 // 立即设置可见性
-preview.style.opacity = '1';
+preview.style.opacity = "1";
 ```
 
 添加 CSS 类来显示覆盖层和预览图片，并立即设置预览图片的可见性。
@@ -76,15 +78,15 @@ preview.style.opacity = '1';
 
 ```javascript
 // 开启动画
-preview.style.transition = 'all 0.42s cubic-bezier(0.2, 0, 0, 1)';
+preview.style.transition = "all 0.42s cubic-bezier(0.2, 0, 0, 1)";
 
 // 放大到中央
-preview.style.width = '360px';
-preview.style.height = '360px';
-preview.style.left = '50%';
-preview.style.top = '50%';
-preview.style.transform = 'translate(-50%, -50%)';
-preview.style.borderRadius = '24px';
+preview.style.width = "360px";
+preview.style.height = "360px";
+preview.style.left = "50%";
+preview.style.top = "50%";
+preview.style.transform = "translate(-50%, -50%)";
+preview.style.borderRadius = "24px";
 ```
 
 1. 设置过渡动画属性，使用 `cubic-bezier(0.2, 0, 0, 1)` 缓动函数
@@ -93,6 +95,7 @@ preview.style.borderRadius = '24px';
 4. 增加预览图片的圆角
 
 **问题分析：**
+
 - 预览图尺寸写死为 360px × 360px 的正方形，不考虑源图片的原始比例
 - 对于非正方形图片，会导致预览图拉伸或压缩
 - 更好的方法是根据源图片比例计算预览图尺寸，确保图片不变形
@@ -102,7 +105,7 @@ preview.style.borderRadius = '24px';
 ```javascript
 // 动画完成后更新状态
 animationFrameId = setTimeout(() => {
-  isAnimating = false;
+	isAnimating = false;
 }, 420);
 ```
 
@@ -113,34 +116,34 @@ animationFrameId = setTimeout(() => {
 ```javascript
 // 取消当前动画
 function cancelAnimation() {
-  if (animationFrameId) {
-    clearTimeout(animationFrameId);
-    animationFrameId = null;
-  }
-  // 强制停止所有动画
-  preview.style.transition = 'none';
-  preview.getBoundingClientRect();
+	if (animationFrameId) {
+		clearTimeout(animationFrameId);
+		animationFrameId = null;
+	}
+	// 强制停止所有动画
+	preview.style.transition = "none";
+	preview.getBoundingClientRect();
 }
 
 // 关闭动画
 function closeHero() {
-  if (!currentCard || isAnimating) return;
-  isAnimating = true;
-  const rect = currentCard.getBoundingClientRect();
+	if (!currentCard || isAnimating) return;
+	isAnimating = true;
+	const rect = currentCard.getBoundingClientRect();
 
-  // 回到原图位置
-  preview.style.width = rect.width + 'px';
-  preview.style.height = rect.height + 'px';
-  preview.style.left = rect.left + 'px';
-  preview.style.top = rect.top + 'px';
-  preview.style.transform = 'translate(0, 0)';
-  preview.style.borderRadius = '18px';
+	// 回到原图位置
+	preview.style.width = rect.width + "px";
+	preview.style.height = rect.height + "px";
+	preview.style.left = rect.left + "px";
+	preview.style.top = rect.top + "px";
+	preview.style.transform = "translate(0, 0)";
+	preview.style.borderRadius = "18px";
 
-  setTimeout(() => {
-    overlay.classList.remove('active');
-    preview.classList.remove('active');
-    isAnimating = false;
-  }, 420);
+	setTimeout(() => {
+		overlay.classList.remove("active");
+		preview.classList.remove("active");
+		isAnimating = false;
+	}, 420);
 }
 ```
 
@@ -160,34 +163,34 @@ function closeHero() {
 
 ```css
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 999;
-  transition: opacity 0.4s ease;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	pointer-events: none;
+	z-index: 999;
+	transition: opacity 0.4s ease;
 }
 
 .overlay.active {
-  opacity: 1;
-  pointer-events: auto;
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .preview {
-  position: fixed;
-  z-index: 1000;
-  will-change: transform;
-  transition: all 0.42s cubic-bezier(0.2, 0, 0, 1);
-  opacity: 0;
-  pointer-events: none;
-  border-radius: 18px;
-  overflow: hidden;
+	position: fixed;
+	z-index: 1000;
+	will-change: transform;
+	transition: all 0.42s cubic-bezier(0.2, 0, 0, 1);
+	opacity: 0;
+	pointer-events: none;
+	border-radius: 18px;
+	overflow: hidden;
 }
 
 .preview.active {
-  opacity: 1;
-  pointer-events: auto;
+	opacity: 1;
+	pointer-events: auto;
 }
 ```
 
@@ -205,4 +208,5 @@ function closeHero() {
 
 ## 总结
 
-`hero_animation.html` 中的动画处理方式简单而有效，使用 CSS 过渡和 JavaScript 状态管理相结合的方式，实现了流畅的 Hero Animation 效果。这种方法具有良好的性能和可维护性，是实现图片预览动画的优秀参考。
+`hero_animation.html` 中的动画处理方式简单而有效，使用 CSS 过渡和 JavaScript 状态管理相结合的方式，实现了流畅的 Hero
+Animation 效果。这种方法具有良好的性能和可维护性，是实现图片预览动画的优秀参考。

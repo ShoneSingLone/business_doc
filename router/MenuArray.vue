@@ -37,12 +37,12 @@ export default async function () {
 				{
 					icon: "_icon_ripple",
 					label: i18n("水波纹"),
-					href: "/directive/ripple"
+					href: "/directives/ripple"
 				},
 				{
 					icon: "_icon_ripple",
 					label: i18n("Infinite Scroll"),
-					href: "/directive/infinite_scroll"
+					href: "/directives/infinite_scroll"
 				},
 				{ icon: "icon_report", label: i18n("layer"), href: "/other/layer" },
 				{ icon: "_icon_move", label: i18n("move"), href: "/other/move" },
@@ -210,7 +210,7 @@ export default async function () {
 					href: "/component/data/avatar"
 				},
 				{
-					icon: "_icon_affix",
+					icon: "_icon_chart",
 					label: `${i18n("Chart")} ${i18n("图表")}`,
 					href: "/component/data/chart"
 				},
@@ -472,6 +472,11 @@ export default async function () {
 			icon: "icon_report",
 			label: i18n("开发调试用"),
 			children: [
+				{
+					icon: "icon_report",
+					label: i18n("TestComponent"),
+					href: "/component/base/testcomponent"
+				},
 				{
 					icon: "icon_report",
 					label: i18n("template"),
