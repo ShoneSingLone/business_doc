@@ -1,0 +1,20 @@
+[
+  ["card", "icon_card"],
+  ["tag", "icon_tag"],
+  ["pagination", "icon_pagination"],
+  ["badge", "icon_badge"],
+  ["menu", "icon_menu"],
+  ["tabs", "icon_tabs"],
+  ["step", "icon_step"],
+  ["dropdown", "icon_dropdown"],
+  ["network", "icon_network"],
+  ["cron", "icon_cron"],
+  ["demo", "icon_demo"],
+  ["dev", "icon_dev"],
+  ["test", "icon_test"],
+  ["template", "icon_template"],
+  ["render", "icon_render"],
+  ["socket", "icon_socket"],
+  ["debug", "icon_debug"],
+  ["descriptions", "icon_descriptions"]
+]
