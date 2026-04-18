@@ -47,6 +47,7 @@ export default async function () {
 | **\`fullscreen\` (全屏)** | **隐藏图标** | **显示图标** (初始不全屏) |
 | **\`minimizable\` (最小化)** | **隐藏图标** | **显示图标** (初始不最小化) |
 | **\`resize\` (调整大小)** | **\`false\`** | **\`true\`** |
+| **\`keyboard\` (快捷键)** | **\`false\`** | **\`false\`** |
 
 ### Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
@@ -57,6 +58,7 @@ export default async function () {
 | fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不全屏 | boolean | true/false | - |
 | minimizable | 控制最小化按钮。**值为 true** 即显示按钮。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示 | boolean | true/false | - |
 | resize | 是否允许从右下角自由调整窗口大小。在 \`_.$openModal\` 中默认 false，在 \`_.$windowsManager\` 中默认 true | boolean | true/false | - |
+| keyboard | 是否开启键盘快捷键（Ctrl+W 关闭，Ctrl+M 最小化）。默认全都不开启 | boolean | true/false | false |
 | onCancel | 取消按钮点击事件，返回为 \`真值\` 则不会关闭 modal | Function | - | - |
 
 > **提示：逻辑解耦说明**
