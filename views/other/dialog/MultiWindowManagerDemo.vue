@@ -120,6 +120,9 @@ export default async function () {
 					url: "@/views/other/WindowModify.vue",
 					payload: {
 						id: id
+					},
+					modalConfigs: {
+						keyboard: true
 					}
 				});
 				this.refreshWindowsList();
