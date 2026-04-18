@@ -1,24 +1,43 @@
 <template>
 	<div class="mask-usage-demo">
 		<div class="mb flex start gap10">
-			<xBtn @click="openDefaultMask" preset="blue">默认遮罩 (不可点击关闭)</xBtn>
-			<xBtn @click="openClickableMask" preset="green">遮罩可点击关闭</xBtn>
-			<xBtn @click="openNoMask" preset="orange">无遮罩 (可操作背景)</xBtn>
+			<xBtn :configs="btnDefaultMask" />
+			<xBtn :configs="btnClickableMask" />
+			<xBtn :configs="btnNoMask" />
 		</div>
-		<div class="tips-box">
-			<p>说明：</p>
-			<ul>
-				<li><b>默认遮罩</b>：`mask: true`, `closeOnClickMask: false` (默认行为)。</li>
-				<li><b>可点击关闭</b>：显式设置 `closeOnClickMask: true`。</li>
-				<li><b>无遮罩</b>：`mask: false`，此时弹窗容器不会拦截鼠标事件，可以直接点击下方的按钮。</li>
-			</ul>
-		</div>
+		<xMd :md="tipsMd" />
 	</div>
 </template>
 
 <script lang="ts">
 export default async function () {
 	return {
+		data() {
+			const vm = this;
+			return {
+				btnDefaultMask: {
+					label: "默认遮罩 (不可点击关闭)",
+					preset: "blue",
+					onClick: vm.openDefaultMask
+				},
+				btnClickableMask: {
+					label: "遮罩可点击关闭",
+					preset: "green",
+					onClick: vm.openClickableMask
+				},
+				btnNoMask: {
+					label: "无遮罩 (可操作背景)",
+					preset: "orange",
+					onClick: vm.openNoMask
+				},
+				tipsMd: `
+### 说明：
+- **默认遮罩**：\`mask: true\`, \`closeOnClickMask: false\` (默认行为)。
+- **可点击关闭**：显式设置 \`closeOnClickMask: true\`。
+- **无遮罩**：\`mask: false\`，此时弹窗容器不会拦截鼠标事件，可以直接点击下方的按钮。
+`
+			};
+		},
 		methods: {
 			async openDefaultMask() {
 				await _.$openModal({
@@ -51,18 +70,6 @@ export default async function () {
 .mask-usage-demo {
 	.gap10 {
 		gap: 10px;
-	}
-	.tips-box {
-		padding: 10px;
-		background: #f0f9eb;
-		border-left: 4px solid #67c23a;
-		margin-top: 10px;
-		font-size: 13px;
-		color: #606266;
-		ul {
-			margin: 5px 0 0 20px;
-			padding: 0;
-		}
 	}
 }
 </style>

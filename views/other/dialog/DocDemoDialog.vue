@@ -46,6 +46,7 @@ export default async function () {
 | **\`mask\` (遮罩)** | **\`true\`** (锁定背景) | **\`false\`** (不锁定背景) |
 | **\`fullscreen\` (全屏)** | **隐藏图标** | **显示图标** (初始不全屏) |
 | **\`minimizable\` (最小化)** | **隐藏图标** | **显示图标** (初始不最小化) |
+| **\`resize\` (调整大小)** | **\`false\`** | **\`true\`** |
 
 ### Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
@@ -55,6 +56,7 @@ export default async function () {
 | closeOnClickMask | 是否可以通过点击遮罩层关闭窗口。默认为 false | boolean | true/false | false |
 | fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不全屏 | boolean | true/false | - |
 | minimizable | 控制最小化按钮。**值为 true** 即显示按钮。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示 | boolean | true/false | - |
+| resize | 是否允许从右下角自由调整窗口大小。在 \`_.$openModal\` 中默认 false，在 \`_.$windowsManager\` 中默认 true | boolean | true/false | - |
 | onCancel | 取消按钮点击事件，返回为 \`真值\` 则不会关闭 modal | Function | - | - |
 
 > **提示：逻辑解耦说明**
