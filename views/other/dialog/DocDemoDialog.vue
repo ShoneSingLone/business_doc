@@ -54,12 +54,12 @@ export default async function () {
 | mask | 是否显示遮罩（锁定背景）。在 \`_.$openModal\` 中默认为 true，在 \`_.$windowsManager\` 中默认为 false | boolean | true/false | true |
 | closeOnClickMask | 是否可以通过点击遮罩层关闭窗口。默认为 false | boolean | true/false | false |
 | fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不全屏 | boolean | true/false | - |
-| minimizable | 控制最小化按钮。**字段存在**即显示按钮，**值**决定初始是否最小化。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不最小化 | boolean | true/false | - |
+| minimizable | 控制最小化按钮。**值为 true** 即显示按钮。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示 | boolean | true/false | - |
 | onCancel | 取消按钮点击事件，返回为 \`真值\` 则不会关闭 modal | Function | - | - |
 
 > **提示：逻辑解耦说明**
-> - **显示控制**：只要 \`modalConfigs\` 中定义了 \`fullscreen\` 或 \`minimizable\` 键，右上角就会显示对应的功能图标。
-> - **初始状态**：字段的布尔值决定窗口打开时的状态。例如 \`fullscreen: true\` 会使窗口打开时直接处于全屏状态。
+> - **全屏控制 (fullscreen)**：只要 \`modalConfigs\` 中定义了该键，就会显示图标；字段的布尔值决定初始状态。
+> - **最小化控制 (minimizable)**：仅当 \`modalConfigs.minimizable === true\` 时显示图标，且窗口初始始终为常规状态（不为最小化）。
 
 `
 			};

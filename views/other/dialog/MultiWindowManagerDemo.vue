@@ -1,28 +1,20 @@
 <template>
 	<div class="multi-window-manager-demo">
 		<div class="mb flex start gap10">
-			<xBtn @click="openWindow('win1')" preset="blue">打开窗口 1</xBtn>
-			<xBtn @click="openWindow('win2')" preset="green">打开窗口 2</xBtn>
-			<xBtn @click="openWindow('win3')" preset="orange">打开窗口 3</xBtn>
+			<xBtn :configs="btnOpenWin1" />
+			<xBtn :configs="btnOpenWin2" />
+			<xBtn :configs="btnOpenWin3" />
 		</div>
 		<div class="mb flex start gap10">
-			<xBtn @click="toTop('win1')" :disabled="!isWin1Open || isWin1Minimized" size="mini">置顶窗口 1</xBtn>
-			<xBtn @click="minimize('win1')" :disabled="!isWin1Open || isWin1Minimized" size="mini">最小化窗口 1</xBtn>
-			<xBtn @click="restore('win1')" :disabled="!isWin1Open || !isWin1Minimized" size="mini">还原窗口 1</xBtn>
-			<xBtn @click="close('win1')" :disabled="!isWin1Open" size="mini" preset="red">关闭窗口 1</xBtn>
+			<xBtn :configs="btnToTopWin1" />
+			<xBtn :configs="btnToggleWin1" />
+			<xBtn :configs="btnCloseWin1" />
 		</div>
 		<div class="mb flex start gap10">
 			<xBtn @click="closeAll" preset="red">关闭所有窗口</xBtn>
 		</div>
 		<div class="mb flex start gap10 wrap" v-if="minimizedWindows.length > 0">
-			<xBtn 
-				v-for="win in minimizedWindows" 
-				:key="win.id" 
-				@click="restore(win.id)" 
-				size="mini" 
-				preset="blue">
-				恢复窗口: {{win.id}}
-			</xBtn>
+			<xBtn v-for="win in minimizedWindows" :key="win.id" :configs="getRestoreBtnConfigs(win.id)" />
 		</div>
 		<div class="mb" v-else>
 			<xBtn disabled size="mini">暂无最小化窗口</xBtn>
@@ -41,8 +33,24 @@
 export default async function () {
 	return {
 		data() {
+			const vm = this;
 			return {
-				allWindows: []
+				allWindows: [],
+				btnOpenWin1: {
+					label: "打开窗口 1",
+					preset: "blue",
+					onClick: () => vm.openWindow("win1")
+				},
+				btnOpenWin2: {
+					label: "打开窗口 2",
+					preset: "green",
+					onClick: () => vm.openWindow("win2")
+				},
+				btnOpenWin3: {
+					label: "打开窗口 3",
+					preset: "orange",
+					onClick: () => vm.openWindow("win3")
+				}
 			};
 		},
 		computed: {
@@ -50,10 +58,35 @@ export default async function () {
 				return this.allWindows.filter(win => win.minimized);
 			},
 			isWin1Open() {
-				return this.allWindows.some(win => win.id === 'win1');
+				return this.allWindows.some(win => win.id === "win1");
 			},
 			isWin1Minimized() {
-				return this.allWindows.some(win => win.id === 'win1' && win.minimized);
+				return this.allWindows.some(win => win.id === "win1" && win.minimized);
+			},
+			btnToTopWin1() {
+				return {
+					label: "置顶窗口 1",
+					size: "mini",
+					disabled: !this.isWin1Open || this.isWin1Minimized,
+					onClick: () => this.toTop("win1")
+				};
+			},
+			btnToggleWin1() {
+				return {
+					label: this.isWin1Minimized ? "还原窗口 1" : "最小化窗口 1",
+					size: "mini",
+					disabled: !this.isWin1Open,
+					onClick: () => this.toggleWindow("win1")
+				};
+			},
+			btnCloseWin1() {
+				return {
+					label: "关闭窗口 1",
+					size: "mini",
+					preset: "red",
+					disabled: !this.isWin1Open,
+					onClick: () => this.close("win1")
+				};
 			}
 		},
 		mounted() {
@@ -65,6 +98,14 @@ export default async function () {
 			clearInterval(this.timer);
 		},
 		methods: {
+			getRestoreBtnConfigs(id) {
+				return {
+					label: `恢复窗口: ${id}`,
+					size: "mini",
+					preset: "blue",
+					onClick: () => this.restore(id)
+				};
+			},
 			refreshWindowsList() {
 				const instances = _.$windowsManager.getAllInstances();
 				this.allWindows = instances.map(vm => ({
@@ -85,6 +126,17 @@ export default async function () {
 			},
 			toTop(id) {
 				_.$windowsManager.toTop(id);
+			},
+			toggleWindow(id) {
+				const win = this.allWindows.find(w => w.id === id);
+				if (win) {
+					if (win.minimized) {
+						_.$windowsManager.restore(id);
+					} else {
+						_.$windowsManager.minimize(id);
+					}
+					this.refreshWindowsList();
+				}
 			},
 			minimize(id) {
 				_.$windowsManager.minimize(id);

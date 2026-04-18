@@ -1,18 +1,9 @@
 <template>
 	<div>
 		<div class="mb flex start gap10">
-			<xBtn @click="openModal" preset="blue">基础弹窗</xBtn>
-			<xBtn @click="openFullscreenModal" preset="green">支持全屏按钮</xBtn>
-			<xBtn @click="openMinimizableModal" preset="orange">支持最小化按钮</xBtn>
-		</div>
-		<div class="mb">
-			<xBtn 
-				@click="restoreLastMinimized" 
-				:disabled="!hasMinimizedModal" 
-				preset="blue" 
-				size="mini">
-				恢复最近最小化的弹窗
-			</xBtn>
+			<xBtn :configs="btnOpenBase" />
+			<xBtn :configs="btnOpenFullscreen" />
+			<xBtn :configs="btnToggleMinimizable" />
 		</div>
 	</div>
 </template>
@@ -22,13 +13,41 @@ export default async function () {
 	return {
 		inject: ["APP"],
 		data() {
+			const vm = this;
 			return {
-				modalInstances: []
+				modalInstances: [],
+				btnOpenBase: {
+					label: "基础弹窗",
+					preset: "blue",
+					onClick: vm.openModal
+				},
+				btnOpenFullscreen: {
+					label: "支持全屏按钮",
+					preset: "green",
+					onClick: vm.openFullscreenModal
+				}
 			};
 		},
 		computed: {
 			hasMinimizedModal() {
 				return this.modalInstances.some(vm => vm.dialog_class && vm.dialog_class.minimized);
+			},
+			btnToggleMinimizable() {
+				const vm = this;
+				const hasInstance = this.modalInstances.length > 0;
+				let label = "打开支持最小化的弹窗";
+				let preset = "orange";
+
+				if (hasInstance) {
+					label = this.hasMinimizedModal ? "恢复最近最小化的弹窗" : "最小化最近的弹窗";
+					preset = "blue";
+				}
+
+				return {
+					label,
+					preset,
+					onClick: hasInstance ? vm.toggleLastModal : vm.openMinimizableModal
+				};
 			}
 		},
 		methods: {
@@ -72,10 +91,17 @@ export default async function () {
 					this.modalInstances = this.modalInstances.filter(i => i !== vm);
 				});
 			},
-			restoreLastMinimized() {
-				const vm = [...this.modalInstances].reverse().find(vm => vm.dialog_class && vm.dialog_class.minimized);
-				if (vm) {
-					vm.restore();
+			toggleLastModal() {
+				const minimizedVm = [...this.modalInstances]
+					.reverse()
+					.find(vm => vm.dialog_class && vm.dialog_class.minimized);
+				if (minimizedVm) {
+					minimizedVm.restore();
+				} else {
+					const lastVm = _.last(this.modalInstances);
+					if (lastVm) {
+						lastVm.minimize();
+					}
 				}
 			}
 		}
