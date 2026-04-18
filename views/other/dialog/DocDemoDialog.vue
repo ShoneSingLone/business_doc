@@ -2,6 +2,7 @@
 	<DocContentOfDemo class="dropdown-demo">
 		<xMd :md="md" />
 		<DemoAndCode title="基础用法" path="@/views/other/dialog/JiChuYongFa.vue" unfold />
+		<DemoAndCode title="遮罩与交互" path="@/views/other/dialog/MaskUsageDemo.vue" unfold />
 		<DemoAndCode title="多窗口管理" path="@/views/other/dialog/MultiWindowManagerDemo.vue" unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
@@ -51,7 +52,7 @@ export default async function () {
 |------|------|------|--------|--------|
 | windowId | 窗口唯一标识，用于单例管理和 DOM 查找 | string | - | - |
 | mask | 是否显示遮罩（锁定背景）。在 \`_.$openModal\` 中默认为 true，在 \`_.$windowsManager\` 中默认为 false | boolean | true/false | true |
-| closeOnClickMask | 是否可以通过点击遮罩层关闭窗口。默认为 true | boolean | true/false | true |
+| closeOnClickMask | 是否可以通过点击遮罩层关闭窗口。默认为 false | boolean | true/false | false |
 | fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不全屏 | boolean | true/false | - |
 | minimizable | 控制最小化按钮。**字段存在**即显示按钮，**值**决定初始是否最小化。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不最小化 | boolean | true/false | - |
 | onCancel | 取消按钮点击事件，返回为 \`真值\` 则不会关闭 modal | Function | - | - |
