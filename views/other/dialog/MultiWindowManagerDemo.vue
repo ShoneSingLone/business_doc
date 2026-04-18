@@ -6,13 +6,26 @@
 			<xBtn @click="openWindow('win3')" preset="orange">打开窗口 3</xBtn>
 		</div>
 		<div class="mb flex start gap10">
-			<xBtn @click="toTop('win1')" size="mini">置顶窗口 1</xBtn>
-			<xBtn @click="minimize('win1')" size="mini">最小化窗口 1</xBtn>
-			<xBtn @click="restore('win1')" size="mini">还原窗口 1</xBtn>
-			<xBtn @click="close('win1')" size="mini" preset="red">关闭窗口 1</xBtn>
+			<xBtn @click="toTop('win1')" :disabled="!isWin1Open || isWin1Minimized" size="mini">置顶窗口 1</xBtn>
+			<xBtn @click="minimize('win1')" :disabled="!isWin1Open || isWin1Minimized" size="mini">最小化窗口 1</xBtn>
+			<xBtn @click="restore('win1')" :disabled="!isWin1Open || !isWin1Minimized" size="mini">还原窗口 1</xBtn>
+			<xBtn @click="close('win1')" :disabled="!isWin1Open" size="mini" preset="red">关闭窗口 1</xBtn>
 		</div>
 		<div class="mb flex start gap10">
 			<xBtn @click="closeAll" preset="red">关闭所有窗口</xBtn>
+		</div>
+		<div class="mb flex start gap10 wrap" v-if="minimizedWindows.length > 0">
+			<xBtn 
+				v-for="win in minimizedWindows" 
+				:key="win.id" 
+				@click="restore(win.id)" 
+				size="mini" 
+				preset="blue">
+				恢复窗口: {{win.id}}
+			</xBtn>
+		</div>
+		<div class="mb" v-else>
+			<xBtn disabled size="mini">暂无最小化窗口</xBtn>
 		</div>
 		<div class="tips-box">
 			<p>提示：支持快捷键操作（需窗口获得焦点）：</p>
@@ -27,7 +40,38 @@
 <script lang="ts">
 export default async function () {
 	return {
+		data() {
+			return {
+				allWindows: []
+			};
+		},
+		computed: {
+			minimizedWindows() {
+				return this.allWindows.filter(win => win.minimized);
+			},
+			isWin1Open() {
+				return this.allWindows.some(win => win.id === 'win1');
+			},
+			isWin1Minimized() {
+				return this.allWindows.some(win => win.id === 'win1' && win.minimized);
+			}
+		},
+		mounted() {
+			this.timer = setInterval(() => {
+				this.refreshWindowsList();
+			}, 500);
+		},
+		beforeDestroy() {
+			clearInterval(this.timer);
+		},
 		methods: {
+			refreshWindowsList() {
+				const instances = _.$windowsManager.getAllInstances();
+				this.allWindows = instances.map(vm => ({
+					id: vm.id,
+					minimized: !!(vm.dialog_class && vm.dialog_class.minimized)
+				}));
+			},
 			async openWindow(id) {
 				await _.$windowsManager.open({
 					id: id,
@@ -37,21 +81,26 @@ export default async function () {
 						id: id
 					}
 				});
+				this.refreshWindowsList();
 			},
 			toTop(id) {
 				_.$windowsManager.toTop(id);
 			},
 			minimize(id) {
 				_.$windowsManager.minimize(id);
+				this.refreshWindowsList();
 			},
 			restore(id) {
 				_.$windowsManager.restore(id);
+				this.refreshWindowsList();
 			},
 			close(id) {
 				_.$windowsManager.close(id);
+				this.refreshWindowsList();
 			},
 			closeAll() {
 				_.$windowsManager.closeAll();
+				this.refreshWindowsList();
 			}
 		}
 	};

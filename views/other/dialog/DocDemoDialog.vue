@@ -12,7 +12,21 @@ export default async function () {
 	return {
 		data() {
 			return {
-				md: "基于`Vue-popper`开发，支持多窗口生命周期管理、层级置顶、最小化还原及状态记忆。",
+				md: `基于 \`Vue-popper\` 开发，支持多窗口生命周期管理、层级置顶、最小化还原及状态记忆。
+
+### 弹窗实例管理 (Instance Management)
+当使用 \`_.$openModal\` 打开弹窗时，它会返回一个指向该弹窗 Vue 实例的 **Promise**。你可以通过保存这个实例句柄，在业务代码中灵活控制弹窗的状态：
+
+1. **获取实例**：\`const vm = await _.$openModal(...)\`
+2. **状态监测**：通过 \`vm.dialog_class.minimized\` 判断窗口是否处于最小化状态。
+3. **手动控制**：
+    - \`vm.minimize()\`：将窗口最小化。
+    - \`vm.restore()\`：将最小化或全屏的窗口还原。
+    - \`vm.closeModal()\`：关闭并销毁窗口。
+4. **生命周期监听**：使用 \`vm.$on('hook:beforeDestroy', callback)\` 来清理业务逻辑中保存的引用，防止内存泄漏。
+
+> 若需更强大的自动化管理（如单例控制、自动记忆位置等），建议直接使用 **_.$windowsManager** 模块。
+`,
 				apiString: `### _.$windowsManager API
 | 方法 | 说明 | 参数 | 返回值 |
 |------|------|------|--------|
@@ -30,7 +44,14 @@ export default async function () {
 |------|------|------|--------|--------|
 | windowId | 窗口唯一标识，用于单例管理和 DOM 查找 | string | - | - |
 | modal | 是否显示遮罩（锁定背景）。在 windowsManager 中默认为 false | boolean | true/false | false |
+| fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 windowsManager 中默认为 false（显示按钮，初始不全屏） | boolean | true/false | - |
+| minimizable | 控制最小化按钮。**字段存在**即显示按钮，**值**决定初始是否最小化。在 windowsManager 中默认为 false（显示按钮，初始不最小化） | boolean | true/false | - |
 | onCancel | 取消按钮点击事件，返回为 \`真值\` 则不会关闭 modal | Function | - | - |
+
+> **提示：逻辑解耦说明**
+> - **显示控制**：只要 \`modalConfigs\` 中定义了 \`fullscreen\` 或 \`minimizable\` 键，右上角就会显示对应的功能图标。
+> - **初始状态**：字段的布尔值决定窗口打开时的状态。例如 \`fullscreen: true\` 会使窗口打开时直接处于全屏状态。
+
 `
 			};
 		}
