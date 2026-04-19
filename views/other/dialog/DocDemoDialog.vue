@@ -44,6 +44,7 @@ export default async function () {
 | 属性 | \`_.$openModal\` (基础) | \`_.$windowsManager\` (管理) |
 | :--- | :--- | :--- |
 | **\`mask\` (遮罩)** | **\`true\`** (锁定背景) | **\`false\`** (不锁定背景) |
+| **\`center\` (居中)** | **\`true\`** | **\`false\`** (使用级联策略) |
 | **\`fullscreen\` (全屏)** | **隐藏图标** | **显示图标** (初始不全屏) |
 | **\`minimizable\` (最小化)** | **隐藏图标** | **显示图标** (初始不最小化) |
 | **\`resize\` (调整大小)** | **\`false\`** | **\`true\`** |
@@ -53,6 +54,7 @@ export default async function () {
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------|------|--------|--------|
 | windowId | 窗口唯一标识，用于单例管理和 DOM 查找 | string | - | - |
+| center | 是否自动将窗口在视口居中。在 \`_.$openModal\` 中默认 true，在 \`_.$windowsManager\` 中默认 false | boolean | true/false | true |
 | mask | 是否显示遮罩（锁定背景）。在 \`_.$openModal\` 中默认为 true，在 \`_.$windowsManager\` 中默认为 false | boolean | true/false | true |
 | closeOnClickMask | 是否可以通过点击遮罩层关闭窗口。默认为 false | boolean | true/false | false |
 | fullscreen | 控制全屏按钮。**字段存在**即显示按钮，**值**决定初始是否全屏。在 \`_.$openModal\` 中默认隐藏，在 \`_.$windowsManager\` 中默认显示且初始不全屏 | boolean | true/false | - |
