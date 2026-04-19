@@ -107,14 +107,14 @@ export default async function () {
 				};
 			},
 			refreshWindowsList() {
-				const instances = _.$windowsManager.getAllInstances();
+				const instances = _.$ModalManager.getAllInstances();
 				this.allWindows = instances.map(vm => ({
 					id: vm.id,
 					minimized: !!(vm.dialog_class && vm.dialog_class.minimized)
 				}));
 			},
 			async openWindow(id) {
-				await _.$windowsManager.open({
+				await _.$ModalManager.open({
 					id: id,
 					title: `窗口 - ${id}`,
 					url: "@/views/other/WindowModify.vue",
@@ -128,33 +128,33 @@ export default async function () {
 				this.refreshWindowsList();
 			},
 			toTop(id) {
-				_.$windowsManager.toTop(id);
+				_.$ModalManager.toTop(id);
 			},
 			toggleWindow(id) {
 				const win = this.allWindows.find(w => w.id === id);
 				if (win) {
 					if (win.minimized) {
-						_.$windowsManager.restore(id);
+						_.$ModalManager.restore(id);
 					} else {
-						_.$windowsManager.minimize(id);
+						_.$ModalManager.minimize(id);
 					}
 					this.refreshWindowsList();
 				}
 			},
 			minimize(id) {
-				_.$windowsManager.minimize(id);
+				_.$ModalManager.minimize(id);
 				this.refreshWindowsList();
 			},
 			restore(id) {
-				_.$windowsManager.restore(id);
+				_.$ModalManager.restore(id);
 				this.refreshWindowsList();
 			},
 			close(id) {
-				_.$windowsManager.close(id);
+				_.$ModalManager.close(id);
 				this.refreshWindowsList();
 			},
 			closeAll() {
-				_.$windowsManager.closeAll();
+				_.$ModalManager.closeAll();
 				this.refreshWindowsList();
 			}
 		}
