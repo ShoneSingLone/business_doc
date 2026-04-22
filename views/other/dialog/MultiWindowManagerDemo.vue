@@ -110,7 +110,7 @@ export default async function () {
 				const instances = _.$ModalManager.getAllInstances();
 				this.allWindows = instances.map(vm => ({
 					id: vm.id,
-					minimized: !!(vm.dialog_class && vm.dialog_class.minimized)
+					minimized: vm.isMinimized
 				}));
 			},
 			async openWindow(id) {

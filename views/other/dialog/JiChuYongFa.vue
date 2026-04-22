@@ -30,7 +30,7 @@ export default async function () {
 		},
 		computed: {
 			hasMinimizedModal() {
-				return this.modalInstances.some(vm => vm.dialog_class && vm.dialog_class.minimized);
+				return this.modalInstances.some(vm => vm.isMinimized);
 			},
 			btnToggleMinimizable() {
 				const vm = this;
@@ -94,7 +94,7 @@ export default async function () {
 			toggleLastModal() {
 				const minimizedVm = [...this.modalInstances]
 					.reverse()
-					.find(vm => vm.dialog_class && vm.dialog_class.minimized);
+					.find(vm => vm.isMinimized);
 				if (minimizedVm) {
 					minimizedVm.restore();
 				} else {
