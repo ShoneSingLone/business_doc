@@ -1,13 +1,14 @@
 <template>
 	<DocContentOfDemo class="dropdown-demo">
 		<xMd :md="md" />
-		<DemoAndCode title="configs用法" path="@/views/base/button/ConfigsYongFa.vue" unfold />
+		<DemoAndCode title="configs 用法" path="@/views/base/button/ConfigsYongFa.vue" unfold />
 		<DemoAndCode title="按钮数组" path="@/views/base/button/AnNiuShuZu.vue" unfold />
 		<DemoAndCode title="按钮组" path="@/views/base/button/AnNiuZu.vue" unfold />
 		<DemoAndCode title="基础用法" path="@/views/base/button/JiChuYongFa.vue" unfold />
 		<DemoAndCode title="文字按钮" path="@/views/base/button/WenZiAnNiu.vue" unfold />
 		<DemoAndCode title="图标按钮" path="@/views/base/button/TuBiaoAnNiu.vue" unfold />
 		<DemoAndCode title="加载中" path="@/views/base/button/JiaZaiZhong.vue" unfold />
+		<DemoAndCode title="禁用且加载" path="@/views/base/button/DisabledWithLoading.vue" unfold />
 		<DemoAndCode title="不同尺寸" path="@/views/base/button/BuTongChiCun.vue" unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
@@ -35,7 +36,7 @@ configs使用isLoading可以是boolean或Function用于computed
 | round     | 是否圆角按钮   | boolean    | — | false   |
 | circle     | 是否圆形按钮   | boolean    | — | false   |
 | loading     | 是否加载中状态   | boolean    | — | false   |
-| disabled  | 是否禁用状态    | boolean   | —   | false   |
+| disabled  | 是否禁用状态，支持传入 string 或 VNode 显示禁用提示    | boolean / string / VNode   | —   | false   |
 | icon  | 图标类名 | string   |  —  |  —  |
 | autofocus  | 是否默认聚焦 | boolean   |  —  |  false  |
 | type | 原生 type 属性 | string | button / submit / reset | button |
