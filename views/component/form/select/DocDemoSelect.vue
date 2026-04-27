@@ -32,6 +32,18 @@
 			title="创建条目"
 			path="@/views/component/form/select/ChuangJianTiaoMu.vue"
 			unfold />
+		<DemoAndCode
+			title="测试：changePopperPositionTo"
+			path="@/views/component/form/select/ChangePopperPositionTo.vue"
+			unfold />
+		<DemoAndCode
+			title="获取 xSelect 实例"
+			path="@/views/component/form/select/GetXSelectInstance.vue"
+			unfold />
+		<DemoAndCode
+			title="获取 xSelect 实例 - 完整文档"
+			path="@/views/component/form/select/GetXSelectInstanceDoc.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
@@ -109,7 +121,32 @@ export default async function () {
 | 方法名 | 说明 | 参数 |
 | ---- | ---- | ---- |
 | focus | 使 input 获取焦点 | - |
-| blur | 使 input 失去焦点，并隐藏下拉框 | - | `
+| blur | 使 input 失去焦点，并隐藏下拉框 | - |
+| changePopperPositionTo | 强制切换下拉框 DOM 位置。调用时立即将下拉框移动到 body 下或组件内部，并添加对应的状态样式类 | mode: 'body' \| string - 传入 'body' 时移动到 body 下 (appendToBody 模式)，传入其他值时移回组件内部 (非 appendToBody 模式) |
+
+### 状态样式
+| 类名 | 说明 | 触发条件 |
+| ---- | ---- | ---- |
+| is-append-to-body | 下拉框在 body 下 (appendToBody 模式) | 调用 changePopperPositionTo('body') 后添加 |
+| is-append-to-self | 下拉框在组件内部 (非 appendToBody 模式) | 调用 changePopperPositionTo(非 'body' 值) 后添加 |
+
+### 使用示例
+\`\`\`javascript
+// 获取 xSelect 组件实例
+const selectVm = this.$refs.mySelect;
+
+// 强制将下拉框移动到 body 下
+selectVm.changePopperPositionTo('body');
+
+// 强制将下拉框移回组件内部
+selectVm.changePopperPositionTo('other');
+
+// 组件根元素会自动添加对应的状态类:
+// - appendToBody 模式：<div class="el-select is-append-to-body">
+// - 非 appendToBody 模式：<div class="el-select is-append-to-self">
+\`\`\`
+	
+`
 			};
 		}
 	};
