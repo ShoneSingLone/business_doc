@@ -378,6 +378,41 @@ export default async function () {
 							icon: "_icon_layout",
 							label: `${i18n("单元格自动填充")}`,
 							href: "/component/data/x-table-easy/cell_autofill"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("单元格省略")}`,
+							href: "/component/data/x-table-easy/cell_ellipsis"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("空数据")}`,
+							href: "/component/data/x-table-easy/data_empty"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("自定义事件")}`,
+							href: "/component/data/x-table-easy/event_custom"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("页脚汇总")}`,
+							href: "/component/data/x-table-easy/footer_summary"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("实例方法")}`,
+							href: "/component/data/x-table-easy/instance_methods"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("加载状态")}`,
+							href: "/component/data/x-table-easy/loading"
+						},
+						{
+							icon: "_icon_layout",
+							label: `${i18n("分页")}`,
+							href: "/component/data/x-table-easy/pagination"
 						}
 					]
 				},

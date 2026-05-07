@@ -2,14 +2,15 @@
 
 ## 4.1 功能说明
 
-1. 通过 `editOption` 属性配置单元格编辑功能
+1. 通过 `edit-option` 属性配置单元格编辑功能
 2. 通过 `columns` 对象设置 `edit=true` 允许编辑的列
+3. 需要指定 `rowKeyFieldName` 属性
 
 ---
 
 ## 4.2 基础用法
 
-开启单元格编辑功能。
+开启单元格编辑功能，支持编辑校验回调。
 
 **配置示例**：
 ```vue
@@ -17,6 +18,7 @@
   <xTableEasy
     :columns="columns"
     :table-data="tableData"
+    rowKeyFieldName="rowKey"
     :edit-option="editOption" />
 </template>
 <script>
@@ -24,13 +26,25 @@ export default {
   data() {
     return {
       editOption: {
-        trigger: 'click',
-        mode: 'cell'
+        beforeStartCellEditing: ({ row, column, cellValue }) => {
+          if (row.rowKey === 0 && column.field === "name") {
+            alert("You can't edit this cell.");
+            return false;
+          }
+        },
+        beforeCellValueChange: ({ row, column, changeValue }) => {
+          if (column.field === "number" && !/^\d+$/.test(changeValue)) {
+            alert("请输入数字");
+            return false;
+          }
+        },
+        afterCellValueChange: ({ row, column, changeValue }) => {
+          console.log("Cell value changed:", changeValue);
+        }
       },
       columns: [
         { field: "name", title: "姓名", edit: true },
-        { field: "age", title: "年龄", edit: true },
-        { field: "score", title: "分数", edit: true }
+        { field: "number", title: "数字", edit: true }
       ],
       tableData: [...]
     };
@@ -38,6 +52,11 @@ export default {
 };
 </script>
 ```
+
+**编辑流程说明**：
+1. 单元格进入编辑状态前触发 `beforeStartCellEditing` 回调，返回 `false` 阻止进入编辑状态
+2. 单元格停止编辑后触发 `beforeCellValueChange` 回调，返回 `false` 阻止编辑，还原为编辑前状态
+3. 编辑成功后触发 `afterCellValueChange` 回调
 
 ---
 
@@ -64,30 +83,27 @@ export default {
 
 ## 4.4 实例方法
 
-通过实例方法控制编辑状态：
+通过实例方法控制编辑状态。
 
-| 方法名 | 说明 | 参数 |
-|--------|------|------|
-| startEdit(rowKey, columnKey) | 开始编辑指定单元格 | `rowKey`: 行标识, `columnKey`: 列标识 |
-| stopEdit() | 停止当前编辑 | 无 |
-
-**使用示例**：
+**配置示例**：
 ```vue
 <template>
-  <xTableEasy
-    ref="tableRef"
-    :columns="columns"
-    :table-data="tableData"
-    :edit-option="editOption" />
+  <div>
+    <button @click="startEditingCell(0, 'name')">编辑单元格0-0</button>
+    <button @click="startEditingCell(2, 'hobby', '')">编辑并清空单元格</button>
+    <xTableEasy
+      ref="tableRef"
+      :columns="columns"
+      :table-data="tableData"
+      rowKeyFieldName="rowKey"
+      :edit-option="editOption" />
+  </div>
 </template>
 <script>
 export default {
   methods: {
-    editCell(rowKey, columnKey) {
-      this.$refs.tableRef.startEdit(rowKey, columnKey);
-    },
-    stopEditCell() {
-      this.$refs.tableRef.stopEdit();
+    startEditingCell(rowKey, colKey, defaultValue) {
+      this.$refs.tableRef.startEditingCell({ rowKey, colKey, defaultValue });
     }
   }
 };
@@ -104,8 +120,11 @@ export default {
 ```vue
 <template>
   <xTableEasy
+    :scroll-width="1600"
+    :max-height="500"
     :columns="columns"
     :table-data="tableData"
+    rowKeyFieldName="rowKey"
     :edit-option="editOption" />
 </template>
 <script>
@@ -113,12 +132,14 @@ export default {
   data() {
     return {
       editOption: {
-        trigger: 'click'
+        cellValueChange: ({ row, column }) => {
+          console.log("Cell value changed");
+        }
       },
       columns: [
-        { field: "name", title: "姓名", fixed: "left", edit: true },
-        { field: "age", title: "年龄", edit: true },
-        { field: "score", title: "分数", fixed: "right", edit: true }
+        { field: "col1", title: "col1", width: 50, fixed: "left", edit: true },
+        { field: "col2", title: "col2", edit: true },
+        { field: "col3", title: "col3", width: 50, fixed: "right", edit: true }
       ],
       tableData: [...]
     };
@@ -136,76 +157,123 @@ export default {
 **配置示例**：
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :edit-option="editOption" />
+  <div>
+    <button @click="submit()">提交</button>
+    <xTableEasy
+      :columns="columns"
+      :table-data="tableData"
+      rowKeyFieldName="rowKey"
+      :cell-selection-option="{ enable: false }" />
+  </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      editOption: {
-        trigger: 'click',
-        customEditCell: ({ row, column, rowIndex, columnIndex }) => {
-          if (column.field === 'status') {
-            return {
-              component: 'el-select',
-              props: {
-                value: row[column.field],
-                options: [
-                  { label: '启用', value: 1 },
-                  { label: '禁用', value: 0 }
-                ]
-              },
-              event: {
-                change: (value) => {
-                  row[column.field] = value;
-                }
-              }
-            };
+      submitData: [],
+      columns: [
+        { field: "name", title: "Name" },
+        {
+          field: "date",
+          title: "Date",
+          renderBodyCell: ({ row, column }, h) => {
+            return (
+              <el-date-picker
+                size="small"
+                value={row["date"]}
+                on-input={val => {
+                  row["date"] = val;
+                  this.cellDataChange(row, column, val);
+                }}
+                type="date"
+                value-format="yyyy-MM-dd"
+                placeholder="选择日期"></el-date-picker>
+            );
+          }
+        },
+        {
+          field: "gender",
+          title: "Gender",
+          renderBodyCell: ({ row, column }, h) => {
+            return (
+              <el-select
+                size="small"
+                value={row["gender"]}
+                on-input={val => {
+                  row["gender"] = val;
+                  this.cellDataChange(row, column, val);
+                }}
+                placeholder="请选择">
+                <el-option label="female" value="female"></el-option>
+                <el-option label="male" value="male"></el-option>
+              </el-select>
+            );
           }
         }
-      },
-      columns: [
-        { field: "name", title: "姓名", edit: true },
-        { field: "status", title: "状态", edit: true }
       ],
       tableData: [...]
     };
+  },
+  methods: {
+    submit() {
+      alert(JSON.stringify(this.submitData));
+    },
+    cellDataChange(row, column, cellValue) {
+      let currentCell = this.submitData.find(
+        x => x.rowKey === row["rowKey"] && x.field === column.field
+      );
+      if (currentCell) {
+        currentCell.value = cellValue;
+      } else {
+        this.submitData.push({
+          rowKey: row["rowKey"],
+          field: column.field,
+          value: cellValue
+        });
+      }
+    }
   }
 };
 </script>
 ```
 
+**注意**：组件本身可能会和第三方库组件的快捷键冲突，此时可以通过 `cell-selection-option.enable = false` 禁用单元格选择功能。
+
 ---
 
 ## 4.7 API
 
-### editOption
+### edit-option
 
 编辑配置
 
 | 属性 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| trigger | 触发方式 | String | `dblclick` |
-| mode | 编辑模式 | String | `cell` |
-| customEditCell | 自定义编辑器函数 | Function | - |
+| beforeStartCellEditing | 进入编辑状态前回调，返回 false 阻止编辑 | Function | - |
+| beforeCellValueChange | 值改变前回调，返回 false 阻止修改 | Function | - |
+| afterCellValueChange | 值改变后回调 | Function | - |
+| cellValueChange | 值改变回调 | Function | - |
+
+**回调参数说明**：
+
+| 参数 | 说明 | 类型 |
+|------|------|------|
+| row | 当前行数据 | Object |
+| column | 当前列配置 | Object |
+| cellValue | 当前单元格值 | Any |
+| changeValue | 改变后的值 | Any |
 
 ### 列配置
 
 | 属性 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | edit | 是否可编辑 | Boolean | `false` |
-| editType | 编辑器类型 | String | `input` |
-| editOptions | 下拉选项（当 editType 为 select 时） | Array | - |
 
-### 事件
+### 实例方法
 
-| 事件名 | 说明 | 参数 |
+| 方法名 | 说明 | 参数 |
 |--------|------|------|
-| editStart | 开始编辑 | `row`, `column` |
-| editEnd | 结束编辑 | `row`, `column`, `value` |
+| startEditingCell | 开始编辑指定单元格 | `{ rowKey, colKey, defaultValue }` |
 
 ---
 
