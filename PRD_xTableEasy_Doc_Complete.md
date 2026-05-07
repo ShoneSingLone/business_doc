@@ -21,6 +21,7 @@
 7. [实施计划与验证策略](sections/07-implementation-plan.md)
 8. [结论与展望](sections/08-conclusion.md)
 9. [附录：对应关系完整对照表](sections/09-appendix.md)
+10. [附录：功能模块详细设计](sections/10-module-design.md)
 
 ---
 
