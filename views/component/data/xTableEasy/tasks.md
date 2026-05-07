@@ -77,7 +77,7 @@
   - `programmatic` TR-7.1: 文件存在且可通过路由访问
   - `human-judgment` TR-7.2: 页面风格与现有页面一致，包含 API 说明和示例代码
 
-## [ ] Task 8: 创建 row-checkbox（行多选）文档页面
+## [x] Task 8: 创建 row-checkbox（行多选）文档页面
 - **Priority**: P0
 - **Depends On**: None
 - **Description**: 
@@ -110,7 +110,7 @@
   - `programmatic` TR-10.1: 文件存在且可通过路由访问
   - `human-judgment` TR-10.2: 页面风格与现有页面一致，包含 API 说明和示例代码
 
-## [ ] Task 11: 更新 routes.vue 路由配置
+## [x] Task 11: 更新 routes.vue 路由配置
 - **Priority**: P0
 - **Depends On**: Task 1-10
 - **Description**: 
@@ -121,7 +121,8 @@
   - `programmatic` TR-11.1: 所有路由均指向存在的文件
   - `programmatic` TR-11.2: 路由配置无语法错误
 
-## [ ] Task 12: 验证所有页面可访问
+## [x] Task 12: 验证所有页面可访问
+## [x] Task 13: 修正文件命名规范（使用 xTableEasy.XXX.XXX.vue 格式）
 - **Priority**: P0
 - **Depends On**: Task 1-11
 - **Description**: 

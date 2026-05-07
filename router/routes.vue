@@ -314,6 +314,46 @@ export default async function () {
 							"@/views/component/data/xTableEasy/JiChuYongFa.vue"
 						),
 						_.$newRoute(
+							"/component/data/x-table-easy/row_checkbox",
+							"@/views/component/data/xTableEasy/xTableEasy.Row.Checkbox.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/row_radio",
+							"@/views/component/data/xTableEasy/xTableEasy.Row.Radio.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/row_index",
+							"@/views/component/data/xTableEasy/xTableEasy.Row.Index.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/cell_ellipsis",
+							"@/views/component/data/xTableEasy/xTableEasy.Cell.Ellipsis.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/data_empty",
+							"@/views/component/data/xTableEasy/xTableEasy.Data.Empty.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/event_custom",
+							"@/views/component/data/xTableEasy/xTableEasy.Event.Custom.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/footer_summary",
+							"@/views/component/data/xTableEasy/xTableEasy.Footer.Summary.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/instance_methods",
+							"@/views/component/data/xTableEasy/xTableEasy.Instance.Methods.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/loading",
+							"@/views/component/data/xTableEasy/xTableEasy.Loading.vue"
+						),
+						_.$newRoute(
+							"/component/data/x-table-easy/pagination",
+							"@/views/component/data/xTableEasy/xTableEasy.Pagination.vue"
+						),
+						_.$newRoute(
 							"/component/data/pagination",
 							"@/views/component/data/pagination/pagination.vue"
 						),

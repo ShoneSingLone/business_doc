@@ -12,9 +12,9 @@
 - [x] `instance-methods.vue` - 实例方法（已创建）
 - [x] `loading.vue` - 加载状态（已创建）
 - [x] `pagination.vue` - 分页（已创建）
-- [x] `row-checkbox.vue` - 行多选（已创建）
-- [x] `row-index.vue` - 行序号（已创建）
-- [x] `row-radio.vue` - 行单选（已创建）
+- [x] `xTableEasy.Row.Checkbox.vue` - 行多选（已创建）
+- [x] `xTableEasy.Row.Index.vue` - 行序号（已创建）
+- [x] `xTableEasy.Row.Radio.vue` - 行单选（已创建）
 
 ## 文档页面质量检查
 - [x] 所有新页面使用统一的模板结构（DocContentOfDemo + xMd + xTableEasy）
@@ -23,17 +23,17 @@
 - [x] 代码符合项目的 Vue 文件格式规范
 
 ## 路由配置验证
-- [ ] routes.vue 已添加所有新页面的路由
-- [ ] 所有路由均指向存在的文件
-- [ ] 路由配置无语法错误
+- [x] routes.vue 已添加所有新页面的路由
+- [x] 所有路由均指向存在的文件
+- [x] 路由配置无语法错误
 
 ## 页面可访问性验证
-- [ ] 所有新页面均可通过路由访问
-- [ ] 无404错误
+- [x] 所有新页面均可通过路由访问
+- [x] 无404错误
 
 ## 文档一致性验证
-- [ ] 新页面风格与现有页面一致
-- [ ] 命名规范与现有页面一致（使用点分隔符）
+- [x] 新页面风格与现有页面一致
+- [x] 命名规范与现有页面一致（使用点分隔符）
 
 ## Skill 创建验证
 - [x] Skill 文件已创建
