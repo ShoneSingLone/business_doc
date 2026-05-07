@@ -35,6 +35,15 @@
 - [x] 新页面风格与现有页面一致
 - [x] 命名规范与现有页面一致（使用点分隔符）
 
+## 三层结构模式验证（xTableEasy-doc-pattern）
+- [x] cell-ellipsis 模块：主入口 + 3个子功能文件
+- [x] footer-summary 模块：主入口 + 3个子功能文件
+- [x] event-custom 模块：主入口 + 3个子功能文件
+- [x] 所有主入口文件使用 DocContentOfDemo 组件
+- [x] 所有子功能文件使用 defineComponent
+- [x] DemoAndCode title 与文档章节标题一致
+- [x] 样式类名符合 {component-name}-{module-name} 格式
+
 ## Skill 创建验证
 - [x] Skill 文件已创建
 - [x] Skill 可正常加载和调用

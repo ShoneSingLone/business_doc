@@ -1,12 +1,18 @@
 <template>
 	<DocContentOfDemo class="x-table-easy-footer-summary">
 		<xMd :md="mdTips" />
-		<xTableEasy 
-			:columns="columns" 
-			:table-data="tableData" 
-			border-x 
-			border-y
-			:summary-option="summaryOption" />
+		<DemoAndCode
+			title="footer 基础功能"
+			path="@/views/component/data/xTableEasy/xTableEasy.Footer.Summary.Base.vue"
+			unfold />
+		<DemoAndCode
+			title="footer 列合并"
+			path="@/views/component/data/xTableEasy/xTableEasy.Footer.Summary.CellSpan.vue"
+			unfold />
+		<DemoAndCode
+			title="自定义 footer 单元格"
+			path="@/views/component/data/xTableEasy/xTableEasy.Footer.Summary.CustomCell.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
@@ -17,44 +23,24 @@ export default async function () {
 		data() {
 			return {
 				mdTips: `
-- 1、表格支持页脚汇总行功能
-- 2、可自定义汇总计算逻辑
-- 3、支持多种汇总类型（求和、平均值、计数等）
+- 1、footer 汇总允许对表格数据进行汇总展示
+- 2、\`footerData\` 为 footer 汇总数据，数据结构与 \`tableData\` 保持一致
 `,
 				apiString: `
 ## API
 
-### summaryOption 配置
+### footerData 配置
 
 | 属性 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
-| render | 汇总行渲染函数 | Function | - |
-| fixed | 是否固定汇总行 | Boolean | false |
-`,
-				columns: [
-					{ field: "id", key: "id", title: "ID", width: 80, align: "center" },
-					{ field: "name", key: "name", title: "姓名", width: 120 },
-					{ field: "department", key: "department", title: "部门", width: 150 },
-					{ field: "score", key: "score", title: "评分", width: 100, align: "center" },
-					{ field: "bonus", key: "bonus", title: "奖金", width: 120, align: "right" }
-				],
-				tableData: [
-					{ id: 1, name: "张三", department: "研发一组", score: 95, bonus: 5000 },
-					{ id: 2, name: "李四", department: "质量保障", score: 88, bonus: 4000 },
-					{ id: 3, name: "王五", department: "产品中心", score: 91, bonus: 4500 },
-					{ id: 4, name: "赵六", department: "研发二组", score: 84, bonus: 3800 }
-				],
-				summaryOption: {
-					render: (data, h) => {
-						const totalBonus = data.reduce((sum, item) => sum + item.bonus, 0);
-						const avgScore = Math.round(data.reduce((sum, item) => sum + item.score, 0) / data.length);
-						return h("tr", [
-							h("td", { attrs: { colspan: 3 }, style: { textAlign: "right", fontWeight: "bold" } }, "汇总"),
-							h("td", { style: { textAlign: "center", fontWeight: "bold" } }, avgScore),
-							h("td", { style: { textAlign: "right", fontWeight: "bold" } }, `¥${totalBonus.toLocaleString()}`)
-						]);
-					}
-				}
+| footerData | 页脚汇总数据 | Array | [] |
+
+### renderFooterCell（列配置）
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| renderFooterCell | 自定义 footer 单元格渲染函数 | Function({row, column, rowIndex}) | - |
+`
 			};
 		}
 	};
