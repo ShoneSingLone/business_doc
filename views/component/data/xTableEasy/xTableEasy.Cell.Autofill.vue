@@ -1,59 +1,44 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:cell-autofill-option="cellAutofillOption"
-				borderX
-				borderY />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-cell-autofill">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="单元格自动填充" path="xTableEasy.Cell.Autofill.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 cellAutofillOption 属性来启用单元格自动填充功能",
-				cellAutofillOption: {
-					enable: true
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center" },
-					{ field: "date", key: "c", title: "Tel", width: 200 },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300 }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Geneva",
-						age: 35,
-						date: "2010-08-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 cellAutofillOption 属性启用自动填充功能
+- 2、选中单元格后拖动右下角填充柄进行填充
+- 3、支持数字序列、日期序列等智能填充
+        `,
+        apiString: `
+## API
+
+### cellAutofillOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| enable | 是否启用自动填充 | Boolean | false |
+
+### 支持的填充类型
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| 复制填充 | 重复复制选中内容 | 1, 1, 1 |
+| 数字序列 | 自动递增数字 | 1, 2, 3 |
+| 日期序列 | 自动递增日期 | 2024-01-01, 2024-01-02 |
+| 文本序列 | 自动递增序号 | Item 1, Item 2 |
+        `
+      };
+    }
+  };
 }
 </script>
+<style lang="less">
+.x-table-easy-cell-autofill {
+}
+</style>

@@ -23,7 +23,7 @@
 
 <script lang="ts">
 export default async function () {
-	return defineComponent({
+	return {
 		data() {
 			return {
 				mdTips: `
@@ -49,7 +49,7 @@ export default async function () {
 `
 			};
 		}
-	});
+	};
 }
 </script>
 

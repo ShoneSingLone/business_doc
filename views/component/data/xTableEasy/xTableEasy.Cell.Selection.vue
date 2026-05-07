@@ -1,81 +1,50 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<div class="demo-controls">
-				<el-button type="info" @click="clearSelection">清除选择</el-button>
-			</div>
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:cell-selection-option="cellSelectionOption"
-				borderX
-				borderY
-				@cell-click="handleCellClick" />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-cell-selection">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="单元格选择" path="xTableEasy.Cell.Selection.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 cellSelectionOption 属性来启用单元格选择功能",
-				cellSelectionOption: {
-					enable: true
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center" },
-					{ field: "date", key: "c", title: "Tel", width: 200 },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300 }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Geneva",
-						age: 35,
-						date: "2010-08-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		},
-		methods: {
-			handleCellClick(row, rowIndex, column, colIndex, event) {
-				// 单元格点击事件处理
-				console.log("Cell clicked:", row, rowIndex, column, colIndex);
-			},
-			clearSelection() {
-				// 清除选择
-				this.$refs.table.clearCellSelectionCurrentCell();
-			}
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 cellSelectionOption 属性启用单元格选择功能
+- 2、支持单击选中、拖拽选择、Shift+点击范围选择
+- 3、选中的单元格会高亮显示
+        `,
+        apiString: `
+## API
+
+### cellSelectionOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| enable | 是否启用单元格选择 | Boolean | false |
+| trigger | 触发方式 | String('click'/'cell') | 'click' |
+
+### 实例方法
+
+| 方法名 | 说明 |
+|--------|------|
+| clearCellSelectionCurrentCell | 清除当前选中状态 |
+| getSelectedCells | 获取选中的单元格信息 |
+
+### 快捷键
+
+| 快捷键 | 说明 |
+|--------|------|
+| Ctrl+A | 全选所有单元格 |
+| Delete/Backspace | 删除选中内容 |
+        `
+      };
+    }
+  };
 }
 </script>
-<style scoped>
-.demo-controls {
-	margin-bottom: 16px;
-	padding: 12px;
-	background-color: #f5f7fa;
-	border-radius: 4px;
+<style lang="less">
+.x-table-easy-cell-selection {
 }
 </style>

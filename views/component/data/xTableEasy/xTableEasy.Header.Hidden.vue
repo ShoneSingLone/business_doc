@@ -1,73 +1,46 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<div class="demo-controls">
-				<el-switch v-model="showHeader" active-text="显示表头" inactive-text="隐藏表头" />
-			</div>
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:showHeader="showHeader"
-				borderX
-				borderY />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-header-hidden">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="表头隐藏" path="xTableEasy.Header.Hidden.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: '通过设置 showHeader 属性来控制表头的显示与隐藏',
-				showHeader: true,
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 100 },
-					{ field: "date", key: "b", title: "Tel", width: 200 },
-					{ field: "hobby", key: "c", title: "Hobby", width: 300 },
-					{ field: "address", key: "d", title: "Address", width: 400 }
-				],
-				tableData: [
-					{
-						name: "John",
-						date: "1900-05-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Shanghai"
-					},
-					{
-						name: "Dickerson",
-						date: "1910-06-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Beijing"
-					},
-					{
-						name: "Larsen",
-						date: "2000-07-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Chongqing"
-					},
-					{
-						name: "Geneva",
-						date: "2010-08-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Xiamen"
-					},\n					{
-						name: "Jami",
-						date: "2020-09-20",
-						hobby: "coding and coding repeat",
-						address: "No.1 Century Avenue, Shenzhen"
-					}
-				]
-			};
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过设置 showHeader 属性控制表头显示与隐藏
+- 2、showHeader 为 true 时显示表头，为 false 时隐藏表头
+- 3、适用于只需要展示数据列表的场景
+        `,
+        apiString: `
+## API
+
+### 表头配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| showHeader | 是否显示表头 | Boolean | true |
+
+### 示例
+
+\`\`\`javascript
+<xTableEasy
+  :columns="columns"
+  :table-data="tableData"
+  :showHeader="showHeader"
+  borderX
+  borderY />
+\`\`\`
+        `
+      };
+    }
+  };
 }
 </script>
-<style scoped>
-.demo-controls {
-	margin-bottom: 16px;
-	padding: 12px;
-	background-color: #f5f7fa;
-	border-radius: 4px;
+<style lang="less">
+.x-table-easy-header-hidden {
 }
 </style>

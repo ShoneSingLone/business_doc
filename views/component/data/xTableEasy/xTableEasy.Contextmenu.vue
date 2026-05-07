@@ -1,78 +1,44 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:contextmenu-body-option="contextmenuBodyOption"
-				borderX
-				borderY />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-contextmenu">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="右键菜单" path="xTableEasy.Contextmenu.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 contextmenuBodyOption 属性来启用右键菜单功能",
-				contextmenuBodyOption: {
-					contextmenus: [
-						{
-							label: "查看详情",
-							action: (row, rowIndex) => {
-								console.log("查看详情:", row, rowIndex);
-							}
-						},
-						{
-							label: "编辑",
-							action: (row, rowIndex) => {
-								console.log("编辑:", row, rowIndex);
-							}
-						},
-						{
-							label: "删除",
-							action: (row, rowIndex) => {
-								console.log("删除:", row, rowIndex);
-							}
-						}
-					]
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center" },
-					{ field: "date", key: "c", title: "Tel", width: 200 },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300 }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Geneva",
-						age: 35,
-						date: "2010-08-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 contextmenuBodyOption 属性配置右键菜单
+- 2、支持自定义菜单项和点击事件
+- 3、右键点击表格行时显示菜单
+        `,
+        apiString: `
+## API
+
+### contextmenuBodyOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| contextmenus | 菜单项数组 | Array | [] |
+
+### contextmenus 项配置
+
+| 属性 | 说明 | 类型 |
+|------|------|------|
+| label | 菜单项显示文本 | String |
+| action | 点击菜单项时的回调函数 | Function(row, rowIndex) |
+| disabled | 是否禁用 | Boolean/Function |
+| children | 子菜单数组 | Array |
+        `
+      };
+    }
+  };
 }
 </script>
+<style lang="less">
+.x-table-easy-contextmenu {
+}
+</style>

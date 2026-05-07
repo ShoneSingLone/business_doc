@@ -1,80 +1,49 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:cell-span-option="cellSpanOption"
-				borderX
-				borderY />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-cell-merge">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="单元格合并" path="xTableEasy.Cell.Merge.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 cellSpanOption 属性来自定义单元格合并",
-				cellSpanOption: {
-					cellSpan: (row, column, rowIndex, colIndex) => {
-						// 自定义单元格合并逻辑
-						if (rowIndex === 0 && colIndex === 0) {
-							return {
-								rowspan: 2,
-								colspan: 1
-							};
-						}
-						if (rowIndex === 0 && colIndex === 1) {
-							return {
-								rowspan: 1,
-								colspan: 2
-							};
-						}
-						if (rowIndex === 1 && colIndex === 1) {
-							return {
-								rowspan: 1,
-								colspan: 0 // 隐藏当前单元格
-							};
-						}
-						return {};
-					}
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center" },
-					{ field: "date", key: "c", title: "Tel", width: 200 },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300 }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 cellSpanOption 属性实现单元格合并
+- 2、支持跨行合并(rowspan)和跨列合并(colspan)
+- 3、合并后的单元格会占据多个单元格位置
+        `,
+        apiString: `
+## API
+
+### cellSpanOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| cellSpan | 单元格合并回调函数 | Function(row, column, rowIndex, colIndex) | - |
+
+### 返回值格式
+
+\`\`\`javascript
+{
+  rowspan: 2,  // 跨行数，0 表示隐藏当前单元格
+  colspan: 1   // 跨列数，0 表示隐藏当前单元格
+}
+\`\`\`
+
+### 注意事项
+
+- 返回 {rowspan: 0, colspan: 0} 表示隐藏该单元格
+- 被合并覆盖的单元格需要返回 {colspan: 0} 或 {rowspan: 0}
+        `
+      };
+    }
+  };
 }
 </script>
+<style lang="less">
+.x-table-easy-cell-merge {
+}
+</style>

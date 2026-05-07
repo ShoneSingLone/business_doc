@@ -1,76 +1,42 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<div class="demo-controls">
-				<el-button type="primary" @click="copySelected">复制选中内容</el-button>
-			</div>
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:cell-selection-option="cellSelectionOption"
-				borderX
-				borderY />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-clipboard">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="剪贴板功能" path="xTableEasy.Clipboard.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 cellSelectionOption 属性启用单元格选择，结合剪贴板功能实现复制粘贴",
-				cellSelectionOption: {
-					enable: true
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center" },
-					{ field: "date", key: "c", title: "Tel", width: 200 },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300 }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Geneva",
-						age: 35,
-						date: "2010-08-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		},
-		methods: {
-			copySelected() {
-				// 复制选中内容到剪贴板
-				console.log("复制选中内容到剪贴板");
-			}
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 cellSelectionOption 启用单元格选择功能
+- 2、选中单元格后可以复制内容到剪贴板
+- 3、支持按 Ctrl+C 快捷键复制
+        `,
+        apiString: `
+## API
+
+### cellSelectionOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| enable | 是否启用单元格选择 | Boolean | false |
+
+### 快捷键
+
+| 快捷键 | 说明 |
+|--------|------|
+| Ctrl+C | 复制选中的单元格内容 |
+| Ctrl+X | 剪切选中的单元格内容 |
+        `
+      };
+    }
+  };
 }
 </script>
-<style scoped>
-.demo-controls {
-	margin-bottom: 16px;
-	padding: 12px;
-	background-color: #f5f7fa;
-	border-radius: 4px;
+<style lang="less">
+.x-table-easy-clipboard {
 }
 </style>

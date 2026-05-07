@@ -1,76 +1,49 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="tableData"
-				:edit-option="editOption"
-				borderX
-				borderY
-				@cell-edit="handleCellEdit" />
-		</div>
-	</div>
+  <DocContentOfDemo class="x-table-easy-cell-edit">
+    <xMd :md="mdTips" />
+    <DemoAndCode title="单元格编辑" path="xTableEasy.Cell.Edit.Base.vue" />
+    <xMd :md="apiString" data-role="api" />
+  </DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-	return defineComponent({
-		data() {
-			return {
-				mdDoc: "通过 editOption 属性来启用单元格编辑功能",
-				editOption: {
-					enable: true,
-					editMode: "click"
-				},
-				columns: [
-					{ field: "name", key: "a", title: "Name", width: 150, edit: true },
-					{
-						field: "age",
-						key: "b",
-						title: "Age",
-						width: 100,
-						align: "center",
-						edit: true
-					},
-					{ field: "date", key: "c", title: "Tel", width: 200, edit: true },
-					{ field: "hobby", key: "d", title: "Hobby", width: 300, edit: true }
-				],
-				tableData: [
-					{
-						name: "John",
-						age: 28,
-						date: "1900-05-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Dickerson",
-						age: 32,
-						date: "1910-06-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Larsen",
-						age: 25,
-						date: "2000-07-20",
-						hobby: "coding and coding repeat"
-					},
-					{
-						name: "Geneva",
-						age: 35,
-						date: "2010-08-20",
-						hobby: "coding and coding repeat"
-					}
-				]
-			};
-		},
-		methods: {
-			handleCellEdit(row, rowIndex, column, colIndex, value) {
-				// 单元格编辑事件处理
-				console.log("Cell edited:", row, rowIndex, column, colIndex, value);
-				// 保存编辑后的值
-				this.tableData[rowIndex][column.field] = value;
-			}
-		}
-	});
+  return {
+    data() {
+      return {
+        mdTips: `
+- 1、通过 editOption 属性启用单元格编辑功能
+- 2、双击或单击单元格进入编辑模式
+- 3、支持自定义编辑器组件
+        `,
+        apiString: `
+## API
+
+### editOption 配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| enable | 是否启用编辑 | Boolean | false |
+| editMode | 编辑触发方式 | String('click'/'dblclick') | 'dblclick' |
+
+### 列配置
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| edit | 是否可编辑 | Boolean | false |
+| editRender | 自定义编辑渲染函数 | Function | - |
+
+### 事件
+
+| 事件名 | 说明 | 参数 |
+|--------|------|------|
+| cell-edit | 单元格编辑完成 | row, rowIndex, column, colIndex, value |
+        `
+      };
+    }
+  };
 }
 </script>
+<style lang="less">
+.x-table-easy-cell-edit {
+}
+</style>
