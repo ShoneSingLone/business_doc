@@ -1,17 +1,32 @@
 <template>
-	<div>
-		<div class="flex vertical">
-			<xMd :md="mdDoc" />
-			<xTableEasy :columns="columns" :table-data="tableData" borderX borderY />
-		</div>
-	</div>
+	<DocContentOfDemo class="x-table-easy-basic">
+		<xMd :md="mdTips" />
+		<xTableEasy :columns="columns" :table-data="tableData" border-x border-y />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
 	return {
 		data() {
 			return {
-				mdDoc: "这是一个基础的 xTableEasy 表格示例，展示了最基本的表格功能。",
+				mdTips: `
+- 1、这是一个基础的 xTableEasy 表格示例，展示了最基本的表格功能。
+- 2、通过 columns 配置列信息，通过 table-data 配置表格数据。
+- 3、border-x 和 border-y 属性分别控制横向和纵向边框。
+`,
+				apiString: `
+## API
+
+### 基础表格属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| columns | 列配置数组 | Array | [] |
+| table-data | 表格数据 | Array | [] |
+| border-x | 是否显示横向边框 | Boolean | false |
+| border-y | 是否显示纵向边框 | Boolean | false |
+`,
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Date", width: 150 },
@@ -55,4 +70,7 @@ export default async function () {
 	};
 }
 </script>
-<style lang="less"></style>
+<style lang="less">
+.x-table-easy-basic {
+}
+</style>
