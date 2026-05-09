@@ -2,15 +2,13 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<div class="demo-controls">
-				<el-switch v-model="showHeader" active-text="显示表头" inactive-text="隐藏表头" />
-			</div>
 			<xTableEasy
 				:columns="columns"
 				:table-data="tableData"
-				:show-header="showHeader"
+				:pagination="paginationConfig"
 				border-x
-				border-y />
+				border-y
+				@page-change="handlePageChange" />
 		</div>
 	</div>
 </template>
@@ -19,8 +17,12 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过设置 showHeader 属性为 false 来隐藏表头',
-				showHeader: true,
+				mdDoc: "通过 pagination 属性配置分页功能",
+				paginationConfig: {
+					currentPage: 1,
+					pageSize: 10,
+					total: 100
+				},
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
@@ -60,15 +62,12 @@ export default async function () {
 					}
 				]
 			};
+		},
+		methods: {
+			handlePageChange(page) {
+				console.log("Page changed:", page);
+			}
 		}
 	});
 }
 </script>
-<style scoped>
-.demo-controls {
-	margin-bottom: 16px;
-	padding: 12px;
-	background-color: #f5f7fa;
-	border-radius: 4px;
-}
-</style>

@@ -3,12 +3,13 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-switch v-model="showHeader" active-text="显示表头" inactive-text="隐藏表头" />
+				<el-button type="primary" @click="loading = true">显示加载</el-button>
+				<el-button @click="loading = false">隐藏加载</el-button>
 			</div>
 			<xTableEasy
 				:columns="columns"
 				:table-data="tableData"
-				:show-header="showHeader"
+				:loading="loading"
 				border-x
 				border-y />
 		</div>
@@ -19,8 +20,8 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过设置 showHeader 属性为 false 来隐藏表头',
-				showHeader: true,
+				mdDoc: "通过 loading 属性控制表格的加载状态",
+				loading: false,
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
@@ -70,5 +71,7 @@ export default async function () {
 	padding: 12px;
 	background-color: #f5f7fa;
 	border-radius: 4px;
+	display: flex;
+	gap: 12px;
 }
 </style>

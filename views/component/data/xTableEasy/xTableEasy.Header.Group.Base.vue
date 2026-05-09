@@ -11,7 +11,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "通过列配置中的 children 属性可以实现多级表头",
+				mdDoc: "通过列配置中的 `children` 属性可以实现多级表头",
 				columns: [
 					{ field: "id", key: "id", title: "ID", width: 80, align: "center" },
 					{
@@ -78,4 +78,26 @@ export default async function () {
 					{
 						id: 2,
 						name: "李四",
-						age:
+						age: 27,
+						gender: "女",
+						phone: "13800000002",
+						email: "lisi@example.com",
+						score: 91,
+						rank: 2
+					},
+					{
+						id: 3,
+						name: "王五",
+						age: 29,
+						gender: "男",
+						phone: "13800000003",
+						email: "wangwu@example.com",
+						score: 86,
+						rank: 3
+					}
+				]
+			};
+		}
+	});
+}
+</script>
