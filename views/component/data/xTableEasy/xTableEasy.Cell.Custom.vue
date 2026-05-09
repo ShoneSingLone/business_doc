@@ -11,25 +11,52 @@ export default async function () {
     data() {
       return {
         mdTips: `
-- 1、通过 columns 配置中的 \`render\` 函数自定义单元格渲染
-- 2、可以渲染任意HTML内容
-- 3、支持条件渲染和自定义样式
+- 1、通过 columns 配置中的 \`render\` 函数自定义表体单元格渲染
+- 2、通过 columns 配置中的 \`renderHeaderCell\` 函数自定义表头单元格渲染
+- 3、可以渲染任意HTML内容，包括按钮、输入框等交互元素
+- 4、支持条件渲染和自定义样式
         `,
         apiString: `
 ## API
 
-### 列配置中的 render 函数
+### 列配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|------|
-| render | 单元格渲染函数 | Function(row, column, rowIndex, colIndex) | - |
+| 属性 | 说明 | 类型 |
+|------|------|------|
+| render | 表体单元格渲染函数 | Function(row, column, rowIndex, colIndex) |
+| renderHeaderCell | 表头单元格渲染函数 | Function(column) |
 
-### render 函数返回值
+### render 函数参数
 
-返回 HTML 字符串，例如：
+| 参数 | 说明 | 类型 |
+|------|------|------|
+| row | 当前行数据 | Object |
+| column | 当前列配置 | Object |
+| rowIndex | 行索引 | Number |
+| colIndex | 列索引 | Number |
+
+### renderHeaderCell 函数参数
+
+| 参数 | 说明 | 类型 |
+|------|------|------|
+| column | 当前列配置 | Object |
+
+### 使用示例
+
+**表体单元格自定义（带按钮）**：
 \`\`\`javascript
 render: (row, column, rowIndex, colIndex) => {
-  return \`<span style="color: #ff4d4f;">\${row.name}</span>\`;
+  return \`
+    <el-button type="primary" size="small">编辑</el-button>
+    <el-button type="danger" size="small">删除</el-button>
+  \`;
+}
+\`\`\`
+
+**表头单元格自定义（带输入框）**：
+\`\`\`javascript
+renderHeaderCell: (column) => {
+  return \`<input type="text" placeholder="搜索" style="width:90%;" />\`;
 }
 \`\`\`
         `
