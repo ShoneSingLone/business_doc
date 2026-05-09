@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-cell-selection">
     <xMd :md="mdTips" />
-    <DemoAndCode title="单元格选择" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Selection.Base.vue" />
+    <DemoAndCode title="单元格选择" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Selection.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

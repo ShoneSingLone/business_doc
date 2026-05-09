@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-header-hidden">
     <xMd :md="mdTips" />
-    <DemoAndCode title="表头隐藏" path="@/views/component/data/xTableEasy/xTableEasy.Header.Hidden.Base.vue" />
+    <DemoAndCode title="表头隐藏" path="@/views/component/data/xTableEasy/xTableEasy.Header.Hidden.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

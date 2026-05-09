@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-sort">
     <xMd :md="mdTips" />
-    <DemoAndCode title="表头排序" path="@/views/component/data/xTableEasy/xTableEasy.Sort.Base.vue" />
+    <DemoAndCode title="表头排序" path="@/views/component/data/xTableEasy/xTableEasy.Sort.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

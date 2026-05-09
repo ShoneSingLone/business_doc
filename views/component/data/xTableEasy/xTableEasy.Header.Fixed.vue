@@ -1,9 +1,7 @@
-<template>
+﻿<template>
 	<DocContentOfDemo class="x-table-easy-header-fixed">
 		<xMd :md="mdTips" />
-		<DemoAndCode
-			title="表头固定"
-			path="@/views/component/data/xTableEasy/xTableEasy.Header.Fixed.Base.vue" />
+		<DemoAndCode title="表头固定" path="@/views/component/data/xTableEasy/xTableEasy.Header.Fixed.Base.vue" unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

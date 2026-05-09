@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-virtual-scroll">
     <xMd :md="mdTips" />
-    <DemoAndCode title="虚拟滚动" path="@/views/component/data/xTableEasy/xTableEasy.Virtual.Scroll.Base.vue" />
+    <DemoAndCode title="虚拟滚动" path="@/views/component/data/xTableEasy/xTableEasy.Virtual.Scroll.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

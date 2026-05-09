@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-loading">
     <xMd :md="mdTips" />
-    <DemoAndCode title="加载状态" path="@/views/component/data/xTableEasy/xTableEasy.Loading.Base.vue" />
+    <DemoAndCode title="加载状态" path="@/views/component/data/xTableEasy/xTableEasy.Loading.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

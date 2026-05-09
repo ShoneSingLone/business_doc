@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <DocContentOfDemo class="x-table-easy-cell-align">
     <xMd :md="mdTips" />
-    <DemoAndCode title="单元格对齐" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Align.Base.vue" />
+    <DemoAndCode title="单元格对齐" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Align.Base.vue" unfold />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>
