@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-cell-merge">
     <xMd :md="mdTips" />
-    <DemoAndCode title="单元格合并" path="xTableEasy.Cell.Merge.Base.vue" />
+    <DemoAndCode title="单元格合并" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Merge.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-contextmenu">
     <xMd :md="mdTips" />
-    <DemoAndCode title="右键菜单" path="xTableEasy.Contextmenu.Base.vue" />
+    <DemoAndCode title="右键菜单" path="@/views/component/data/xTableEasy/xTableEasy.Contextmenu.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

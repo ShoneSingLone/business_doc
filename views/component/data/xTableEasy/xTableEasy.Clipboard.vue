@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-clipboard">
     <xMd :md="mdTips" />
-    <DemoAndCode title="剪贴板功能" path="xTableEasy.Clipboard.Base.vue" />
+    <DemoAndCode title="剪贴板功能" path="@/views/component/data/xTableEasy/xTableEasy.Clipboard.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

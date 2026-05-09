@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-cell-autofill">
     <xMd :md="mdTips" />
-    <DemoAndCode title="单元格自动填充" path="xTableEasy.Cell.Autofill.Base.vue" />
+    <DemoAndCode title="单元格自动填充" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-action-column">
     <xMd :md="mdTips" />
-    <DemoAndCode title="操作列" path="xTableEasy.Action.Column.Base.vue" />
+    <DemoAndCode title="操作列" path="@/views/component/data/xTableEasy/xTableEasy.Action.Column.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>

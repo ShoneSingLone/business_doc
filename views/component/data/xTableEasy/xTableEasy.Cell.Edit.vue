@@ -1,7 +1,7 @@
 <template>
   <DocContentOfDemo class="x-table-easy-cell-edit">
     <xMd :md="mdTips" />
-    <DemoAndCode title="单元格编辑" path="xTableEasy.Cell.Edit.Base.vue" />
+    <DemoAndCode title="单元格编辑" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Edit.Base.vue" />
     <xMd :md="apiString" data-role="api" />
   </DocContentOfDemo>
 </template>
