@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <DocContentOfDemo class="x-table-easy-cell-edit">
     <xMd :md="mdTips" />
     <DemoAndCode title="单元格编辑" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Edit.Base.vue" unfold />

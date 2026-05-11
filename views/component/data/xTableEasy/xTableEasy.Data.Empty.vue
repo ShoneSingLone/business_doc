@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <DocContentOfDemo class="x-table-easy-data-empty">
     <xMd :md="mdTips" />
     <DemoAndCode title="空数据状态" path="@/views/component/data/xTableEasy/xTableEasy.Data.Empty.Base.vue" unfold />

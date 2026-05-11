@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <DocContentOfDemo class="x-table-easy-row-style">
     <xMd :md="mdTips" />
     <DemoAndCode title="行样式" path="@/views/component/data/xTableEasy/xTableEasy.Row.Style.Base.vue" unfold />

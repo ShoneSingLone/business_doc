@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <DocContentOfDemo class="x-table-easy-pagination">
     <xMd :md="mdTips" />
     <DemoAndCode title="分页功能" path="@/views/component/data/xTableEasy/xTableEasy.Pagination.Base.vue" unfold />

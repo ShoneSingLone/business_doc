@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <DocContentOfDemo class="x-table-easy-instance-methods">
     <xMd :md="mdTips" />
     <DemoAndCode title="实例方法" path="@/views/component/data/xTableEasy/xTableEasy.Instance.Methods.Base.vue" unfold />
