@@ -1,4 +1,4 @@
-﻿﻿<template>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
 	<DocContentOfDemo class="x-table-easy-header-group">
 		<xMd :md="mdTips" />
 		<DemoAndCode title="表头分组" path="@/views/component/data/xTableEasy/xTableEasy.Header.Group.Base.vue" unfold />
