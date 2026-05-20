@@ -155,7 +155,7 @@ export default async function () {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .get-x-select-instance-demo {
 	padding: 20px;
 	
