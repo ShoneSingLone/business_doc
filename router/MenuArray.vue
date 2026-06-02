@@ -91,6 +91,11 @@ export default async function () {
 						},
 						{
 							icon: "_icon_switch",
+							label: i18n("xItemAdvanceWrapper"),
+							href: "/x-component/x-item-advance-wrapper"
+						},
+						{
+							icon: "_icon_switch",
 							label: i18n("xItemAdvanceConfig"),
 							href: "/x-component/x-item-advance-config"
 						},

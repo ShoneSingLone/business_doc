@@ -78,6 +78,10 @@ export default async function () {
 					"@/views/xComponent/DemoxItemCidr/DemoxItemCidr.vue"
 				),
 				_.$newRoute(
+					"/x-component/x-item-advance-wrapper",
+					"@/views/xComponent/DemoxItemAdvanceWrapper/DemoxItemAdvanceWrapper.vue"
+				),
+				_.$newRoute(
 					"/x-component/x-item-advance-config",
 					"@/views/xComponent/DemoxItemAdvanceConfig/DemoxItemAdvanceConfig.vue"
 				),
