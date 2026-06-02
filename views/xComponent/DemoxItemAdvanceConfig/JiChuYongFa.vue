@@ -23,7 +23,7 @@ export default async function () {
 						label: i18n("高级配置"),
 						activeText: i18n("展开"),
 						inactiveText: i18n("收起"),
-						children: [
+						subItems: [
 							{
 								_key: "param1",
 								value: "",
@@ -61,7 +61,7 @@ export default async function () {
 				}),
 				md: `### 基础用法 — itemType 模式
 
-通过 \`itemType: "xItemAdvanceConfig"\` 在 configs 中配置，配合 \`children\` 定义子 xItem。
+通过 \`itemType: "xItemAdvanceConfig"\` 在 configs 中配置，配合 \`subItems\` 定义子 xItem。
 
 - Switch 关闭时仅显示开关
 - Switch 打开后展开子配置项

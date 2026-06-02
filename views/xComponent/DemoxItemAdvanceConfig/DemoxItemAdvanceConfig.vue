@@ -25,14 +25,14 @@ export default async function () {
 
 **方式一：作为 itemType 使用**
 
-在 xItem configs 中指定 \`itemType: "xItemAdvanceConfig"\`，通过 \`children\` 配置子项：
+在 xItem configs 中指定 \`itemType: "xItemAdvanceConfig"\`，通过 \`subItems\` 配置子项：
 
 \`\`\`js
 {
   value: false,
   itemType: "xItemAdvanceConfig",
   label: "高级配置",
-  children: [
+  subItems: [
     { value: "", label: "参数1", itemType: "xItemInput" },
     { value: "", label: "参数2", itemType: "xItemSelect", options: [...] }
   ]
@@ -54,7 +54,7 @@ export default async function () {
 
 | 属性 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| \`children\` | 子 xItem configs 数组（itemType 模式下） | Array | \`[]\` |
+| \`subItems\` | 子 xItem configs 数组（itemType 模式下） | Array | \`[]\` |
 | \`required\` | 是否必填（为 true 时隐藏 Switch，强制展开） | Boolean | \`false\` |
 | \`activeText\` | Switch 开启时的文本 | String | \`"开启"\` |
 | \`inactiveText\` | Switch 关闭时的文本 | String | \`"关闭"\` |
