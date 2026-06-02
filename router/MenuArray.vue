@@ -90,6 +90,11 @@ export default async function () {
 							href: "/x-component/x-item-switch"
 						},
 						{
+							icon: "_icon_switch",
+							label: i18n("xItemAdvanceConfig"),
+							href: "/x-component/x-item-advance-config"
+						},
+						{
 							icon: "_icon_item_input",
 							label: i18n("xItemInput"),
 							href: "/x-component/x-item-input"

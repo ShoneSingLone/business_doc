@@ -37,11 +37,11 @@ export default async function () {
 			children: [
 				_.$newRoute(
 					"/directives/ripple",
-					"@/views/directives/directives/ripple/DocDemoRipple.vue"
+					"@/views/directives/ripple/DocDemoRipple.vue"
 				),
 				_.$newRoute(
 					"/directives/infinite_scroll",
-					"@/views/directives/directives/infinite_scroll/DocDemoInfiniteScroll.vue"
+					"@/views/directives/infinite_scroll/DocDemoInfiniteScroll.vue"
 				)
 			]
 		}),
@@ -76,6 +76,10 @@ export default async function () {
 				_.$newRoute(
 					"/x-component/x-item-cidr",
 					"@/views/xComponent/DemoxItemCidr/DemoxItemCidr.vue"
+				),
+				_.$newRoute(
+					"/x-component/x-item-advance-config",
+					"@/views/xComponent/DemoxItemAdvanceConfig/DemoxItemAdvanceConfig.vue"
 				),
 				_.$newRoute(
 					"/x-component/x-item-checkbox-group",
