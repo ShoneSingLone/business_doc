@@ -29,7 +29,9 @@ export default async function () {
 		_.$newRoute("/guide", ComponentPageRouterView, {
 			children: [
 				_.$newRoute("/guide/i18n", "@/views/guide/guide/ViewI18n.vue"),
-				_.$newRoute("/guide/class", "@/views/common/css/ClassName.vue")
+				_.$newRoute("/guide/class", "@/views/common/css/ClassName.vue"),
+				/* 【需求】新增“主题与业务覆盖演示页”路由入口，作为变量覆盖与 small 对齐的验收基准 */
+				_.$newRoute("/guide/theme-coverage", "@/views/guide/theme/ViewThemeCoverage.vue")
 			]
 		}),
 		/* 指令 */

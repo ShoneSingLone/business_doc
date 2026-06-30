@@ -27,6 +27,12 @@ export default async function () {
 					icon: "_icon_class_name",
 					label: i18n("样式类"),
 					href: "/guide/class"
+				},
+				{
+					/* 【需求】新增“主题与业务覆盖演示页”菜单入口，统一收敛主题/业务覆盖的可调项展示与验收基准 */
+					icon: "_icon_class_name",
+					label: i18n("主题与覆盖"),
+					href: "/guide/theme-coverage"
 				}
 			]
 		},
