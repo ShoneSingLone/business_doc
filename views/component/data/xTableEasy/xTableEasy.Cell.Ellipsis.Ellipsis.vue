@@ -11,16 +11,16 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过设置 `ellipsis` 属性，内容超出时显示省略号',
+				mdDoc: "通过设置 `ellipsis` 属性，内容超出时显示省略号",
 				columns: [
 					{ field: "name", key: "name", title: "姓名", width: 150 },
 					{ field: "hobby", key: "hobby", title: "爱好", width: 200 },
-					{ 
-						field: "address", 
-						key: "address", 
-						title: "地址", 
+					{
+						field: "address",
+						key: "address",
+						title: "地址",
 						width: 200,
-						ellipsis: true 
+						ellipsis: true
 					}
 				],
 				tableData: [

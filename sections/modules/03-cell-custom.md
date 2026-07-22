@@ -11,9 +11,10 @@
 通过 `renderBodyCell` 属性自定义表体单元格内容。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy style="width:100%" :columns="columns" :table-data="tableData" />
+	<xTableEasy style="width:100%" :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -67,12 +68,8 @@ export default {
 </script>
 ```
 
-**renderBodyCell 参数**：
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| column | 当前列配置 | Object |
-| rowIndex | 行索引 | Number |
+**renderBodyCell 参数**：| 参数 | 说明 | 类型 | |------|------|------| | row | 当前行数据 | Object | | column
+| 当前列配置 | Object | | rowIndex | 行索引 | Number |
 
 ---
 
@@ -81,9 +78,10 @@ export default {
 通过 `renderHeaderCell` 属性自定义表头单元格内容。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy style="width:100%" :columns="columns" :table-data="tableData" />
+	<xTableEasy style="width:100%" :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -127,10 +125,7 @@ export default {
 </script>
 ```
 
-**renderHeaderCell 参数**：
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| column | 当前列配置 | Object |
+**renderHeaderCell 参数**：| 参数 | 说明 | 类型 | |------|------|------| | column | 当前列配置 | Object |
 
 ---
 
@@ -154,9 +149,9 @@ export default {
 
 ### 列配置
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| renderBodyCell | 表体单元格渲染函数 | Function |
+| 属性             | 说明               | 类型     |
+| ---------------- | ------------------ | -------- |
+| renderBodyCell   | 表体单元格渲染函数 | Function |
 | renderHeaderCell | 表头单元格渲染函数 | Function |
 
 ---

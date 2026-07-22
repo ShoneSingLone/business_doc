@@ -4,7 +4,6 @@
 		<xForm class="container">
 			<div class="block">
 				<span class="demonstration">默认</span>
-				阿斯顿发生的发生大发是
 				<xDatePicker v-model="value1" type="time-select" placeholder="选择日期时间">
 				</xDatePicker>
 			</div>

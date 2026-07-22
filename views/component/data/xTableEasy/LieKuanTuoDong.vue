@@ -1,7 +1,12 @@
 <template>
 	<div class="card-LieKuanTuoDong">
 		<xMd :md="mdTips" />
-		<xTableEasy :columns="columns" :table-data="tableData" :max-height="300" border-x border-y />
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			:max-height="300"
+			border-x
+			border-y />
 	</div>
 </template>
 <script lang="ts">
@@ -15,8 +20,22 @@ export default async function () {
 - 3、调整后的列宽会自动适配表格布局。
 `,
 				tableData: [
-					{ id: 1, name: "张三", age: 18, sex: "男", phone: "13800000001", address: "上海市普陀区金沙江路 1518 弄" },
-					{ id: 2, name: "李四", age: 20, sex: "女", phone: "13800000002", address: "上海市浦东新区张江高科技园区" }
+					{
+						id: 1,
+						name: "张三",
+						age: 18,
+						sex: "男",
+						phone: "13800000001",
+						address: "上海市普陀区金沙江路 1518 弄"
+					},
+					{
+						id: 2,
+						name: "李四",
+						age: 20,
+						sex: "女",
+						phone: "13800000002",
+						address: "上海市浦东新区张江高科技园区"
+					}
 				],
 				columns: [
 					{ field: "id", key: "id", title: "ID", width: 80, align: "center" },

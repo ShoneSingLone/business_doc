@@ -9,10 +9,10 @@
 					</li>
 				</ul>
 			</div>
-			<xTableEasy 
-				:columns="columns" 
-				:table-data="tableData" 
-				border-x 
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				border-x
 				border-y
 				@on-header-cell-click="handleHeaderCellClick" />
 		</div>
@@ -23,7 +23,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: 'header 单元格事件：监听表头单元格点击事件',
+				mdDoc: "header 单元格事件：监听表头单元格点击事件",
 				eventLogs: [],
 				columns: [
 					{ field: "name", key: "name", title: "姓名", width: 120 },
@@ -40,14 +40,14 @@ export default async function () {
 		methods: {
 			addLog(message) {
 				const now = new Date();
-				const time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+				const time = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}:${now.getSeconds().toString().padStart(2, "0")}`;
 				this.eventLogs.unshift({ time, message });
 				if (this.eventLogs.length > 5) {
 					this.eventLogs.pop();
 				}
 			},
 			handleHeaderCellClick({ column, columnIndex }) {
-				this.addLog(`点击表头 [列${columnIndex+1}]: ${column.title}`);
+				this.addLog(`点击表头 [列${columnIndex + 1}]: ${column.title}`);
 			}
 		}
 	});
@@ -61,12 +61,12 @@ export default async function () {
 	border-radius: 4px;
 	max-height: 100px;
 	overflow-y: auto;
-	
+
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		
+
 		li {
 			padding: 3px 0;
 			font-size: 12px;

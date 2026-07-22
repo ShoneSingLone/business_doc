@@ -19,7 +19,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: '通过设置 showHeader 属性为 false 来隐藏表头',
+				mdDoc: "通过设置 showHeader 属性为 false 来隐藏表头",
 				showHeader: true,
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },

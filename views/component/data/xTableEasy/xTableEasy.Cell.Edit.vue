@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-cell-edit">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="单元格编辑" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Edit.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-cell-edit">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="单元格编辑"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Edit.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过 editOption 属性启用单元格编辑功能
 - 2、双击或单击单元格进入编辑模式
 - 3、支持自定义编辑器组件
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### editOption 配置
@@ -38,9 +42,9 @@ export default async function () {
 |--------|------|------|
 | cell-edit | 单元格编辑完成 | row, rowIndex, column, colIndex, value |
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

@@ -85,7 +85,9 @@ export default async function () {
 					preset: "blue",
 					async onClick() {
 						const values = _.$pickFormValues(vm.form);
-						_.$msgSuccess(JSON.stringify({ ...values, isAdvanceOpen: vm.isAdvanceOpen }, null, 2));
+						_.$msgSuccess(
+							JSON.stringify({ ...values, isAdvanceOpen: vm.isAdvanceOpen }, null, 2)
+						);
 					}
 				};
 			}

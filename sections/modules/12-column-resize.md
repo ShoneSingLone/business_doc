@@ -11,9 +11,10 @@
 启用列宽调整功能。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -44,11 +45,11 @@ export default {
 
 列宽调整配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
+| 属性      | 说明       | 类型    | 默认值  |
+| --------- | ---------- | ------- | ------- |
 | resizable | 是否可调整 | Boolean | `false` |
-| minWidth | 最小宽度 | Number | - |
-| maxWidth | 最大宽度 | Number | - |
+| minWidth  | 最小宽度   | Number  | -       |
+| maxWidth  | 最大宽度   | Number  | -       |
 
 ---
 

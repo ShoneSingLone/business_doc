@@ -3,6 +3,7 @@
 ## 31.1 功能说明
 
 **配置要点**：
+
 1. 通过 `radioOption` 属性开启单选功能
 2. 通过在 `columns` 设置 `type=radio` 作为单选的列
 3. 设置 `rowKeyFieldName` 属性对应行数据的列名
@@ -45,16 +46,16 @@
 
 单选配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| selectedRowKey | 默认选中的行 key | Any | - |
-| disabled | 禁用选中的函数 | Function | - |
-| checkStrictly | 是否严格模式（仅点击 radio 选中） | Boolean | `true` |
+| 属性           | 说明                              | 类型     | 默认值 |
+| -------------- | --------------------------------- | -------- | ------ |
+| selectedRowKey | 默认选中的行 key                  | Any      | -      |
+| disabled       | 禁用选中的函数                    | Function | -      |
+| checkStrictly  | 是否严格模式（仅点击 radio 选中） | Boolean  | `true` |
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-|--------|------|------|
+| 事件名            | 说明           | 参数                                  |
+| ----------------- | -------------- | ------------------------------------- |
 | selectedRowChange | 行选中状态改变 | `row`, `isSelected`, `selectedRowKey` |
 
 ---

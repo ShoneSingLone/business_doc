@@ -11,9 +11,10 @@
 显示空数据提示。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" empty-text="暂无数据" />
+	<xTableEasy :columns="columns" :table-data="tableData" empty-text="暂无数据" />
 </template>
 <script>
 export default {
@@ -33,10 +34,10 @@ export default {
 
 ### 空数据配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| empty-text | 空数据提示文字 | String | `暂无数据` |
-| empty-component | 自定义空数据组件 | Component | - |
+| 属性            | 说明             | 类型      | 默认值     |
+| --------------- | ---------------- | --------- | ---------- |
+| empty-text      | 空数据提示文字   | String    | `暂无数据` |
+| empty-component | 自定义空数据组件 | Component | -          |
 
 ---
 

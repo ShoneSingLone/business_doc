@@ -34,12 +34,12 @@
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-|--------|------|------|
-| on-header-row-click | 表头行点击 | `event`, `row`, `column` |
+| 事件名               | 说明           | 参数                     |
+| -------------------- | -------------- | ------------------------ |
+| on-header-row-click  | 表头行点击     | `event`, `row`, `column` |
 | on-header-cell-click | 表头单元格点击 | `event`, `row`, `column` |
-| on-body-row-click | 表体行点击 | `event`, `row`, `column` |
-| on-body-cell-click | 表体单元格点击 | `event`, `row`, `column` |
+| on-body-row-click    | 表体行点击     | `event`, `row`, `column` |
+| on-body-cell-click   | 表体单元格点击 | `event`, `row`, `column` |
 
 ---
 

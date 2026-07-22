@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-cell-align">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="单元格对齐" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Align.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-cell-align">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="单元格对齐"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Align.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过 columns 配置中的 align 属性控制单元格对齐
 - 2、支持左对齐、居中对齐、右对齐三种方式
 - 3、对齐方式同时作用于表头和表体单元格
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### 列配置
@@ -43,9 +47,9 @@ export default async function () {
 }
 \`\`\`
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

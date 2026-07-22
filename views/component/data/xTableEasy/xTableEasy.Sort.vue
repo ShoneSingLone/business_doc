@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-sort">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="表头排序" path="@/views/component/data/xTableEasy/xTableEasy.Sort.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-sort">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="表头排序"
+			path="@/views/component/data/xTableEasy/xTableEasy.Sort.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、表格支持通过外部排序逻辑实现表头排序
 - 2、点击表头或使用按钮触发排序
 - 3、排序后的数据重新传递给表格组件
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### 排序实现方式
@@ -40,9 +44,9 @@ sortByDate() {
 }
 \`\`\`
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

@@ -37,10 +37,7 @@ export default async function () {
 		/* 指令 */
 		_.$newRoute("/directive", ComponentPageRouterView, {
 			children: [
-				_.$newRoute(
-					"/directives/ripple",
-					"@/views/directives/ripple/DocDemoRipple.vue"
-				),
+				_.$newRoute("/directives/ripple", "@/views/directives/ripple/DocDemoRipple.vue"),
 				_.$newRoute(
 					"/directives/infinite_scroll",
 					"@/views/directives/infinite_scroll/DocDemoInfiniteScroll.vue"

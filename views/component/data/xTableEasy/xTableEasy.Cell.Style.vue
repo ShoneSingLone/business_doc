@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-cell-style">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="单元格样式" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Style.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-cell-style">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="单元格样式"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Style.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过 cellStyleOption 属性自定义单元格样式
 - 2、支持根据行、列、索引等条件动态设置样式
 - 3、可实现斑马纹、高亮等效果
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### cellStyleOption 配置
@@ -36,9 +40,9 @@ export default async function () {
 }
 \`\`\`
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

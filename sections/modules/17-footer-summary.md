@@ -12,68 +12,69 @@
 默认汇总数据固定在底部。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    fixed-header
-    :max-height="300"
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData"
-    row-key-field-name="rowKey" />
+	<xTableEasy
+		border-y
+		fixed-header
+		:max-height="300"
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData"
+		row-key-field-name="rowKey" />
 </template>
 <script>
 export default {
-  data() {
-    return {
-      columns: [
-        { field: "name", key: "a", title: "Name", align: "center" },
-        { field: "date", key: "b", title: "Date", align: "left" },
-        { field: "hobby", key: "c", title: "Hobby", align: "center" },
-        { field: "address", key: "d", title: "Address", align: "left" }
-      ],
-      tableData: [],
-      footerData: []
-    };
-  },
-  methods: {
-    initTableData() {
-      let data = [];
-      for (let i = 0; i < 15; i++) {
-        data.push({
-          rowKey: i,
-          name: i,
-          date: i,
-          hobby: i,
-          address: i
-        });
-      }
-      this.tableData = data;
-    },
-    initFooterData() {
-      this.footerData = [
-        {
-          rowKey: 0,
-          name: "平均值",
-          date: 213,
-          hobby: 355,
-          address: 189
-        },
-        {
-          rowKey: 1,
-          name: "汇总值",
-          date: 1780,
-          hobby: 890,
-          address: 2988
-        }
-      ];
-    }
-  },
-  created() {
-    this.initTableData();
-    this.initFooterData();
-  }
+	data() {
+		return {
+			columns: [
+				{ field: "name", key: "a", title: "Name", align: "center" },
+				{ field: "date", key: "b", title: "Date", align: "left" },
+				{ field: "hobby", key: "c", title: "Hobby", align: "center" },
+				{ field: "address", key: "d", title: "Address", align: "left" }
+			],
+			tableData: [],
+			footerData: []
+		};
+	},
+	methods: {
+		initTableData() {
+			let data = [];
+			for (let i = 0; i < 15; i++) {
+				data.push({
+					rowKey: i,
+					name: i,
+					date: i,
+					hobby: i,
+					address: i
+				});
+			}
+			this.tableData = data;
+		},
+		initFooterData() {
+			this.footerData = [
+				{
+					rowKey: 0,
+					name: "平均值",
+					date: 213,
+					hobby: 355,
+					address: 189
+				},
+				{
+					rowKey: 1,
+					name: "汇总值",
+					date: 1780,
+					hobby: 890,
+					address: 2988
+				}
+			];
+		}
+	},
+	created() {
+		this.initTableData();
+		this.initFooterData();
+	}
 };
 </script>
 ```
@@ -85,13 +86,10 @@ export default {
 通过 `renderFooterCell` 自定义 footer 单元格内容。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy border-y :columns="columns" :table-data="tableData" :footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -99,8 +97,8 @@ export default {
     return {
       columns: [
         { field: "name", title: "Name" },
-        { 
-          field: "amount", 
+        {
+          field: "amount",
           title: "Amount",
           renderFooterCell: ({ row, column, rowIndex }, h) => {
             return (
@@ -126,13 +124,10 @@ export default {
 自定义 footer 单元格样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy border-y :columns="columns" :table-data="tableData" :footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -168,13 +163,10 @@ export default {
 通过 `span` 属性设置单元格合并。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy border-y :columns="columns" :table-data="tableData" :footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -210,16 +202,17 @@ export default {
 footer 固定在底部，不会随滚动而移动。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    fixed-header
-    fixed-footer
-    :max-height="300"
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy
+		border-y
+		fixed-header
+		fixed-footer
+		:max-height="300"
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -241,15 +234,16 @@ export default {
 在固定列中使用 footer。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    :scroll-width="1200"
-    style="width:900px"
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy
+		border-y
+		:scroll-width="1200"
+		style="width:900px"
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -276,15 +270,16 @@ export default {
 虚拟滚动模式下的汇总。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    border-y
-    virtual-scroll
-    :max-height="300"
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData" />
+	<xTableEasy
+		border-y
+		virtual-scroll
+		:max-height="300"
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData" />
 </template>
 <script>
 export default {
@@ -305,22 +300,23 @@ export default {
 
 ### 表格属性
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| footer-data | footer 汇总数据 | Array | [] |
+| 属性         | 说明            | 类型    | 默认值  |
+| ------------ | --------------- | ------- | ------- |
+| footer-data  | footer 汇总数据 | Array   | []      |
 | fixed-footer | 是否固定 footer | Boolean | `false` |
 
 ### 列配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| renderFooterCell | footer 单元格渲染函数 | Function | - |
+| 属性             | 说明                  | 类型     | 默认值 |
+| ---------------- | --------------------- | -------- | ------ |
+| renderFooterCell | footer 单元格渲染函数 | Function | -      |
 
 ### footerData 数据结构
 
 footer 数据支持以下两种格式：
 
 **简单格式**：
+
 ```javascript
 {
   rowKey: 0,
@@ -330,6 +326,7 @@ footer 数据支持以下两种格式：
 ```
 
 **对象格式（支持样式和合并）**：
+
 ```javascript
 {
   rowKey: 0,
@@ -341,18 +338,14 @@ footer 数据支持以下两种格式：
 }
 ```
 
-**对象格式属性**：
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| text | 显示文本 | String |
-| style | 自定义样式 | Object |
-| span | 单元格合并配置 | Object |
+**对象格式属性**：| 属性 | 说明 | 类型 | |------|------|------| | text | 显示文本 | String | | style | 自定义样式 |
+Object | | span | 单元格合并配置 | Object |
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-|--------|------|------|
-| on-footer-row-click | 汇总行点击 | `event`, `row`, `column` |
+| 事件名               | 说明           | 参数                     |
+| -------------------- | -------------- | ------------------------ |
+| on-footer-row-click  | 汇总行点击     | `event`, `row`, `column` |
 | on-footer-cell-click | 汇总单元格点击 | `event`, `row`, `column` |
 
 ---

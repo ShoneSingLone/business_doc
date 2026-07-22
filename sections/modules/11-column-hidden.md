@@ -12,6 +12,7 @@
 通过 `defaultHiddenColumnKeys` 属性设置默认隐藏的列。
 
 **配置示例**：
+
 ```vue
 <template>
 	<xTableEasy :columns="columns" :table-data="tableData" :column-hidden-option="columnHiddenOption" />
@@ -43,6 +44,7 @@ export default {
 通过实例方法动态控制列的显示与隐藏。
 
 **配置示例**：
+
 ```vue
 <template>
 	<div>
@@ -86,14 +88,14 @@ export default {
 
 列隐藏配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| defaultHiddenColumnKeys | 默认隐藏的列 key 数组 | Array | `[]` |
+| 属性                    | 说明                  | 类型  | 默认值 |
+| ----------------------- | --------------------- | ----- | ------ |
+| defaultHiddenColumnKeys | 默认隐藏的列 key 数组 | Array | `[]`   |
 
 ### 实例方法
 
-| 方法名 | 说明 | 参数 |
-|--------|------|------|
+| 方法名                  | 说明       | 参数              |
+| ----------------------- | ---------- | ----------------- |
 | hideColumnsByKeys(keys) | 隐藏指定列 | keys: 列 key 数组 |
 | showColumnsByKeys(keys) | 显示指定列 | keys: 列 key 数组 |
 

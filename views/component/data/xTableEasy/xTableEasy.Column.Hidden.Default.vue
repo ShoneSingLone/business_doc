@@ -2,11 +2,12 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy 
-				:columns="columns" 
-				:table-data="tableData" 
-				:column-hidden-option="columnHiddenOption" 
-				borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:column-hidden-option="columnHiddenOption"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>

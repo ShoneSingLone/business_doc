@@ -3,6 +3,7 @@
 ## 7.1 功能说明
 
 **配置要点**：
+
 1. 通过配置对象 `cell-span-option` 设置合并单元格
 2. 通过 `bodyCellSpan` 方法设置表体单元格合并
 3. 通过 `footerCellSpan` 方法设置页脚单元格合并
@@ -17,55 +18,56 @@
 通过 `rowspan` 实现跨行合并。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :border-around="true"
-    :border-x="true"
-    :border-y="true"
-    :cell-span-option="cellSpanOption" />
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		:border-around="true"
+		:border-x="true"
+		:border-y="true"
+		:cell-span-option="cellSpanOption" />
 </template>
 <script>
 export default {
-  data() {
-    return {
-      cellSpanOption: {
-        bodyCellSpan: this.bodyCellSpan
-      },
-      columns: [
-        { field: "name", title: "姓名", width: 200 },
-        { field: "date", title: "日期", width: 200 },
-        { field: "hobby", title: "爱好", width: 200 },
-        { field: "address", title: "地址" }
-      ],
-      tableData: [
-        { name: "John", date: "1900-05-20", hobby: "coding", address: "Shanghai" },
-        { name: "Dickerson", date: "1910-06-20", hobby: "coding", address: "Beijing" },
-        { name: "Larsen", date: "2000-07-20", hobby: "coding", address: "Chongqing" },
-        { name: "Geneva", date: "2010-08-20", hobby: "coding", address: "Xiamen" },
-        { name: "Jami", date: "2020-09-20", hobby: "coding", address: "Shenzhen" }
-      ]
-    };
-  },
-  methods: {
-    bodyCellSpan({ row, column, rowIndex }) {
-      if (column.field === "name") {
-        if (rowIndex === 1) {
-          return {
-            rowspan: 2,
-            colspan: 1
-          };
-        } else if (rowIndex === 2) {
-          return {
-            rowspan: 0,
-            colspan: 0
-          };
-        }
-      }
-    }
-  }
+	data() {
+		return {
+			cellSpanOption: {
+				bodyCellSpan: this.bodyCellSpan
+			},
+			columns: [
+				{ field: "name", title: "姓名", width: 200 },
+				{ field: "date", title: "日期", width: 200 },
+				{ field: "hobby", title: "爱好", width: 200 },
+				{ field: "address", title: "地址" }
+			],
+			tableData: [
+				{ name: "John", date: "1900-05-20", hobby: "coding", address: "Shanghai" },
+				{ name: "Dickerson", date: "1910-06-20", hobby: "coding", address: "Beijing" },
+				{ name: "Larsen", date: "2000-07-20", hobby: "coding", address: "Chongqing" },
+				{ name: "Geneva", date: "2010-08-20", hobby: "coding", address: "Xiamen" },
+				{ name: "Jami", date: "2020-09-20", hobby: "coding", address: "Shenzhen" }
+			]
+		};
+	},
+	methods: {
+		bodyCellSpan({ row, column, rowIndex }) {
+			if (column.field === "name") {
+				if (rowIndex === 1) {
+					return {
+						rowspan: 2,
+						colspan: 1
+					};
+				} else if (rowIndex === 2) {
+					return {
+						rowspan: 0,
+						colspan: 0
+					};
+				}
+			}
+		}
+	}
 };
 </script>
 ```
@@ -77,15 +79,16 @@ export default {
 通过 `colspan` 实现跨列合并。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :border-around="true"
-    :border-x="true"
-    :border-y="true"
-    :cell-span-option="cellSpanOption" />
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		:border-around="true"
+		:border-x="true"
+		:border-y="true"
+		:cell-span-option="cellSpanOption" />
 </template>
 <script>
 export default {
@@ -131,12 +134,10 @@ export default {
 通过 `renderBodyCell` 自定义合并单元格的显示内容。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-span-option="cellSpanOption" />
+	<xTableEasy :columns="columns" :table-data="tableData" :cell-span-option="cellSpanOption" />
 </template>
 <script>
 export default {
@@ -185,13 +186,14 @@ export default {
 通过 `footerCellSpan` 方法设置页脚单元格合并。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData"
-    :cell-span-option="cellSpanOption" />
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData"
+		:cell-span-option="cellSpanOption" />
 </template>
 <script>
 export default {
@@ -234,31 +236,31 @@ export default {
 
 单元格合并配置
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| bodyCellSpan | 表体单元格合并方法 | Function |
+| 属性           | 说明               | 类型     |
+| -------------- | ------------------ | -------- |
+| bodyCellSpan   | 表体单元格合并方法 | Function |
 | footerCellSpan | 页脚单元格合并方法 | Function |
 
 ### bodyCellSpan 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| column | 当前列配置 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| row      | 当前行数据 | Object |
+| column   | 当前列配置 | Object |
+| rowIndex | 行索引     | Number |
 
 ### footerCellSpan 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前页脚行数据 | Object |
-| column | 当前列配置 | Object |
-| rowIndex | 页脚行索引 | Number |
+| 参数     | 说明           | 类型   |
+| -------- | -------------- | ------ |
+| row      | 当前页脚行数据 | Object |
+| column   | 当前列配置     | Object |
+| rowIndex | 页脚行索引     | Number |
 
 ### 返回值
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
+| 属性    | 说明                 | 类型   |
+| ------- | -------------------- | ------ |
 | rowspan | 跨行数，0 表示不渲染 | Number |
 | colspan | 跨列数，0 表示不渲染 | Number |
 

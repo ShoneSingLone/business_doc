@@ -40,11 +40,11 @@
 
 列宽度配置
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| width | 列宽度（像素或百分比） | Number/String |
-| minWidth | 最小宽度 | Number |
-| maxWidth | 最大宽度 | Number |
+| 属性     | 说明                   | 类型          |
+| -------- | ---------------------- | ------------- |
+| width    | 列宽度（像素或百分比） | Number/String |
+| minWidth | 最小宽度               | Number        |
+| maxWidth | 最大宽度               | Number        |
 
 ---
 

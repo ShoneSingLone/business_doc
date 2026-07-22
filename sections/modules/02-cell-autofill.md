@@ -5,6 +5,7 @@
 当存在需要重复拷贝的数据，你可以像 excel 那样进行单元格内容的自动填充。
 
 **配置要点**：
+
 1. 通过 `cell-autofill-option` 属性开启自动填充功能
 2. 支持配置填充方向（水平、垂直、双向）
 3. 支持填充前后的回调函数
@@ -16,13 +17,14 @@
 启用自动填充功能。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    rowKeyFieldName="rowKey"
-    :cell-autofill-option="cellAutofillOption" />
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		rowKeyFieldName="rowKey"
+		:cell-autofill-option="cellAutofillOption" />
 </template>
 <script>
 export default {
@@ -68,13 +70,14 @@ export default {
 可以设置在某一个方向开启自动填充。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-autofill-option="cellAutofillOption"
-    rowKeyFieldName="rowKey" />
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		:cell-autofill-option="cellAutofillOption"
+		rowKeyFieldName="rowKey" />
 </template>
 <script>
 export default {
@@ -92,11 +95,8 @@ export default {
 </script>
 ```
 
-**方向配置说明**：
-| 配置项 | 说明 |
-|--------|------|
-| directionX | 启用水平方向自动填充 |
-| directionY | 启用垂直方向自动填充 |
+**方向配置说明**：| 配置项 | 说明 | |--------|------| | directionX | 启用水平方向自动填充 | | directionY
+| 启用垂直方向自动填充 |
 
 ---
 
@@ -106,21 +106,16 @@ export default {
 
 自动填充配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| directionX | 是否启用水平方向填充 | Boolean | `true` |
-| directionY | 是否启用垂直方向填充 | Boolean | `true` |
-| beforeAutofill | 填充前回调函数 | Function | - |
-| afterAutofill | 填充后回调函数 | Function | - |
+| 属性           | 说明                 | 类型     | 默认值 |
+| -------------- | -------------------- | -------- | ------ |
+| directionX     | 是否启用水平方向填充 | Boolean  | `true` |
+| directionY     | 是否启用垂直方向填充 | Boolean  | `true` |
+| beforeAutofill | 填充前回调函数       | Function | -      |
+| afterAutofill  | 填充后回调函数       | Function | -      |
 
-**beforeAutofill / afterAutofill 参数**：
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| direction | 填充方向 | String |
-| sourceSelectionRangeIndexes | 源选区索引 | Object |
-| targetSelectionRangeIndexes | 目标选区索引 | Object |
-| sourceSelectionData | 源选区数据 | Array |
-| targetSelectionData | 目标选区数据 | Array |
+**beforeAutofill / afterAutofill 参数**：| 参数 | 说明 | 类型 | |------|------|------| | direction | 填充方向 | String |
+| sourceSelectionRangeIndexes | 源选区索引 | Object | | targetSelectionRangeIndexes | 目标选区索引 | Object | |
+sourceSelectionData | 源选区数据 | Array | | targetSelectionData | 目标选区数据 | Array |
 
 ---
 

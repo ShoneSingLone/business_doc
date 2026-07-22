@@ -2,12 +2,23 @@
 	<DocContentOfDemo class="x-table-easy-table-height">
 		<xMd :md="mdTips" />
 		<h4>固定高度</h4>
-		<xTableEasy :columns="columns" :table-data="tableData" :max-height="300" border-x border-y />
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			:max-height="300"
+			border-x
+			border-y />
 		<h4>自适应高度</h4>
 		<xTableEasy :columns="columns" :table-data="tableData" border-x border-y />
 		<h4>百分比高度</h4>
-		<div style="height: 300px; border: 1px solid #e8e8e8; padding: 10px; box-sizing: border-box">
-			<xTableEasy :columns="columns" :table-data="tableData" :max-height="'100%'" border-x border-y />
+		<div
+			style="height: 300px; border: 1px solid #e8e8e8; padding: 10px; box-sizing: border-box">
+			<xTableEasy
+				:columns="columns"
+				:table-data="tableData"
+				:max-height="'100%'"
+				border-x
+				border-y />
 		</div>
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>

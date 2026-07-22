@@ -4,7 +4,10 @@
 		<DemoAndCode title="基础用法" path="@/views/other/dialog/JiChuYongFa.vue" unfold />
 		<DemoAndCode title="遮罩与交互" path="@/views/other/dialog/MaskUsageDemo.vue" unfold />
 		<DemoAndCode title="高级配置" path="@/views/other/dialog/AdvanceConfigsDemo.vue" unfold />
-		<DemoAndCode title="多窗口管理" path="@/views/other/dialog/MultiWindowManagerDemo.vue" unfold />
+		<DemoAndCode
+			title="多窗口管理"
+			path="@/views/other/dialog/MultiWindowManagerDemo.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

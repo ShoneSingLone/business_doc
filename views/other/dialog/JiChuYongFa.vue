@@ -92,9 +92,7 @@ export default async function () {
 				});
 			},
 			toggleLastModal() {
-				const minimizedVm = [...this.modalInstances]
-					.reverse()
-					.find(vm => vm.isMinimized);
+				const minimizedVm = [...this.modalInstances].reverse().find(vm => vm.isMinimized);
 				if (minimizedVm) {
 					minimizedVm.restore();
 				} else {

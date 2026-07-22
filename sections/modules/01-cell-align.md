@@ -11,9 +11,10 @@
 支持三种对齐方式：左对齐、居中对齐、右对齐。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -39,11 +40,11 @@ export default {
 
 单元格对齐方式
 
-| 属性值 | 说明 | 适用场景 |
-|--------|------|---------|
-| left | 左对齐 | 文本类型数据 |
+| 属性值 | 说明     | 适用场景         |
+| ------ | -------- | ---------------- |
+| left   | 左对齐   | 文本类型数据     |
 | center | 居中对齐 | 状态类数据、标题 |
-| right | 右对齐 | 数字类型数据 |
+| right  | 右对齐   | 数字类型数据     |
 
 ---
 

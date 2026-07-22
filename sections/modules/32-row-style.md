@@ -11,9 +11,10 @@
 通过 `rowStyle` 函数实现斑马纹效果。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" :row-style="rowStyle" />
+	<xTableEasy :columns="columns" :table-data="tableData" :row-style="rowStyle" />
 </template>
 <script>
 export default {
@@ -25,8 +26,8 @@ export default {
   },
   methods: {
     rowStyle({ rowIndex }) {
-      return rowIndex % 2 === 0 
-        ? { backgroundColor: '#f8f9fa' } 
+      return rowIndex % 2 === 0
+        ? { backgroundColor: '#f8f9fa' }
         : { backgroundColor: '#ffffff' };
     }
   }
@@ -54,10 +55,10 @@ export default {
 
 行样式函数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| row      | 当前行数据 | Object |
+| rowIndex | 行索引     | Number |
 
 ---
 

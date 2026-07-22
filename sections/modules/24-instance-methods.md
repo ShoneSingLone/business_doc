@@ -26,11 +26,11 @@
 
 ### 实例方法
 
-| 方法名 | 说明 | 参数 |
-|--------|------|------|
-| scrollTo(x, y) | 滚动到指定坐标 | `x`: 水平位置, `y`: 垂直位置 |
-| scrollToRowKey(rowKey) | 滚动到指定行 | `rowKey`: 行标识 |
-| scrollToColKey(colKey) | 滚动到指定列 | `colKey`: 列标识 |
+| 方法名                 | 说明           | 参数                         |
+| ---------------------- | -------------- | ---------------------------- |
+| scrollTo(x, y)         | 滚动到指定坐标 | `x`: 水平位置, `y`: 垂直位置 |
+| scrollToRowKey(rowKey) | 滚动到指定行   | `rowKey`: 行标识             |
+| scrollToColKey(colKey) | 滚动到指定列   | `colKey`: 列标识             |
 
 ---
 

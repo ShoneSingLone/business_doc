@@ -2,11 +2,31 @@
 	<div class="card-BiaoTouGuDing">
 		<xMd :md="mdTips" />
 		<h4>固定表头</h4>
-		<xTableEasy :columns="columns" :table-data="tableData" :max-height="300" fixed-header border-x border-y />
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			:max-height="300"
+			fixed-header
+			border-x
+			border-y />
 		<h4>不固定表头</h4>
-		<xTableEasy :columns="columns" :table-data="tableData" :max-height="300" :fixed-header="false" border-x border-y />
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			:max-height="300"
+			:fixed-header="false"
+			border-x
+			border-y />
 		<h4>同时固定表头和表尾</h4>
-		<xTableEasy :columns="columns" :table-data="tableData" :footer-data="footerData" :max-height="300" fixed-header fixed-footer border-x border-y />
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			:footer-data="footerData"
+			:max-height="300"
+			fixed-header
+			fixed-footer
+			border-x
+			border-y />
 	</div>
 </template>
 <script lang="ts">

@@ -34,13 +34,7 @@ export default async function () {
 		methods: {
 			generateData(count) {
 				const hobbies = ["coding", "reading", "gaming", "sports", "music"];
-				const addresses = [
-					"Shanghai",
-					"Beijing",
-					"Shenzhen",
-					"Guangzhou",
-					"Hangzhou"
-				];
+				const addresses = ["Shanghai", "Beijing", "Shenzhen", "Guangzhou", "Hangzhou"];
 				const data = [];
 				for (let i = 0; i < count; i++) {
 					data.push({

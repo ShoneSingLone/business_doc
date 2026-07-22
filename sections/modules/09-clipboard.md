@@ -3,6 +3,7 @@
 ## 9.1 功能说明
 
 **配置要点**：
+
 1. 通过 `clipboard` 属性开启剪贴板功能
 2. 支持复制选中的单元格内容
 3. 支持带表头复制
@@ -27,10 +28,10 @@
 
 ### clipboard 相关配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| clipboard | 是否启用剪贴板 | Boolean | `false` |
-| clipboard-with-header | 是否包含表头 | Boolean | `false` |
+| 属性                  | 说明           | 类型    | 默认值  |
+| --------------------- | -------------- | ------- | ------- |
+| clipboard             | 是否启用剪贴板 | Boolean | `false` |
+| clipboard-with-header | 是否包含表头   | Boolean | `false` |
 
 ---
 

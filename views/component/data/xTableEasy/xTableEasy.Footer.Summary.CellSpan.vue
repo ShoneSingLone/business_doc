@@ -2,10 +2,10 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy 
-				border-y 
+			<xTableEasy
+				border-y
 				:max-height="300"
-				:columns="columns" 
+				:columns="columns"
 				:table-data="tableData"
 				:footer-data="footerData"
 				:cell-span-option="cellSpanOption" />
@@ -17,13 +17,19 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: 'footer 列合并：设置汇总第1行的评分列和奖金列合并',
+				mdDoc: "footer 列合并：设置汇总第1行的评分列和奖金列合并",
 				cellSpanOption: {
 					footerCellSpan: this.footerCellSpan
 				},
 				columns: [
 					{ field: "name", key: "name", title: "姓名", width: 120, align: "center" },
-					{ field: "department", key: "department", title: "部门", width: 150, align: "left" },
+					{
+						field: "department",
+						key: "department",
+						title: "部门",
+						width: 150,
+						align: "left"
+					},
 					{ field: "score", key: "score", title: "评分", width: 100, align: "center" },
 					{ field: "bonus", key: "bonus", title: "奖金", width: 120, align: "right" }
 				],
@@ -54,7 +60,10 @@ export default async function () {
 			},
 			initFooterData() {
 				const totalBonus = this.tableData.reduce((sum, item) => sum + item.bonus, 0);
-				const avgScore = Math.round(this.tableData.reduce((sum, item) => sum + item.score, 0) / this.tableData.length);
+				const avgScore = Math.round(
+					this.tableData.reduce((sum, item) => sum + item.score, 0) /
+						this.tableData.length
+				);
 				this.footerData = [
 					{ name: "合并演示", department: "跨列展示", score: "合并单元格示例", bonus: 0 },
 					{ name: "汇总值", department: "-", score: "-", bonus: totalBonus }

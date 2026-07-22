@@ -13,13 +13,10 @@
 开启单元格编辑功能，支持编辑校验回调。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    rowKeyFieldName="rowKey"
-    :edit-option="editOption" />
+	<xTableEasy :columns="columns" :table-data="tableData" rowKeyFieldName="rowKey" :edit-option="editOption" />
 </template>
 <script>
 export default {
@@ -54,6 +51,7 @@ export default {
 ```
 
 **编辑流程说明**：
+
 1. 单元格进入编辑状态前触发 `beforeStartCellEditing` 回调，返回 `false` 阻止进入编辑状态
 2. 单元格停止编辑后触发 `beforeCellValueChange` 回调，返回 `false` 阻止编辑，还原为编辑前状态
 3. 编辑成功后触发 `afterCellValueChange` 回调
@@ -64,20 +62,20 @@ export default {
 
 可编辑单元格支持以下快捷键（参考 excel 快捷键）：
 
-| 功能 | 快捷键 |
-|------|--------|
-| 活动单元格进入编辑状态 | `F2` |
-| 停止编辑状态，并停留在当前单元格 | `Ctrl` + `Enter` |
-| 单元格内文本换行 | `Alt` + `Enter` |
-| 清空活动单元格内容 | `Delete` |
-| 清空活动单元格内容，并进入编辑状态 | `BackSpace` |
-| 清空活动单元格内容并填入空格 | `Space` |
-| 停止编辑状态并向下移动活动单元格 | `Enter` |
-| 停止编辑状态并向上移动活动单元格 | `Shift` + `Enter` |
-| 停止编辑状态并向右移动活动单元格 | `Tab` |
-| 停止编辑状态并向左移动活动单元格 | `Shift` + `Tab` |
-| 支持在可编辑单元格直接输入文本并进入编辑状态 | - |
-| 支持长文本输入时，编辑框自动伸缩功能 | - |
+| 功能                                         | 快捷键            |
+| -------------------------------------------- | ----------------- |
+| 活动单元格进入编辑状态                       | `F2`              |
+| 停止编辑状态，并停留在当前单元格             | `Ctrl` + `Enter`  |
+| 单元格内文本换行                             | `Alt` + `Enter`   |
+| 清空活动单元格内容                           | `Delete`          |
+| 清空活动单元格内容，并进入编辑状态           | `BackSpace`       |
+| 清空活动单元格内容并填入空格                 | `Space`           |
+| 停止编辑状态并向下移动活动单元格             | `Enter`           |
+| 停止编辑状态并向上移动活动单元格             | `Shift` + `Enter` |
+| 停止编辑状态并向右移动活动单元格             | `Tab`             |
+| 停止编辑状态并向左移动活动单元格             | `Shift` + `Tab`   |
+| 支持在可编辑单元格直接输入文本并进入编辑状态 | -                 |
+| 支持长文本输入时，编辑框自动伸缩功能         | -                 |
 
 ---
 
@@ -86,26 +84,27 @@ export default {
 通过实例方法控制编辑状态。
 
 **配置示例**：
+
 ```vue
 <template>
-  <div>
-    <button @click="startEditingCell(0, 'name')">编辑单元格0-0</button>
-    <button @click="startEditingCell(2, 'hobby', '')">编辑并清空单元格</button>
-    <xTableEasy
-      ref="tableRef"
-      :columns="columns"
-      :table-data="tableData"
-      rowKeyFieldName="rowKey"
-      :edit-option="editOption" />
-  </div>
+	<div>
+		<button @click="startEditingCell(0, 'name')">编辑单元格0-0</button>
+		<button @click="startEditingCell(2, 'hobby', '')">编辑并清空单元格</button>
+		<xTableEasy
+			ref="tableRef"
+			:columns="columns"
+			:table-data="tableData"
+			rowKeyFieldName="rowKey"
+			:edit-option="editOption" />
+	</div>
 </template>
 <script>
 export default {
-  methods: {
-    startEditingCell(rowKey, colKey, defaultValue) {
-      this.$refs.tableRef.startEditingCell({ rowKey, colKey, defaultValue });
-    }
-  }
+	methods: {
+		startEditingCell(rowKey, colKey, defaultValue) {
+			this.$refs.tableRef.startEditingCell({ rowKey, colKey, defaultValue });
+		}
+	}
 };
 </script>
 ```
@@ -117,15 +116,16 @@ export default {
 在固定列中使用编辑功能。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :scroll-width="1600"
-    :max-height="500"
-    :columns="columns"
-    :table-data="tableData"
-    rowKeyFieldName="rowKey"
-    :edit-option="editOption" />
+	<xTableEasy
+		:scroll-width="1600"
+		:max-height="500"
+		:columns="columns"
+		:table-data="tableData"
+		rowKeyFieldName="rowKey"
+		:edit-option="editOption" />
 </template>
 <script>
 export default {
@@ -155,16 +155,17 @@ export default {
 使用 Element UI 组件作为编辑器。
 
 **配置示例**：
+
 ```vue
 <template>
-  <div>
-    <button @click="submit()">提交</button>
-    <xTableEasy
-      :columns="columns"
-      :table-data="tableData"
-      rowKeyFieldName="rowKey"
-      :cell-selection-option="{ enable: false }" />
-  </div>
+	<div>
+		<button @click="submit()">提交</button>
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
+			rowKeyFieldName="rowKey"
+			:cell-selection-option="{ enable: false }" />
+	</div>
 </template>
 <script>
 export default {
@@ -237,7 +238,8 @@ export default {
 </script>
 ```
 
-**注意**：组件本身可能会和第三方库组件的快捷键冲突，此时可以通过 `cell-selection-option.enable = false` 禁用单元格选择功能。
+**注意**：组件本身可能会和第三方库组件的快捷键冲突，此时可以通过 `cell-selection-option.enable = false`
+禁用单元格选择功能。
 
 ---
 
@@ -247,32 +249,32 @@ export default {
 
 编辑配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| beforeStartCellEditing | 进入编辑状态前回调，返回 false 阻止编辑 | Function | - |
-| beforeCellValueChange | 值改变前回调，返回 false 阻止修改 | Function | - |
-| afterCellValueChange | 值改变后回调 | Function | - |
-| cellValueChange | 值改变回调 | Function | - |
+| 属性                   | 说明                                    | 类型     | 默认值 |
+| ---------------------- | --------------------------------------- | -------- | ------ |
+| beforeStartCellEditing | 进入编辑状态前回调，返回 false 阻止编辑 | Function | -      |
+| beforeCellValueChange  | 值改变前回调，返回 false 阻止修改       | Function | -      |
+| afterCellValueChange   | 值改变后回调                            | Function | -      |
+| cellValueChange        | 值改变回调                              | Function | -      |
 
 **回调参数说明**：
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| column | 当前列配置 | Object |
-| cellValue | 当前单元格值 | Any |
-| changeValue | 改变后的值 | Any |
+| 参数        | 说明         | 类型   |
+| ----------- | ------------ | ------ |
+| row         | 当前行数据   | Object |
+| column      | 当前列配置   | Object |
+| cellValue   | 当前单元格值 | Any    |
+| changeValue | 改变后的值   | Any    |
 
 ### 列配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
+| 属性 | 说明       | 类型    | 默认值  |
+| ---- | ---------- | ------- | ------- |
 | edit | 是否可编辑 | Boolean | `false` |
 
 ### 实例方法
 
-| 方法名 | 说明 | 参数 |
-|--------|------|------|
+| 方法名           | 说明               | 参数                               |
+| ---------------- | ------------------ | ---------------------------------- |
 | startEditingCell | 开始编辑指定单元格 | `{ rowKey, colKey, defaultValue }` |
 
 ---

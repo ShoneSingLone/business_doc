@@ -11,9 +11,10 @@
 配置多级表头分组。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -50,10 +51,10 @@ export default {
 
 表头分组配置
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| title | 分组标题 | String |
-| children | 子列配置 | Array |
+| 属性     | 说明     | 类型   |
+| -------- | -------- | ------ |
+| title    | 分组标题 | String |
+| children | 子列配置 | Array  |
 
 ---
 

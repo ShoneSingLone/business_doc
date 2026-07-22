@@ -11,9 +11,10 @@
 隐藏表头。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" :show-header="false" />
+	<xTableEasy :columns="columns" :table-data="tableData" :show-header="false" />
 </template>
 <script>
 export default {
@@ -35,8 +36,8 @@ export default {
 
 表头显示配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
+| 属性        | 说明         | 类型    | 默认值 |
+| ----------- | ------------ | ------- | ------ |
 | show-header | 是否显示表头 | Boolean | `true` |
 
 ---

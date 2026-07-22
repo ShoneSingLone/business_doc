@@ -2,10 +2,10 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy 
-				border-y 
+			<xTableEasy
+				border-y
 				:max-height="300"
-				:columns="columns" 
+				:columns="columns"
 				:table-data="tableData"
 				:footer-data="footerData" />
 		</div>
@@ -16,10 +16,16 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: 'footer 汇总功能，默认汇总数据固定在底部显示',
+				mdDoc: "footer 汇总功能，默认汇总数据固定在底部显示",
 				columns: [
 					{ field: "name", key: "name", title: "姓名", width: 120, align: "center" },
-					{ field: "department", key: "department", title: "部门", width: 150, align: "left" },
+					{
+						field: "department",
+						key: "department",
+						title: "部门",
+						width: 150,
+						align: "left"
+					},
 					{ field: "score", key: "score", title: "评分", width: 100, align: "center" },
 					{ field: "bonus", key: "bonus", title: "奖金", width: 120, align: "right" }
 				],
@@ -42,9 +48,17 @@ export default async function () {
 			},
 			initFooterData() {
 				const totalBonus = this.tableData.reduce((sum, item) => sum + item.bonus, 0);
-				const avgScore = Math.round(this.tableData.reduce((sum, item) => sum + item.score, 0) / this.tableData.length);
+				const avgScore = Math.round(
+					this.tableData.reduce((sum, item) => sum + item.score, 0) /
+						this.tableData.length
+				);
 				this.footerData = [
-					{ name: "平均值", department: "-", score: avgScore, bonus: Math.round(totalBonus / this.tableData.length) },
+					{
+						name: "平均值",
+						department: "-",
+						score: avgScore,
+						bonus: Math.round(totalBonus / this.tableData.length)
+					},
 					{ name: "汇总值", department: "-", score: "-", bonus: totalBonus }
 				];
 			}

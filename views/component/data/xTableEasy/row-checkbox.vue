@@ -6,11 +6,11 @@
 			<xBtn @click="clearSelection">清除选择</xBtn>
 			<xBtn @click="selectAll">全选</xBtn>
 		</div>
-		<xTableEasy 
-			:columns="columns" 
-			:table-data="tableData" 
+		<xTableEasy
+			:columns="columns"
+			:table-data="tableData"
 			:checkbox-option="checkboxOption"
-			border-x 
+			border-x
 			border-y />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
@@ -46,13 +46,31 @@ export default async function () {
 					{ field: "score", key: "score", title: "评分", width: 100, align: "center" }
 				],
 				tableData: [
-					{ id: 1, name: "张三", department: "研发一组", position: "前端开发", score: 95 },
-					{ id: 2, name: "李四", department: "质量保障", position: "测试工程师", score: 88 },
-					{ id: 3, name: "王五", department: "产品中心", position: "产品经理", score: 91 },
+					{
+						id: 1,
+						name: "张三",
+						department: "研发一组",
+						position: "前端开发",
+						score: 95
+					},
+					{
+						id: 2,
+						name: "李四",
+						department: "质量保障",
+						position: "测试工程师",
+						score: 88
+					},
+					{
+						id: 3,
+						name: "王五",
+						department: "产品中心",
+						position: "产品经理",
+						score: 91
+					},
 					{ id: 4, name: "赵六", department: "研发二组", position: "后端开发", score: 84 }
 				],
 				checkboxOption: {
-					trigger: 'row',
+					trigger: "row",
 					onChange: (selectedRowKeys, selectedRows) => {
 						this.selectedRows = selectedRows;
 					}

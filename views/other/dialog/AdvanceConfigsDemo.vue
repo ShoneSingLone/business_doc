@@ -35,24 +35,30 @@ export default async function () {
 			async openNoCenter() {
 				// 模拟 ModalManager 的级联效果，手动给一个偏移
 				const count = _.$ModalManager.getAllInstances().length;
-				await _.$openModal({
-					title: "非居中弹窗",
-					url: "@/views/other/WindowModify.vue",
-					style: {
-						left: 50 + count * 20,
-						top: 50 + count * 20
+				await _.$openModal(
+					{
+						title: "非居中弹窗",
+						url: "@/views/other/WindowModify.vue",
+						style: {
+							left: 50 + count * 20,
+							top: 50 + count * 20
+						}
+					},
+					{
+						center: false
 					}
-				}, {
-					center: false
-				});
+				);
 			},
 			async openResponsive() {
-				await _.$openModal({
-					title: "响应式全屏弹窗",
-					url: "@/views/other/WindowModify.vue",
-				}, {
-					responsiveMaximize: 600 // 演示用，设为 600px
-				});
+				await _.$openModal(
+					{
+						title: "响应式全屏弹窗",
+						url: "@/views/other/WindowModify.vue"
+					},
+					{
+						responsiveMaximize: 600 // 演示用，设为 600px
+					}
+				);
 				_.$msg("请尝试缩小浏览器窗口至 600px 以下观察效果");
 			}
 		}

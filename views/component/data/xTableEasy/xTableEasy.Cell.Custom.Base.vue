@@ -71,7 +71,7 @@ export default async function () {
 						title: "Name",
 						width: 180,
 						align: "center",
-						renderHeaderCell: (column) => {
+						renderHeaderCell: column => {
 							return `
 								<input 
 									type="text" 
@@ -87,7 +87,7 @@ export default async function () {
 						key: "b",
 						title: "Date",
 						width: 150,
-						renderHeaderCell: (column) => {
+						renderHeaderCell: column => {
 							return `<span style="color:#1890ff;font-weight:bold;">${column.title}</span>`;
 						}
 					},

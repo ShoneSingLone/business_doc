@@ -240,8 +240,7 @@ export default async function () {
 			},
 			refreshPresets() {
 				/* 【需求】Phase2：刷新 localStorage 预设列表 */
-				const data =
-					this.readStorageSafe() || this.presetsState || { v: 1, presets: [] };
+				const data = this.readStorageSafe() || this.presetsState || { v: 1, presets: [] };
 				if (!data.presets) data.presets = [];
 				this.presetsState = data;
 			},

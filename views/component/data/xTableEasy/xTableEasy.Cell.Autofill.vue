@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-cell-autofill">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="单元格自动填充" path="@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-cell-autofill">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="单元格自动填充"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过 cellAutofillOption 属性启用自动填充功能
 - 2、选中单元格后拖动右下角填充柄进行填充
 - 3、支持数字序列、日期序列等智能填充
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### cellAutofillOption 配置
@@ -33,9 +37,9 @@ export default async function () {
 | 日期序列 | 自动递增日期 | 2024-01-01, 2024-01-02 |
 | 文本序列 | 自动递增序号 | Item 1, Item 2 |
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

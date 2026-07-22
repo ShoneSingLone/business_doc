@@ -11,9 +11,10 @@
 添加操作列。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -21,8 +22,8 @@ export default {
     return {
       columns: [
         { field: "name", title: "姓名", width: 120 },
-        { 
-          title: "操作", 
+        {
+          title: "操作",
           width: 200,
           render: (row) => {
             return `
@@ -55,11 +56,11 @@ export default {
 
 操作列渲染函数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| column | 当前列配置 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| row      | 当前行数据 | Object |
+| column   | 当前列配置 | Object |
+| rowIndex | 行索引     | Number |
 
 ---
 

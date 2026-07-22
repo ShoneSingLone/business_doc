@@ -1,11 +1,7 @@
 <template>
 	<DocContentOfDemo class="x-table-easy-row-index">
 		<xMd :md="mdTips" />
-		<xTableEasy 
-			:columns="columns" 
-			:table-data="tableData" 
-			border-x 
-			border-y />
+		<xTableEasy :columns="columns" :table-data="tableData" border-x border-y />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

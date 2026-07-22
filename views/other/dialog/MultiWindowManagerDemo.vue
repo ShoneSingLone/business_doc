@@ -14,7 +14,10 @@
 			<xBtn @click="closeAll" preset="red">关闭所有窗口</xBtn>
 		</div>
 		<div class="mb flex start gap10 wrap" v-if="minimizedWindows.length > 0">
-			<xBtn v-for="win in minimizedWindows" :key="win.id" :configs="getRestoreBtnConfigs(win.id)" />
+			<xBtn
+				v-for="win in minimizedWindows"
+				:key="win.id"
+				:configs="getRestoreBtnConfigs(win.id)" />
 		</div>
 		<div class="mb" v-else>
 			<xBtn disabled size="mini">暂无最小化窗口</xBtn>

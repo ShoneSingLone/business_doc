@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-header-hidden">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="表头隐藏" path="@/views/component/data/xTableEasy/xTableEasy.Header.Hidden.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-header-hidden">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="表头隐藏"
+			path="@/views/component/data/xTableEasy/xTableEasy.Header.Hidden.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过设置 \`showHeader\` 属性控制表头显示与隐藏
 - 2、\`showHeader\` 为 \`true\` 时显示表头，为 \`false\` 时隐藏表头
 - 3、适用于只需要展示数据列表的场景
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### 表头配置
@@ -24,9 +28,9 @@ export default async function () {
 |------|------|------|------|
 | showHeader | 是否显示表头 | Boolean | true |
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

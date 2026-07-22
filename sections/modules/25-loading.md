@@ -11,9 +11,10 @@
 显示加载状态。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :loading="loading" :columns="columns" :table-data="tableData" />
+	<xTableEasy :loading="loading" :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -42,8 +43,8 @@ export default {
 
 加载状态
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
+| 属性    | 说明             | 类型    | 默认值  |
+| ------- | ---------------- | ------- | ------- |
 | loading | 是否显示加载状态 | Boolean | `false` |
 
 ---

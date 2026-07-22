@@ -3,6 +3,7 @@
 ## 29.1 功能说明
 
 **配置要点**：
+
 1. 通过 `expandOption` 属性配置展开行功能
 2. 通过在 `columns` 设置 `type=expand` 展开的列
 3. 设置 `rowKeyFieldName` 属性对应行数据的列名
@@ -70,17 +71,17 @@
 
 展开配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| expandedRowKeys | 默认展开的行 key 数组 | Array | - |
-| trigger | 触发方式 | String | `click` |
-| expandable | 是否可展开的函数 | Function | - |
-| render | 自定义展开内容 | Function | - |
+| 属性            | 说明                  | 类型     | 默认值  |
+| --------------- | --------------------- | -------- | ------- |
+| expandedRowKeys | 默认展开的行 key 数组 | Array    | -       |
+| trigger         | 触发方式              | String   | `click` |
+| expandable      | 是否可展开的函数      | Function | -       |
+| render          | 自定义展开内容        | Function | -       |
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-|--------|------|------|
+| 事件名       | 说明         | 参数              |
+| ------------ | ------------ | ----------------- |
 | expandChange | 展开状态改变 | `row`, `expanded` |
 
 ---

@@ -4,7 +4,12 @@
 		<h4>像素宽度</h4>
 		<xTableEasy :columns="columnsPx" :table-data="tableData" border-x border-y />
 		<h4>百分比宽度</h4>
-		<xTableEasy :columns="columnsPercent" :table-data="tableData" :max-height="300" border-x border-y />
+		<xTableEasy
+			:columns="columnsPercent"
+			:table-data="tableData"
+			:max-height="300"
+			border-x
+			border-y />
 		<h4>不设置宽度（自动分配）</h4>
 		<xTableEasy :columns="columnsAuto" :table-data="tableData" border-x border-y />
 	</div>
@@ -20,8 +25,22 @@ export default async function () {
 - 3、合理设置列宽可以优化表格的显示效果。
 `,
 				tableData: [
-					{ id: 1, name: "张三", age: 18, sex: "男", phone: "13800000001", address: "上海市普陀区金沙江路 1518 弄" },
-					{ id: 2, name: "李四", age: 20, sex: "女", phone: "13800000002", address: "上海市浦东新区张江高科技园区" }
+					{
+						id: 1,
+						name: "张三",
+						age: 18,
+						sex: "男",
+						phone: "13800000001",
+						address: "上海市普陀区金沙江路 1518 弄"
+					},
+					{
+						id: 2,
+						name: "李四",
+						age: 20,
+						sex: "女",
+						phone: "13800000002",
+						address: "上海市浦东新区张江高科技园区"
+					}
 				],
 				columnsPx: [
 					{ field: "id", key: "id", title: "ID", width: 80, align: "center" },
@@ -36,7 +55,13 @@ export default async function () {
 					{ field: "name", key: "name", title: "姓名", width: "15%", align: "left" },
 					{ field: "age", key: "age", title: "年龄", width: "10%", align: "center" },
 					{ field: "sex", key: "sex", title: "性别", width: "10%", align: "center" },
-					{ field: "phone", key: "phone", title: "电话号码", width: "20%", align: "left" },
+					{
+						field: "phone",
+						key: "phone",
+						title: "电话号码",
+						width: "20%",
+						align: "left"
+					},
 					{ field: "address", key: "address", title: "地址", width: "35%", align: "left" }
 				],
 				columnsAuto: [

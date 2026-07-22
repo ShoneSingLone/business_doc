@@ -1,21 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<template>
-  <DocContentOfDemo class="x-table-easy-contextmenu">
-    <xMd :md="mdTips" />
-    <DemoAndCode title="右键菜单" path="@/views/component/data/xTableEasy/xTableEasy.Contextmenu.Base.vue" unfold />
-    <xMd :md="apiString" data-role="api" />
-  </DocContentOfDemo>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+<template>
+	<DocContentOfDemo class="x-table-easy-contextmenu">
+		<xMd :md="mdTips" />
+		<DemoAndCode
+			title="右键菜单"
+			path="@/views/component/data/xTableEasy/xTableEasy.Contextmenu.Base.vue"
+			unfold />
+		<xMd :md="apiString" data-role="api" />
+	</DocContentOfDemo>
 </template>
 <script lang="ts">
 export default async function () {
-  return {
-    data() {
-      return {
-        mdTips: `
+	return {
+		data() {
+			return {
+				mdTips: `
 - 1、通过 contextmenuBodyOption 属性配置右键菜单
 - 2、支持自定义菜单项和点击事件
 - 3、右键点击表格行时显示菜单
         `,
-        apiString: `
+				apiString: `
 ## API
 
 ### contextmenuBodyOption 配置
@@ -33,9 +37,9 @@ export default async function () {
 | disabled | 是否禁用 | Boolean/Function |
 | children | 子菜单数组 | Array |
         `
-      };
-    }
-  };
+			};
+		}
+	};
 }
 </script>
 <style lang="less">

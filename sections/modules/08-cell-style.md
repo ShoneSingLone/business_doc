@@ -3,6 +3,7 @@
 ## 8.1 功能说明
 
 **配置要点**：
+
 1. 通过配置对象 `cell-style-option` 设置单元格的样式
 2. 支持通过回调函数动态设置符合条件的单元格 class
 3. `<style>` 标签不可以使用 `scoped` 属性
@@ -15,18 +16,16 @@
 通过 `bodyCellClass` 回调函数设置表体单元格样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-style-option="cellStyleOption" />
-  <style>
-    .highlight-cell {
-      background-color: #fff7e6;
-      color: #d46b08;
-    }
-  </style>
+	<xTableEasy :columns="columns" :table-data="tableData" :cell-style-option="cellStyleOption" />
+	<style>
+		.highlight-cell {
+			background-color: #fff7e6;
+			color: #d46b08;
+		}
+	</style>
 </template>
 <script>
 export default {
@@ -59,17 +58,15 @@ export default {
 通过 `bodyRowClass` 回调函数设置表体行样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-style-option="cellStyleOption" />
-  <style>
-    .highlight-row {
-      background-color: #f6ffed;
-    }
-  </style>
+	<xTableEasy :columns="columns" :table-data="tableData" :cell-style-option="cellStyleOption" />
+	<style>
+		.highlight-row {
+			background-color: #f6ffed;
+		}
+	</style>
 </template>
 <script>
 export default {
@@ -97,18 +94,16 @@ export default {
 通过 `headerCellClass` 回调函数设置表头单元格样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-style-option="cellStyleOption" />
-  <style>
-    .header-required {
-      color: #f5222d;
-      font-weight: bold;
-    }
-  </style>
+	<xTableEasy :columns="columns" :table-data="tableData" :cell-style-option="cellStyleOption" />
+	<style>
+		.header-required {
+			color: #f5222d;
+			font-weight: bold;
+		}
+	</style>
 </template>
 <script>
 export default {
@@ -139,17 +134,15 @@ export default {
 通过 `headerRowClass` 回调函数设置表头行样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :cell-style-option="cellStyleOption" />
-  <style>
-    .custom-header-row {
-      background-color: #f0f5ff;
-    }
-  </style>
+	<xTableEasy :columns="columns" :table-data="tableData" :cell-style-option="cellStyleOption" />
+	<style>
+		.custom-header-row {
+			background-color: #f0f5ff;
+		}
+	</style>
 </template>
 <script>
 export default {
@@ -177,19 +170,20 @@ export default {
 通过 `footerCellClass` 回调函数设置页脚单元格样式。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy
-    :columns="columns"
-    :table-data="tableData"
-    :footer-data="footerData"
-    :cell-style-option="cellStyleOption" />
-  <style>
-    .footer-total {
-      font-weight: bold;
-      color: #1890ff;
-    }
-  </style>
+	<xTableEasy
+		:columns="columns"
+		:table-data="tableData"
+		:footer-data="footerData"
+		:cell-style-option="cellStyleOption" />
+	<style>
+		.footer-total {
+			font-weight: bold;
+			color: #1890ff;
+		}
+	</style>
 </template>
 <script>
 export default {
@@ -219,41 +213,41 @@ export default {
 
 单元格样式配置
 
-| 属性 | 说明 | 类型 |
-|------|------|------|
-| bodyCellClass | 表体单元格 class 回调函数 | Function |
-| bodyRowClass | 表体行 class 回调函数 | Function |
+| 属性            | 说明                      | 类型     |
+| --------------- | ------------------------- | -------- |
+| bodyCellClass   | 表体单元格 class 回调函数 | Function |
+| bodyRowClass    | 表体行 class 回调函数     | Function |
 | headerCellClass | 表头单元格 class 回调函数 | Function |
-| headerRowClass | 表头行 class 回调函数 | Function |
+| headerRowClass  | 表头行 class 回调函数     | Function |
 | footerCellClass | 页脚单元格 class 回调函数 | Function |
-| footerRowClass | 页脚行 class 回调函数 | Function |
+| footerRowClass  | 页脚行 class 回调函数     | Function |
 
 ### bodyCellClass 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| column | 当前列配置 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| row      | 当前行数据 | Object |
+| column   | 当前列配置 | Object |
+| rowIndex | 行索引     | Number |
 
 ### bodyRowClass 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| row | 当前行数据 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| row      | 当前行数据 | Object |
+| rowIndex | 行索引     | Number |
 
 ### headerCellClass 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
-| column | 当前列配置 | Object |
-| rowIndex | 行索引 | Number |
+| 参数     | 说明       | 类型   |
+| -------- | ---------- | ------ |
+| column   | 当前列配置 | Object |
+| rowIndex | 行索引     | Number |
 
 ### headerRowClass 参数
 
-| 参数 | 说明 | 类型 |
-|------|------|------|
+| 参数     | 说明   | 类型   |
+| -------- | ------ | ------ |
 | rowIndex | 行索引 | Number |
 
 ---

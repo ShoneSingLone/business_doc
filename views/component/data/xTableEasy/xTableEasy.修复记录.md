@@ -32,15 +32,16 @@ const [BodyTd, ...] = await Promise.all([_.$importVue("...")]);
 
 ### 文件修改列表
 
-| 文件路径 | 修改内容 |
-|---------|---------|
+| 文件路径                                                          | 修改内容                                         |
+| ----------------------------------------------------------------- | ------------------------------------------------ |
 | `statics/common/ui-x/components/data/xTableEasy/body/body-tr.vue` | 添加 `components` 对象注册子组件，并修复导入语法 |
-| `statics/common/ui-x/components/data/xTableEasy/body/index.vue` | 添加 `components` 对象注册子组件 |
-| `statics/common/ui-x/components/data/xTableEasy/body/body-td.vue` | 添加 `components` 对象注册子组件 |
+| `statics/common/ui-x/components/data/xTableEasy/body/index.vue`   | 添加 `components` 对象注册子组件                 |
+| `statics/common/ui-x/components/data/xTableEasy/body/body-td.vue` | 添加 `components` 对象注册子组件                 |
 
 ### 关键代码变更
 
 **body-tr.vue**:
+
 ```javascript
 // 添加 components 对象
 components: {
@@ -53,6 +54,7 @@ const [BodyTd, ...] = await Promise.all([_.$importVue("...")]);
 ```
 
 **body/index.vue**:
+
 ```javascript
 // 添加 components 对象
 components: {
@@ -64,6 +66,7 @@ components: {
 ```
 
 **body-td.vue**:
+
 ```javascript
 // 添加 components 对象
 components: {
@@ -77,11 +80,11 @@ components: {
 
 修复后，表格数据正确显示：
 
-| ID | 姓名 | 年龄 | 性别 | 电话号码 | 地址 |
-|---|---|---|---|---|---|
-| 1 | 张三 | 18 | 男 | 13800000001 | 上海市普陀区金沙江路 1518 弄 |
-| 2 | 李四 | 20 | 女 | 13800000002 | 上海市浦东新区张江高科技园区 |
-| ... | ... | ... | ... | ... | ... |
+| ID  | 姓名 | 年龄 | 性别 | 电话号码    | 地址                         |
+| --- | ---- | ---- | ---- | ----------- | ---------------------------- |
+| 1   | 张三 | 18   | 男   | 13800000001 | 上海市普陀区金沙江路 1518 弄 |
+| 2   | 李四 | 20   | 女   | 13800000002 | 上海市浦东新区张江高科技园区 |
+| ... | ...  | ...  | ...  | ...         | ...                          |
 
 ## 修复时间
 

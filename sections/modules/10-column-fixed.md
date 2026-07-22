@@ -11,9 +11,10 @@
 设置 `fixed: "left"` 将列固定在左侧。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -57,10 +58,10 @@ export default {
 
 列固定配置
 
-| 属性值 | 说明 |
-|--------|------|
-| left | 左侧固定 |
-| right | 右侧固定 |
+| 属性值 | 说明     |
+| ------ | -------- |
+| left   | 左侧固定 |
+| right  | 右侧固定 |
 
 ---
 

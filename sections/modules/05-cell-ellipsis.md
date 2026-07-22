@@ -12,9 +12,10 @@
 默认单行省略，鼠标悬停显示完整内容。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -32,6 +33,7 @@ export default {
 ```
 
 **特点**：
+
 - 默认单行省略
 - 鼠标悬停显示完整内容（通过 title 属性）
 - 简单实用
@@ -42,12 +44,14 @@ export default {
 
 通过 `lineClamp` 设置超过多少行省略。
 
-> 此功能目前只支持 [-webkit-line-clamp 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp) 的浏览器
+> 此功能目前只支持 [-webkit-line-clamp 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp)
+> 的浏览器
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -67,11 +71,8 @@ export default {
 </script>
 ```
 
-**多行省略配置**：
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| showTitle | 是否显示 title 提示 | Boolean | `true` |
-| lineClamp | 省略行数 | Number | `1` |
+**多行省略配置**：| 属性 | 说明 | 类型 | 默认值 | |------|------|------|--------| | showTitle | 是否显示 title 提示 |
+Boolean | `true` | | lineClamp | 省略行数 | Number | `1` |
 
 ---
 
@@ -80,9 +81,10 @@ export default {
 简单模式下，可以直接设置 `ellipsis: true`。
 
 **配置示例**：
+
 ```vue
 <template>
-  <xTableEasy :columns="columns" :table-data="tableData" />
+	<xTableEasy :columns="columns" :table-data="tableData" />
 </template>
 <script>
 export default {
@@ -105,15 +107,12 @@ export default {
 
 ### ellipsis 相关配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
+| 属性     | 说明                   | 类型           | 默认值  |
+| -------- | ---------------------- | -------------- | ------- |
 | ellipsis | 是否启用省略或省略配置 | Boolean/Object | `false` |
 
-**ellipsis 为对象时的配置**：
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| showTitle | 是否显示 title 提示 | Boolean | `true` |
-| lineClamp | 省略行数 | Number | `1` |
+**ellipsis 为对象时的配置**：| 属性 | 说明 | 类型 | 默认值 | |------|------|------|--------| | showTitle
+| 是否显示 title 提示 | Boolean | `true` | | lineClamp | 省略行数 | Number | `1` |
 
 ---
 

@@ -3,6 +3,7 @@
 ## 2.1 vue-easytable 组件库
 
 `vue-easytable` 是一个基于 Vue.js 的高性能表格组件库，提供了以下核心功能：
+
 - 虚拟滚动
 - 列固定
 - 单元格编辑
@@ -13,6 +14,7 @@
 ## 2.2 xTableEasy 封装层
 
 `xTableEasy` 是对 `vue-easytable` 的二次封装，主要改进包括：
+
 - 统一的样式规范
 - 与项目现有 UI 组件库的集成
 - 简化的 API 接口

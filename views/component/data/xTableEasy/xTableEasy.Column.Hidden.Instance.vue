@@ -3,17 +3,29 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button @click="hideColumns(['name'])" type="primary" size="small">隐藏 Name 列</el-button>
-				<el-button @click="hideColumns(['date'])" type="primary" size="small">隐藏 Date 列</el-button>
-				<el-button @click="hideColumns(['hobby'])" type="primary" size="small">隐藏 Hobby 列</el-button>
-				<el-button @click="showColumns(['name','date','hobby'])" type="success" size="small">显示所有列</el-button>
+				<el-button @click="hideColumns(['name'])" type="primary" size="small"
+					>隐藏 Name 列</el-button
+				>
+				<el-button @click="hideColumns(['date'])" type="primary" size="small"
+					>隐藏 Date 列</el-button
+				>
+				<el-button @click="hideColumns(['hobby'])" type="primary" size="small"
+					>隐藏 Hobby 列</el-button
+				>
+				<el-button
+					@click="showColumns(['name', 'date', 'hobby'])"
+					type="success"
+					size="small"
+					>显示所有列</el-button
+				>
 			</div>
-			<xTableEasy 
+			<xTableEasy
 				ref="tableRef"
-				:columns="columns" 
-				:table-data="tableData" 
-				:column-hidden-option="columnHiddenOption" 
-				borderX borderY />
+				:columns="columns"
+				:table-data="tableData"
+				:column-hidden-option="columnHiddenOption"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>

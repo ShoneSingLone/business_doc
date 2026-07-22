@@ -3,6 +3,7 @@
 ## 28.1 功能说明
 
 **配置要点**：
+
 1. 通过 `checkboxOption` 属性开启多选功能
 2. 通过在 `columns` 设置 `type=checkbox` 作为多选的列
 3. 设置 `rowKeyFieldName` 属性对应行数据的列名
@@ -53,19 +54,19 @@
 
 多选配置
 
-| 属性 | 说明 | 类型 | 默认值 |
-|------|------|------|--------|
-| selectedRowKeys | 默认选中的行 key 数组 | Array | - |
-| disabled | 禁用选中的函数 | Function | - |
-| checkStrictly | 是否严格模式（仅点击 checkbox 选中） | Boolean | `true` |
-| hideDefaultCheckbox | 是否隐藏全选框 | Boolean | `false` |
+| 属性                | 说明                                 | 类型     | 默认值  |
+| ------------------- | ------------------------------------ | -------- | ------- |
+| selectedRowKeys     | 默认选中的行 key 数组                | Array    | -       |
+| disabled            | 禁用选中的函数                       | Function | -       |
+| checkStrictly       | 是否严格模式（仅点击 checkbox 选中） | Boolean  | `true`  |
+| hideDefaultCheckbox | 是否隐藏全选框                       | Boolean  | `false` |
 
 ### 事件
 
-| 事件名 | 说明 | 参数 |
-|--------|------|------|
+| 事件名            | 说明           | 参数                                   |
+| ----------------- | -------------- | -------------------------------------- |
 | selectedRowChange | 行选中状态改变 | `row`, `isSelected`, `selectedRowKeys` |
-| selectedAllChange | 全选状态改变 | `isSelected`, `selectedRowKeys` |
+| selectedAllChange | 全选状态改变   | `isSelected`, `selectedRowKeys`        |
 
 ---
 

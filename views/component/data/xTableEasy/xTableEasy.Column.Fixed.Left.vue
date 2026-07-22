@@ -17,7 +17,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "通过 `fixed: \"left\"` 设置左列固定",
+				mdDoc: '通过 `fixed: "left"` 设置左列固定',
 				columns: [
 					{ field: "col1", key: "a", title: "固定列1", fixed: "left", width: 120 },
 					{ field: "col2", key: "b", title: "固定列2", fixed: "left", width: 120 },

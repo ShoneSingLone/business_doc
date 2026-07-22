@@ -2,12 +2,9 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<xTableEasy
-				:columns="columns"
-				:table-data="[]"
-				:empty-text="emptyText"
-				border-x
-				border-y />
+			<div class="data-empty-demo">
+				<xTableEasy :columns="columns" :table-data="[]" border-x border-y />
+			</div>
 		</div>
 	</div>
 </template>
@@ -16,8 +13,7 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "通过 empty-text 属性自定义空数据提示文本",
-				emptyText: "暂无数据",
+				mdDoc: "当 table-data 为空数组时，表格只显示表头，表体为空",
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
@@ -29,3 +25,10 @@ export default async function () {
 	});
 }
 </script>
+<style lang="less">
+.data-empty-demo {
+	.ve-table-container {
+		min-height: 100px;
+	}
+}
+</style>
