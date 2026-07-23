@@ -13,6 +13,10 @@
 			title="两侧固定"
 			path="@/views/component/data/xTableEasy/xTableEasy.Column.Fixed.Both.vue"
 			unfold />
+		<DemoAndCode
+			title="容器自适应列固定"
+			path="@/views/component/data/xTableEasy/xTableEasy.Column.Fixed.Adaptive.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

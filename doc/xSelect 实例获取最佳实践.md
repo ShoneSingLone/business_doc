@@ -24,7 +24,7 @@
 
 ### 方案一：使用专用工具函数（最推荐）✅
 
-我们创建了专门的工具函数 [`xSelectHelper.vue`](file:///e:/ghca_code/m2o/statics/common/utils/xSelectHelper.vue)
+我们创建了专门的工具函数 [`xSelectHelper.vue`](../../../statics/common/utils/xSelectHelper.vue)
 来处理这个问题。
 
 #### 1. 基础用法
@@ -294,6 +294,6 @@ await new Promise(resolve => setTimeout(resolve, 3000));
 
 参考实现：
 
-- 工具函数：[`xSelectHelper.vue`](file:///e:/ghca_code/m2o/statics/common/utils/xSelectHelper.vue)
-- 业务示例：[`ViewList.vue`](file:///e:/ghca_code/m2o/statics/business_cib/views/apply/ViewList.vue#L182-L194)
-- 文档示例：[`GetXSelectInstance.vue`](file:///e:/ghca_code/m2o/statics/business_doc/views/component/form/select/GetXSelectInstance.vue)
+- 工具函数：[`xSelectHelper.vue`](../../../statics/common/utils/xSelectHelper.vue)
+- 业务示例：[`ViewList.vue`](../../../statics/business_cib/views/apply/ViewList.vue#L182-L194)
+- 文档示例：[`GetXSelectInstance.vue`](../../../statics/business_doc/views/component/form/select/GetXSelectInstance.vue)
