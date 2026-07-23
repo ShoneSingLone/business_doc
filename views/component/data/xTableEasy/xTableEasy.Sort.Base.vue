@@ -4,10 +4,15 @@
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
 				<el-button type="primary" @click="sortByName">按姓名排序</el-button>
-				<el-button type="primary" @click="sortByDate">按电话排序</el-button>
+				<el-button type="primary" @click="sortByTel">按电话排序</el-button>
 				<el-button type="info" @click="resetSort">重置顺序</el-button>
 			</div>
-			<xTableEasy :columns="columns" :table-data="sortedData" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="sortedData"
+				:sort-option="sortOption"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -16,43 +21,48 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "通过在外部实现排序逻辑，然后将排序后的数据传递给表格组件",
+				mdDoc: "1、表格支持通过外部排序逻辑实现表头排序\n2、点击表头或使用按钮触发排序\n3、排序后的数据重新传递给表格组件",
+				sortOption: {
+					sortChange: (sortColumns) => {
+						console.log("sortColumns:", sortColumns);
+					}
+				},
 				originalData: [
 					{
 						name: "John",
-						date: "1900-05-20",
+						tel: "1900-05-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Shanghai"
 					},
 					{
 						name: "Dickerson",
-						date: "1910-06-20",
+						tel: "1910-06-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Beijing"
 					},
 					{
 						name: "Larsen",
-						date: "2000-07-20",
+						tel: "2000-07-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Chongqing"
 					},
 					{
 						name: "Geneva",
-						date: "2010-08-20",
+						tel: "2010-08-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Xiamen"
 					},
 					{
 						name: "Jami",
-						date: "2020-09-20",
+						tel: "2020-09-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Shenzhen"
 					}
 				],
 				sortedData: [],
 				columns: [
-					{ field: "name", key: "a", title: "Name", width: 100 },
-					{ field: "date", key: "b", title: "Tel", width: 200 },
+					{ field: "name", key: "a", title: "Name", width: 150, align: "center", sortBy: "" },
+					{ field: "tel", key: "b", title: "Tel", width: 200, align: "center", sortBy: "" },
 					{ field: "hobby", key: "c", title: "Hobby", width: 300 },
 					{ field: "address", key: "d", title: "Address", width: 400 }
 				]
@@ -63,17 +73,31 @@ export default async function () {
 		},
 		methods: {
 			sortByName() {
-				this.sortedData = [...this.sortedData].sort((a, b) => {
-					return a.name.localeCompare(b.name);
-				});
+				const col = this.columns.find(c => c.field === "name");
+				if (col.sortBy === "asc") {
+					this.sortedData = [...this.sortedData].sort((a, b) => b.name.localeCompare(a.name));
+					col.sortBy = "desc";
+				} else {
+					this.sortedData = [...this.sortedData].sort((a, b) => a.name.localeCompare(b.name));
+					col.sortBy = "asc";
+				}
+				this.columns = [...this.columns];
 			},
-			sortByDate() {
-				this.sortedData = [...this.sortedData].sort((a, b) => {
-					return new Date(a.date) - new Date(b.date);
-				});
+			sortByTel() {
+				const col = this.columns.find(c => c.field === "tel");
+				if (col.sortBy === "asc") {
+					this.sortedData = [...this.sortedData].sort((a, b) => b.tel.localeCompare(a.tel));
+					col.sortBy = "desc";
+				} else {
+					this.sortedData = [...this.sortedData].sort((a, b) => a.tel.localeCompare(b.tel));
+					col.sortBy = "asc";
+				}
+				this.columns = [...this.columns];
 			},
 			resetSort() {
 				this.sortedData = [...this.originalData];
+				this.columns.forEach(c => { c.sortBy = ""; });
+				this.columns = [...this.columns];
 			}
 		}
 	});

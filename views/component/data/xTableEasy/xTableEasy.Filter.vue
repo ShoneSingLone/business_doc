@@ -11,7 +11,11 @@
 				</el-input>
 				<el-button type="info" @click="resetFilter">重置</el-button>
 			</div>
-			<xTableEasy :columns="columns" :table-data="filteredData" borderX borderY />
+			<xTableEasy
+				:columns="columns"
+				:table-data="filteredData"
+				borderX
+				borderY />
 		</div>
 	</div>
 </template>
@@ -20,43 +24,43 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "通过在外部实现筛选逻辑，然后将筛选后的数据传递给表格组件",
+				mdDoc: "1、通过外部筛选控件实现表格数据的筛选\n2、可以根据业务需求自定义筛选逻辑和筛选控件\n3、筛选后的数据直接传递给 table-data 属性",
 				filterKeyword: "",
 				originalData: [
 					{
 						name: "John",
-						date: "1900-05-20",
+						tel: "1900-05-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Shanghai"
 					},
 					{
 						name: "Dickerson",
-						date: "1910-06-20",
+						tel: "1910-06-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Beijing"
 					},
 					{
 						name: "Larsen",
-						date: "2000-07-20",
+						tel: "2000-07-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Chongqing"
 					},
 					{
 						name: "Geneva",
-						date: "2010-08-20",
+						tel: "2010-08-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Xiamen"
 					},
 					{
 						name: "Jami",
-						date: "2020-09-20",
+						tel: "2020-09-20",
 						hobby: "coding and coding repeat",
 						address: "No.1 Century Avenue, Shenzhen"
 					}
 				],
 				columns: [
-					{ field: "name", key: "a", title: "Name", width: 100 },
-					{ field: "date", key: "b", title: "Tel", width: 200 },
+					{ field: "name", key: "a", title: "Name", width: 150 },
+					{ field: "tel", key: "b", title: "Tel", width: 200 },
 					{ field: "hobby", key: "c", title: "Hobby", width: 300 },
 					{ field: "address", key: "d", title: "Address", width: 400 }
 				]
