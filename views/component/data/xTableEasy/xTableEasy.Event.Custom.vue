@@ -13,6 +13,18 @@
 			title="header 单元格事件"
 			path="@/views/component/data/xTableEasy/xTableEasy.Event.Custom.HeaderCell.vue"
 			unfold />
+		<DemoAndCode
+			title="header 行事件"
+			path="@/views/component/data/xTableEasy/xTableEasy.Event.Custom.HeaderRow.vue"
+			unfold />
+		<DemoAndCode
+			title="footer 单元格事件"
+			path="@/views/component/data/xTableEasy/xTableEasy.Event.Custom.FooterCell.vue"
+			unfold />
+		<DemoAndCode
+			title="footer 行事件"
+			path="@/views/component/data/xTableEasy/xTableEasy.Event.Custom.FooterRow.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
