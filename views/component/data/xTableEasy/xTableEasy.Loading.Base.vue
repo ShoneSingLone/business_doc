@@ -3,8 +3,8 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="loading = true">显示加载</el-button>
-				<el-button @click="loading = false">隐藏加载</el-button>
+				<xBtn type="primary" @click="loading = true">显示加载</xBtn>
+				<xBtn @click="loading = false">隐藏加载</xBtn>
 			</div>
 			<xTableEasy
 				:columns="columns"

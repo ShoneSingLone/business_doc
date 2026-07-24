@@ -37,6 +37,7 @@ export default async function () {
 					}
 				},
 				columns: [
+					{ type: "expand", key: "expand", width: 50 },
 					{ field: "name", key: "name", title: "Name", width: 100 },
 					{ field: "date", key: "date", title: "Tel", width: 150 },
 					{ field: "hobby", key: "hobby", title: "Hobby", width: 200 },

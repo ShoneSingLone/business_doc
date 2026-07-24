@@ -3,19 +3,12 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-input v-model="filterKeyword" placeholder="输入姓名搜索" style="width: 200px">
-					<el-button
-						slot="append"
-						icon="el-icon-search"
-						@click="handleFilter"></el-button>
-				</el-input>
-				<el-button type="info" @click="resetFilter">重置</el-button>
+				<xInput v-model="filterKeyword" placeholder="输入姓名搜索" style="width: 200px">
+					<xBtn slot="append" icon="el-icon-search" @click="handleFilter"></xBtn>
+				</xInput>
+				<xBtn type="info" @click="resetFilter">重置</xBtn>
 			</div>
-			<xTableEasy
-				:columns="columns"
-				:table-data="filteredData"
-				borderX
-				borderY />
+			<xTableEasy :columns="columns" :table-data="filteredData" borderX borderY />
 		</div>
 	</div>
 </template>

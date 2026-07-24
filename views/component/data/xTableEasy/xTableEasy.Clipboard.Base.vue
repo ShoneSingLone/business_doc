@@ -3,7 +3,7 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="copySelected">复制选中内容</el-button>
+				<xBtn type="primary" @click="copySelected">复制选中内容</xBtn>
 			</div>
 			<xTableEasy
 				:columns="columns"

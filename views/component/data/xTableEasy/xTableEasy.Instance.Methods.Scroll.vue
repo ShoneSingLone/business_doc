@@ -3,8 +3,8 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="scrollToRow">滚动到第50行</el-button>
-				<el-button type="primary" @click="scrollToTop">滚动到顶部</el-button>
+				<xBtn type="primary" @click="scrollToRow">滚动到第50行</xBtn>
+				<xBtn type="primary" @click="scrollToTop">滚动到顶部</xBtn>
 			</div>
 			<xTableEasy
 				ref="tableRef"

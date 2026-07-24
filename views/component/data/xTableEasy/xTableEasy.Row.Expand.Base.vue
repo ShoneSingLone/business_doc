@@ -6,6 +6,7 @@
 				:columns="columns"
 				:table-data="tableData"
 				:expand-option="expandOption"
+				:row-key-field-name="'name'"
 				border-x
 				border-y />
 		</div>
@@ -24,6 +25,7 @@ export default async function () {
 					}
 				},
 				columns: [
+					{ type: "expand", key: "expand", width: 50 },
 					{ field: "name", key: "a", title: "Name", width: 100 },
 					{ field: "date", key: "b", title: "Tel", width: 200 },
 					{ field: "hobby", key: "c", title: "Hobby", width: 300 },

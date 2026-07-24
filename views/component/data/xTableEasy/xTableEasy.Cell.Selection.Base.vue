@@ -3,7 +3,7 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="info" @click="clearSelection">清除选择</el-button>
+				<xBtn type="info" @click="clearSelection">清除选择</xBtn>
 			</div>
 			<xTableEasy
 				:columns="columns"

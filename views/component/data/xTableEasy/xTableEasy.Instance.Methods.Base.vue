@@ -3,9 +3,9 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="scrollToRow">滚动到第5行</el-button>
-				<el-button @click="clearSelection">清除选择</el-button>
-				<el-button @click="getSelectedRows">获取选中行</el-button>
+				<xBtn type="primary" @click="scrollToRow">滚动到第5行</xBtn>
+				<xBtn @click="clearSelection">清除选择</xBtn>
+				<xBtn @click="getSelectedRows">获取选中行</xBtn>
 			</div>
 			<xTableEasy
 				ref="tableRef"

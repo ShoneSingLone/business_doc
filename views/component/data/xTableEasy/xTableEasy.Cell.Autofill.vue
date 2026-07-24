@@ -3,8 +3,12 @@
 	<DocContentOfDemo class="x-table-easy-cell-autofill">
 		<xMd :md="mdTips" />
 		<DemoAndCode
-			title="单元格自动填充"
+			title="基本用法"
 			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.Base.vue"
+			unfold />
+		<DemoAndCode
+			title="自动填充方向"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Autofill.Direction.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>

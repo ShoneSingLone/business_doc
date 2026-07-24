@@ -3,14 +3,14 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-select v-model="selectedHobby" placeholder="选择爱好" style="width: 150px">
-					<el-option label="全部" value=""></el-option>
-					<el-option label="编程" value="coding"></el-option>
-					<el-option label="阅读" value="reading"></el-option>
-					<el-option label="运动" value="sports"></el-option>
-				</el-select>
-				<el-button type="primary" @click="handleFilter">筛选</el-button>
-				<el-button type="info" @click="resetFilter">重置</el-button>
+				<xSelect v-model="selectedHobby" placeholder="选择爱好" style="width: 150px">
+					<xOption label="全部" value=""></xOption>
+					<xOption label="编程" value="coding"></xOption>
+					<xOption label="阅读" value="reading"></xOption>
+					<xOption label="运动" value="sports"></xOption>
+				</xSelect>
+				<xBtn type="primary" @click="handleFilter">筛选</xBtn>
+				<xBtn type="info" @click="resetFilter">重置</xBtn>
 			</div>
 			<xTableEasy :columns="columns" :table-data="filteredData" borderX borderY />
 		</div>

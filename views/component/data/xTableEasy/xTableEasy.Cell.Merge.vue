@@ -3,8 +3,12 @@
 	<DocContentOfDemo class="x-table-easy-cell-merge">
 		<xMd :md="mdTips" />
 		<DemoAndCode
-			title="单元格合并"
-			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Merge.Base.vue"
+			title="body 列合并"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Merge.Column.vue"
+			unfold />
+		<DemoAndCode
+			title="body 行合并"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Merge.Row.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>

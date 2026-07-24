@@ -3,9 +3,9 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="sortByAge">按年龄排序</el-button>
-				<el-button type="primary" @click="sortByScore">按成绩排序</el-button>
-				<el-button type="info" @click="resetSort">重置</el-button>
+				<xBtn type="primary" @click="sortByAge">按年龄排序</xBtn>
+				<xBtn type="primary" @click="sortByScore">按成绩排序</xBtn>
+				<xBtn type="info" @click="resetSort">重置</xBtn>
 			</div>
 			<xTableEasy
 				:columns="columns"
@@ -24,7 +24,7 @@ export default async function () {
 				mdDoc: "多字段排序：同时对多个字段进行排序",
 				sortOption: {
 					multipleSort: true,
-					sortChange: (sortColumns) => {
+					sortChange: sortColumns => {
 						console.log("sortColumns:", sortColumns);
 					}
 				},
@@ -38,8 +38,22 @@ export default async function () {
 				sortedData: [],
 				columns: [
 					{ field: "name", key: "a", title: "Name", width: 120 },
-					{ field: "age", key: "b", title: "Age", width: 100, align: "center", sortBy: "" },
-					{ field: "score", key: "c", title: "Score", width: 100, align: "center", sortBy: "" },
+					{
+						field: "age",
+						key: "b",
+						title: "Age",
+						width: 100,
+						align: "center",
+						sortBy: ""
+					},
+					{
+						field: "score",
+						key: "c",
+						title: "Score",
+						width: 100,
+						align: "center",
+						sortBy: ""
+					},
 					{ field: "hobby", key: "d", title: "Hobby", width: 200 }
 				]
 			};
@@ -72,7 +86,9 @@ export default async function () {
 			},
 			resetSort() {
 				this.sortedData = [...this.originalData];
-				this.columns.forEach(c => { c.sortBy = ""; });
+				this.columns.forEach(c => {
+					c.sortBy = "";
+				});
 				this.columns = [...this.columns];
 			}
 		}

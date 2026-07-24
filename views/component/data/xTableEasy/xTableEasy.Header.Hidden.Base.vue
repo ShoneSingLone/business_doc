@@ -3,7 +3,7 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-switch v-model="showHeader" active-text="显示表头" inactive-text="隐藏表头" />
+				<xSwitch v-model="showHeader" active-text="显示表头" inactive-text="隐藏表头" />
 			</div>
 			<xTableEasy
 				:columns="columns"

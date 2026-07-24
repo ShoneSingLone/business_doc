@@ -14,6 +14,14 @@
 			title="表头单元格样式"
 			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Style.Header.vue"
 			unfold />
+		<DemoAndCode
+			title="表头行样式"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Style.HeaderRow.vue"
+			unfold />
+		<DemoAndCode
+			title="footer 单元格样式"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Style.Footer.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>

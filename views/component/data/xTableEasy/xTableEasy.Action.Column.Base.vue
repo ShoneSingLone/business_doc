@@ -29,8 +29,8 @@ export default async function () {
 						align: "center",
 						render: (row, column, rowIndex, colIndex) => {
 							return `
-								<el-button type="primary" size="small" @click="handleEdit('${rowIndex}')">编辑</el-button>
-								<el-button type="danger" size="small" @click="handleDelete('${rowIndex}')">删除</el-button>
+								<xBtn type="primary" size="small" @click="handleEdit('${rowIndex}')">编辑</xBtn>
+								<xBtn type="danger" size="small" @click="handleDelete('${rowIndex}')">删除</xBtn>
 							`;
 						}
 					}

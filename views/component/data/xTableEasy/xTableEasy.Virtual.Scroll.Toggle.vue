@@ -3,10 +3,10 @@
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
 			<div class="demo-controls">
-				<el-button type="primary" @click="toggleVirtualScroll">
-					{{ virtualScrollEnabled ? '关闭虚拟滚动' : '开启虚拟滚动' }}
-				</el-button>
-				<span>当前状态：{{ virtualScrollEnabled ? '已开启' : '已关闭' }}</span>
+				<xBtn type="primary" @click="toggleVirtualScroll">
+					{{ virtualScrollEnabled ? "关闭虚拟滚动" : "开启虚拟滚动" }}
+				</xBtn>
+				<span>当前状态：{{ virtualScrollEnabled ? "已开启" : "已关闭" }}</span>
 			</div>
 			<xTableEasy
 				:columns="columns"

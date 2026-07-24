@@ -2,19 +2,16 @@
 	<div>
 		<div class="flex vertical">
 			<xMd :md="mdDoc" />
-			<div class="event-log">
-				<ul>
-					<li v-for="(log, index) in eventLogs" :key="index">
-						{{ log.time }} - {{ log.message }}
-					</li>
-				</ul>
+			<div class="event-log" v-if="eventLogs.length">
+				<strong>事件日志：</strong>
+				<div v-for="(log, i) in eventLogs" :key="i">{{ log }}</div>
 			</div>
 			<xTableEasy
 				:columns="columns"
 				:table-data="tableData"
+				:event-custom-option="eventCustomOption"
 				border-x
-				border-y
-				@on-body-cell-click="handleBodyCellClick" />
+				border-y />
 		</div>
 	</div>
 </template>
@@ -23,39 +20,35 @@ export default async function () {
 	return defineComponent({
 		data() {
 			return {
-				mdDoc: "body 单元格事件：监听单元格点击事件",
+				mdDoc: "body 单元格事件：通过 `eventCustomOption.bodyCellEvents` 自定义单元格的点击事件",
 				eventLogs: [],
+				eventCustomOption: {
+					bodyCellEvents: ({ row, column, rowIndex, columnIndex }) => {
+						return {
+							click: (e) => {
+								const log = `[${new Date().toLocaleTimeString()}] 单元格点击: ${column.title} = ${row[column.field]}`;
+								this.eventLogs.unshift(log);
+								if (this.eventLogs.length > 5) this.eventLogs.pop();
+							}
+						};
+					}
+				},
 				columns: [
-					{ field: "name", key: "name", title: "姓名", width: 120 },
-					{ field: "department", key: "department", title: "部门", width: 150 },
-					{ field: "score", key: "score", title: "评分", width: 100, align: "center" }
+					{ field: "name", key: "name", title: "Name", width: 150 },
+					{ field: "age", key: "age", title: "Age", width: 100, align: "center" },
+					{ field: "hobby", key: "hobby", title: "Hobby", width: 200 }
 				],
 				tableData: [
-					{ name: "张三", department: "研发一组", score: 95 },
-					{ name: "李四", department: "质量保障", score: 88 },
-					{ name: "王五", department: "产品中心", score: 91 }
+					{ name: "John", age: 28, hobby: "coding" },
+					{ name: "Dickerson", age: 32, hobby: "reading" },
+					{ name: "Larsen", age: 25, hobby: "gaming" }
 				]
 			};
-		},
-		methods: {
-			addLog(message) {
-				const now = new Date();
-				const time = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}:${now.getSeconds().toString().padStart(2, "0")}`;
-				this.eventLogs.unshift({ time, message });
-				if (this.eventLogs.length > 5) {
-					this.eventLogs.pop();
-				}
-			},
-			handleBodyCellClick({ row, column, rowIndex, columnIndex }) {
-				this.addLog(
-					`点击单元格 [行${rowIndex + 1}, 列${columnIndex + 1}]: ${column.title} = ${row[column.field]}`
-				);
-			}
 		}
 	});
 }
 </script>
-<style lang="less">
+<style scoped>
 .event-log {
 	margin-bottom: 12px;
 	padding: 8px;
@@ -63,17 +56,7 @@ export default async function () {
 	border-radius: 4px;
 	max-height: 100px;
 	overflow-y: auto;
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-
-		li {
-			padding: 3px 0;
-			font-size: 12px;
-			color: #409eff;
-		}
-	}
+	font-size: 12px;
+	color: #409eff;
 }
 </style>

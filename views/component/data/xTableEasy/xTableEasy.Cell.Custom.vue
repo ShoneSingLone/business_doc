@@ -3,8 +3,16 @@
 	<DocContentOfDemo class="x-table-easy-cell-custom">
 		<xMd :md="mdTips" />
 		<DemoAndCode
-			title="自定义单元格"
+			title="body 自定义单元格"
 			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Custom.Base.vue"
+			unfold />
+		<DemoAndCode
+			title="header 自定义单元格"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Custom.Header.vue"
+			unfold />
+		<DemoAndCode
+			title="footer 汇总自定义单元格"
+			path="@/views/component/data/xTableEasy/xTableEasy.Cell.Custom.Footer.vue"
 			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
@@ -51,8 +59,8 @@ export default async function () {
 \`\`\`javascript
 render: (row, column, rowIndex, colIndex) => {
   return \`
-    <el-button type="primary" size="small">编辑</el-button>
-    <el-button type="danger" size="small">删除</el-button>
+    <xBtn type="primary" size="small">编辑</xBtn>
+    <xBtn type="danger" size="small">删除</xBtn>
   \`;
 }
 \`\`\`
