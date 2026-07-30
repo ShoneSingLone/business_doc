@@ -10,6 +10,10 @@
 			title="子菜单"
 			path="@/views/directives/xcontextmenu/ZiCaiDan.vue"
 			unfold />
+		<DemoAndCode
+			title="自定义内容"
+			path="@/views/directives/xcontextmenu/ZiDingYiNeiRong.vue"
+			unfold />
 		<xMd :md="apiString" data-role="api" />
 	</DocContentOfDemo>
 </template>
@@ -33,10 +37,19 @@ export default async function () {
 					"| :--- | :--- | :--- | :--- |",
 					"| id | `string` | - | 唯一标识 |",
 					"| label | `string` | - | 显示文本 |",
-					"| icon | `string` | - | 图标名（当前面板尚未注册图标，仅作属性预留） |",
+					"| icon | `string` | - | 图标名 |",
 					"| disabled | `boolean` | `false` | 是否禁用 |",
 					"| type | `string` | - | 设为 `'divider'` 渲染为分割线 |",
 					"| children | `Array` | - | 子菜单项（支持递归嵌套） |",
+					"| renderLabel | `Function` | - | 自定义标签渲染，`(item) => VNode\\|string`，优先级高于全局 `renderLabel` |",
+					"| render | `Function` | - | 完整自定义项渲染，`() => VNode`，替换整个菜单项内容 |",
+					"",
+					"#### 高级配置（Object 格式）",
+					"| 属性 | 类型 | 说明 |",
+					"| :--- | :--- | :--- |",
+					"| renderLabel | `Function` | 全局标签渲染函数，`(item) => VNode\\|string` |",
+					"| renderHeader | `Function\\|string` | 菜单头部自定义内容，渲染在菜单项上方 |",
+					"| renderFooter | `Function\\|string` | 菜单尾部自定义内容，渲染在菜单项下方 |",
 					"",
 					"#### 回调",
 					"| 回调 | 参数 | 说明 |",
