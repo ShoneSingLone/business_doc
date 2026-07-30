@@ -21,10 +21,12 @@ export default async function () {
 				expandOption: {
 					enable: true,
 					defaultExpandedRowKeys: [1, 3],
-					render: (row) => {
-						return `<div style="padding: 10px;">
-							<strong>展开内容：</strong> ${row.name} 的详细信息 - ${row.address}
-						</div>`;
+					render: (params, h) => {
+						const { row } = params;
+						return h("div", { style: { padding: "10px" } }, [
+							h("strong", "展开内容："),
+							h("span", ` ${row.name} 的详细信息 - ${row.address}`)
+						]);
 					}
 				},
 				columns: [

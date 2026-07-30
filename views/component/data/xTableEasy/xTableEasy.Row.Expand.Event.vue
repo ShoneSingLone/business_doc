@@ -32,8 +32,12 @@ export default async function () {
 					afterExpandRowChange: ({ afterExpandedRowKeys, row, rowIndex }) => {
 						this.eventLogs.push(`[${new Date().toLocaleTimeString()}] afterExpand: ${row.name}, 当前展开: [${afterExpandedRowKeys}]`);
 					},
-					render: (row) => {
-						return `<div style="padding: 10px;">展开内容：${row.name} 的详细信息</div>`;
+					render: (params, h) => {
+						const { row } = params;
+						return h("div", { style: { padding: "10px" } }, [
+							h("strong", "展开内容："),
+							h("span", ` ${row.name} 的详细信息`)
+						]);
 					}
 				},
 				columns: [

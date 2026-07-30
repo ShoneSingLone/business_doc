@@ -45,10 +45,11 @@ export default async function () {
 					label: i18n("水波纹"),
 					href: "/directives/ripple"
 				},
+				{ icon: "_icon_ripple", label: i18n("Infinite Scroll"), href: "/directives/infinite_scroll" },
 				{
-					icon: "_icon_ripple",
-					label: i18n("Infinite Scroll"),
-					href: "/directives/infinite_scroll"
+					icon: "_icon_menu",
+					label: `${i18n("xContextmenu")} ${i18n("右键菜单")}`,
+					href: "/directives/xcontextmenu"
 				},
 				{ icon: "_icon_dialog", label: i18n("layer"), href: "/other/layer" },
 				{ icon: "_icon_move", label: i18n("move"), href: "/other/move" },

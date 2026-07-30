@@ -20,8 +20,12 @@ export default async function () {
 				mdDoc: "通过 expand-option 属性配置行展开功能",
 				expandOption: {
 					enable: true,
-					render: (row, rowIndex) => {
-						return `<div style="padding: 12px;">展开行详情：${row.name} - ${row.address}</div>`;
+					render: (params, h) => {
+						const { row } = params;
+						return h("div", { style: { padding: "12px" } }, [
+							h("strong", `展开行详情：`),
+							h("span", ` ${row.name} - ${row.address}`)
+						]);
 					}
 				},
 				columns: [
@@ -32,36 +36,11 @@ export default async function () {
 					{ field: "address", key: "d", title: "Address", width: 400 }
 				],
 				tableData: [
-					{
-						name: "John",
-						date: "1900-05-20",
-						hobby: "coding",
-						address: "No.1 Century Avenue, Shanghai"
-					},
-					{
-						name: "Dickerson",
-						date: "1910-06-20",
-						hobby: "coding",
-						address: "No.1 Century Avenue, Beijing"
-					},
-					{
-						name: "Larsen",
-						date: "2000-07-20",
-						hobby: "coding",
-						address: "No.1 Century Avenue, Chongqing"
-					},
-					{
-						name: "Geneva",
-						date: "2010-08-20",
-						hobby: "coding",
-						address: "No.1 Century Avenue, Xiamen"
-					},
-					{
-						name: "Jami",
-						date: "2020-09-20",
-						hobby: "coding",
-						address: "No.1 Century Avenue, Shenzhen"
-					}
+					{ name: "John", date: "1900-05-20", hobby: "coding", address: "Shanghai" },
+					{ name: "Dickerson", date: "1910-06-20", hobby: "reading", address: "Beijing" },
+					{ name: "Larsen", date: "2000-07-20", hobby: "gaming", address: "Chongqing" },
+					{ name: "Geneva", date: "2010-08-20", hobby: "sports", address: "Xiamen" },
+					{ name: "Jami", date: "2020-09-20", hobby: "music", address: "Shenzhen" }
 				]
 			};
 		}

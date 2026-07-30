@@ -41,6 +41,10 @@ export default async function () {
 				_.$newRoute(
 					"/directives/infinite_scroll",
 					"@/views/directives/infinite_scroll/DocDemoInfiniteScroll.vue"
+				),
+				_.$newRoute(
+					"/directives/xcontextmenu",
+					"@/views/directives/xcontextmenu/DocDemoXContextmenu.vue"
 				)
 			]
 		}),

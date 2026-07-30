@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h2>外边框 + 纵向边框</h2>
-		<xTableEasy :columns="columns" :table-data="data" border-around border-y :row-height="40" />
+		<xTableEasy :columns="columns" :table-data="data" border-around border-y :border-x="false" :row-height="40" />
 	</div>
 </template>
 

@@ -20,31 +20,32 @@ export default async function () {
 				mdDoc: "展开表格：展开行中嵌套显示子表格",
 				expandOption: {
 					enable: true,
-					render: (row) => {
-						const hobbies = ["coding", "reading", "gaming", "sports", "music"];
-						const subData = Array.from({ length: 3 }, (_, i) => ({
-							id: i + 1,
-							project: `${row.name}项目${i + 1}`,
-							status: ["进行中", "已完成", "计划中"][i],
-							progress: `${(i + 1) * 30}%`
-						}));
-						return `<div style="padding: 10px;">
-							<strong>${row.name}的项目列表：</strong>
-							<table style="width:100%;border-collapse:collapse;margin-top:8px;">
-								<tr style="background:#f5f7fa;">
-									<th style="padding:6px;border:1px solid #ebeef5;text-align:left;">ID</th>
-									<th style="padding:6px;border:1px solid #ebeef5;text-align:left;">项目</th>
-									<th style="padding:6px;border:1px solid #ebeef5;text-align:left;">状态</th>
-									<th style="padding:6px;border:1px solid #ebeef5;text-align:left;">进度</th>
-								</tr>
-								${subData.map(item => `<tr>
-									<td style="padding:6px;border:1px solid #ebeef5;">${item.id}</td>
-									<td style="padding:6px;border:1px solid #ebeef5;">${item.project}</td>
-									<td style="padding:6px;border:1px solid #ebeef5;">${item.status}</td>
-									<td style="padding:6px;border:1px solid #ebeef5;">${item.progress}</td>
-								</tr>`).join('')}
-							</table>
-						</div>`;
+					render: (params, h) => {
+						const { row } = params;
+						const subData = [
+							{ id: 1, project: `${row.name}项目1`, status: "进行中", progress: "30%" },
+							{ id: 2, project: `${row.name}项目2`, status: "已完成", progress: "60%" },
+							{ id: 3, project: `${row.name}项目3`, status: "计划中", progress: "90%" }
+						];
+						return h("div", { style: { padding: "10px" } }, [
+							h("strong", `${row.name}的项目列表：`),
+							h("table", { style: { width: "100%", borderCollapse: "collapse", marginTop: "8px" } }, [
+								h("tr", { style: { background: "#f5f7fa" } }, [
+									h("th", { style: { padding: "6px", border: "1px solid #ebeef5", textAlign: "left" } }, "ID"),
+									h("th", { style: { padding: "6px", border: "1px solid #ebeef5", textAlign: "left" } }, "项目"),
+									h("th", { style: { padding: "6px", border: "1px solid #ebeef5", textAlign: "left" } }, "状态"),
+									h("th", { style: { padding: "6px", border: "1px solid #ebeef5", textAlign: "left" } }, "进度")
+								]),
+								...subData.map(item =>
+									h("tr", [
+										h("td", { style: { padding: "6px", border: "1px solid #ebeef5" } }, String(item.id)),
+										h("td", { style: { padding: "6px", border: "1px solid #ebeef5" } }, item.project),
+										h("td", { style: { padding: "6px", border: "1px solid #ebeef5" } }, item.status),
+										h("td", { style: { padding: "6px", border: "1px solid #ebeef5" } }, item.progress)
+									])
+								)
+							])
+						]);
 					}
 				},
 				columns: [
