@@ -55,7 +55,10 @@ export default async function () {
 								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 2") }, "通知消息第 2 条"),
 								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 3") }, "通知消息第 3 条"),
 								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 4") }, "通知消息第 4 条"),
-								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 5") }, "通知消息第 5 条")
+								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 5") }, "通知消息第 5 条"),
+								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 6") }, "通知消息第 6 条"),
+								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 7") }, "通知消息第 7 条"),
+								h("div", { class: "x-contextmenu-item", style: "font-size:12px;", onClick: () => console.log("通知 8") }, "通知消息第 8 条")
 							]),
 							h("div", {
 								style: "padding:6px 12px;font-size:11px;color:#c0c4cc;text-align:center;border-top:1px solid #e4e7ed;cursor:pointer;",
