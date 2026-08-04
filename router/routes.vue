@@ -430,7 +430,12 @@ export default async function () {
 				_.$newRoute("/other/divider", "@/views/other/divider/DocDemoDivider.vue"),
 				_.$newRoute("/other/open_window", "@/views/other/dialog/DocDemoDialog.vue"),
 				_.$newRoute("/other/drawer", "@/views/other/drawer/DocDemoDrawer.vue"),
-				_.$newRoute("/other/x_dev", "@/views/other/xDev/DocDemoXDev.vue")
+			/* 【需求】新增 xCacheReloader 缓存更新浮窗的文档演示页路由 */
+			_.$newRoute(
+				"/other/cache_reloader",
+				"@/views/other/cacheReloader/DocDemoCacheReloader.vue"
+			),
+			_.$newRoute("/other/x_dev", "@/views/other/xDev/DocDemoXDev.vue")
 			]
 		}),
 		_.$newRoute("/dev", ComponentPageRouterView, {

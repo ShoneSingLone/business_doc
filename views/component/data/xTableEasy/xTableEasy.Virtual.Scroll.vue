@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
 <template>
 	<DocContentOfDemo class="x-table-easy-virtual-scroll">
 		<xMd :md="mdTips" />
@@ -32,6 +32,7 @@ export default async function () {
 - 3、只渲染可见区域的单元格，减少DOM节点
 - 4、支持结合行多选、固定列等功能
 - 5、支持动态开启或关闭
+- 6、【需求】2026-08-03 虚拟滚动 scroll 处理已内置 rAF 节流：一帧内多次 scroll 只执行一次可视行重算，滚动更顺滑（内部行为，无 API 变化）
         `,
 				apiString: `
 ## API

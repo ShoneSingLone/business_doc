@@ -217,12 +217,18 @@ export default async function () {
 					href: "/component/data/image"
 				},
 				{
-					icon: "_icon_image",
-					label: i18n("Drawer") + i18n("抽屉"),
-					href: "/other/drawer"
-				},
-				{
-					icon: "_icon_avatar",
+				icon: "_icon_image",
+				label: i18n("Drawer") + i18n("抽屉"),
+				href: "/other/drawer"
+			},
+			/* 【需求】新增 xCacheReloader 缓存更新浮窗的菜单入口 */
+			{
+				icon: "_icon_refresh",
+				label: i18n("xCacheReloader") + i18n("缓存更新浮窗"),
+				href: "/other/cache_reloader"
+			},
+			{
+				icon: "_icon_avatar",
 					label: i18n("Avatar") + i18n("头像"),
 					href: "/component/data/avatar"
 				},
